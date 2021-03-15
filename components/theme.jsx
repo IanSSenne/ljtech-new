@@ -16,12 +16,12 @@ export default function Theme() {
 	return (
 		<label
 			className="border-transparent ring-gray-200 border-2 ring-1 inline-block cursor-pointer rounded-full relative w-6 h-3 m-3"
-			htmlFor="switchTheme"
+			htmlFor="theme"
 		>
 			<input
 				className="opacity-0 w-0 h-0"
-				name="switchTheme"
-				id="switchTheme"
+				name="theme"
+				id="theme"
 				type="checkbox"
 				onChange={Toggle}
 			/>

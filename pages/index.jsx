@@ -1,9 +1,16 @@
 import Head from "next/head";
-import Layout from "../components/layout";
+import Layout from "../components/template/layout";
+import Bubbles from "../components/bubbles";
+import Slides from "../components/slides";
+import Plans from "../components/plans";
 
 export default function Home() {
 	return (
 		<Layout>
+			<Head>
+				<title>ljtech.ca</title>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
 			{/* landing */}
 			<section>
 				<div
@@ -11,7 +18,7 @@ export default function Home() {
 					className="flex content-center items-center justify-center"
 				>
 					<div style={{ maxWidth: "43rem" }} className="p-2">
-						<h1 className="w-full font-black text-7xl p-2 mb-4">
+						<h1 className="w-full font-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl p-2 mb-4">
 							Need a website for your business?
 						</h1>
 						<p className="text-3xl p-2">
@@ -21,33 +28,19 @@ export default function Home() {
 							support.
 						</p>
 					</div>
-					<div className="p-2">
-						<img
-							className="dark:hidden p-2"
-							src="./clip/bubbles-dark.svg"
-							alt="bubbles-dark"
-						/>
-						<img
-							className="hidden dark:block p-2"
-							src="./clip/bubbles-light.svg"
-							alt="bubbles-light"
-						/>
-					</div>
-				</div>
-				<div>
-					<img
-						className="dark:hidden"
-						src="./clip/header-dark.svg"
-						alt="header-dark"
-					/>
-					<img
-						className="hidden dark:block"
-						src="./clip/header-light.svg"
-						alt="header-light"
+					<Bubbles
+						dark="./img/bubbles-dark.svg"
+						light="./img/bubbles-light.svg"
 					/>
 				</div>
+				{/* <Clip dark="./img/clip-dark.svg" light="./img/clip-light.svg" /> */}
 			</section>
-			<section className="bg-dark dark:bg-light h-80"></section>
+			<section className="bg-dark dark:bg-light text-light dark:text-dark py-8 sm:py-12 md:py-16">
+				<Slides />
+			</section>
+			<section className="py-8 sm:py-12 md:py-16">
+				<Plans />
+			</section>
 		</Layout>
 	);
 }

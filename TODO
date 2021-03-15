@@ -1,0 +1,34 @@
+add dependencies:
+  ✔ next-seo @done(21-03-14 05:45)
+
+  ✔ svgr @done(21-03-14 05:45)
+
+
+things I wanna incorporate:
+  ☐ foggy transparent backgrounds
+
+  ☐ isometric svg imagery
+
+  ☐ radial blurs enhanced backgrounds
+
+
+
+things to think about:
+
+  ☐ do next slugs or something to cover multiple pages in one
+    - pages to include possibly:
+
+      set1:
+        ☐ [art]
+        ☐ [work]
+        ☐ [games]
+        ☐ [apps]
+
+
+        {actives[i] === 1 && (
+          <div>
+            <div>
+              <p className="text-center">{slideActive.description}</p>
+            </div>
+          </div>
+        )}
