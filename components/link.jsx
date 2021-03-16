@@ -1,11 +1,9 @@
 import Link from "next/link";
 
-export default ({ href, children, className, classNames }) => {
+export default ({ href, children, classNames }) => {
 	return (
 		<Link href={href}>
-			<a className={`${classNames} inline-flex font-semibold px-2 py-1`}>
-				{children}
-			</a>
+			<a className={`${classNames} inline-flex font-semibold`}>{children}</a>
 		</Link>
 	);
 };

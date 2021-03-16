@@ -1,6 +1,6 @@
 const Toggle = ({ off, on, handleChange, isActive }) => (
 	<label
-		className="border-white ring-gray-200 border-2 ring-1 inline-block cursor-pointer rounded-full relative w-6 h-3 m-3"
+		className="border-transparent ring-gray-200 border-2 ring-1 inline-block cursor-pointer rounded-full relative w-6 h-3 m-3"
 		htmlFor="toggle"
 	>
 		<input
@@ -28,7 +28,7 @@ const Toggle = ({ off, on, handleChange, isActive }) => (
 			)}
 			{isActive && (
 				<div
-					className={`${on} text-xs flex content-center items-center justify-center overflow-hidden border border-white w-3 h-3 rounded-full select-none absolute -top-0.5`}
+					className={`${on} text-xs flex content-center items-center justify-center overflow-hidden border w-3 h-3 rounded-full select-none absolute -top-0.5`}
 					style={{
 						opacity: Number(isActive),
 						left: "-2px",

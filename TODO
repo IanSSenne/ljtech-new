@@ -24,11 +24,10 @@ things to think about:
         ☐ [games]
         ☐ [apps]
 
+things do to:
 
-        {actives[i] === 1 && (
-          <div>
-            <div>
-              <p className="text-center">{slideActive.description}</p>
-            </div>
-          </div>
-        )}
+  ✔ fix svg components @done(21-03-16 10:02)
+  ☐ fix text fade in? or something
+  ☐ fix steps component
+  ✔ fix footer responsive breaks @done(21-03-16 11:47)
+  ☐ light/dark mode for socials

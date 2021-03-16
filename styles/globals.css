@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-calendar-picker-indicator {
+	filter: invert(100%) sepia() saturate(10000%) hue-rotate(90deg);
+}
+
 ::-webkit-scrollbar {
 	width: 0;
 }

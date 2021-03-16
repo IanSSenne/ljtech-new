@@ -1,7 +1,8 @@
-const Button = ({ handleClick, classNames, children }) => (
+const Button = ({ handleClick, classNames, children, type }) => (
 	<button
 		onClick={handleClick}
 		className={`${classNames} select-none border rounded-sm px-2 py-1`}
+		type={type}
 	>
 		{children}
 	</button>

@@ -3,7 +3,7 @@ import Logo from "../logo";
 import Theme from "../theme";
 
 const Header = () => (
-	<header className="flex items-center justify-around p-2">
+	<header className="max-w-6xl mx-auto flex items-center justify-between p-2">
 		<div className="flex items-center space-x-2">
 			<Link href="/" classNames="hover:opacity-60">
 				<Logo src="./ljtech-g.svg" width={25} height={25} />
@@ -19,7 +19,7 @@ const Header = () => (
 			<Theme />
 			<Link
 				href="/contact"
-				classNames="border rounded-sm hover:border-purple-500 hover:text-purple-500"
+				classNames="px-2 py-1 border rounded-sm hover:border-purple-500 hover:text-purple-500"
 			>
 				Contact
 			</Link>
