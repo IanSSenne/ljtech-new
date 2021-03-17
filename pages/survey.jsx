@@ -98,9 +98,6 @@ export default function Survey() {
 										helper="Enter your first name."
 										isRequired={true}
 									/>
-                  <label htmlFor="first">
-                    <input id="first" name="first" max="100" type="text"/>
-                  </label>
 									<Inputfield
 										legend="Last name"
 										name="last"

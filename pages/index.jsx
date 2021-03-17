@@ -11,7 +11,7 @@ export default function Home() {
 				<title>ljtech.ca</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<section className="container mx-auto">
+			<section>
 				<div
 					style={{ minHeight: "calc(100vh - 8rem)" }}
 					className="max-w-6xl mx-auto flex items-center"

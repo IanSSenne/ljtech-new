@@ -39,19 +39,39 @@ const Socials = () => (
 		<p>Questions or feedback?</p>
 		<p className="pb-2">I would love to hear from you</p>
 		<div className="flex content-center items-center justify-center">
-			<Link classNames="hover:opacity-80 transition" href={socialLinks[0].href}>
+			<Link
+				target="_blank"
+				classNames="hover:opacity-80 transition"
+				href={socialLinks[0].href}
+			>
 				<Facebook fill="#fcfcfc" width={38} height={38} />
 			</Link>
-			<Link classNames="hover:opacity-80 transition" href={socialLinks[1].href}>
+			<Link
+				target="_blank"
+				classNames="hover:opacity-80 transition"
+				href={socialLinks[1].href}
+			>
 				<Github fill="#fcfcfc" width={38} height={38} />
 			</Link>
-			<Link classNames="hover:opacity-80 transition" href={socialLinks[2].href}>
+			<Link
+				target="_blank"
+				classNames="hover:opacity-80 transition"
+				href={socialLinks[2].href}
+			>
 				<Linkedin fill="#fcfcfc" width={38} height={38} />
 			</Link>
-			<Link classNames="hover:opacity-80 transition" href={socialLinks[3].href}>
+			<Link
+				target="_blank"
+				classNames="hover:opacity-80 transition"
+				href={socialLinks[3].href}
+			>
 				<Twitch fill="#fcfcfc" width={38} height={38} />
 			</Link>
-			<Link classNames="hover:opacity-80 transition" href={socialLinks[4].href}>
+			<Link
+				target="_blank"
+				classNames="hover:opacity-80 transition"
+				href={socialLinks[4].href}
+			>
 				<Twitter fill="#fcfcfc" width={38} height={38} />
 			</Link>
 		</div>

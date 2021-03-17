@@ -4,27 +4,27 @@ const workLinks = [
 	{
 		id: 1,
 		name: "Plans & Pricing",
-		href: "/plans",
+		href: "/pricing",
 	},
 	{
 		id: 2,
-		name: "Professional Work",
-		href: "/work",
+		name: "Apps",
+		href: "/portfolio#apps",
 	},
 	{
 		id: 3,
 		name: "Art",
-		href: "/art",
+		href: "/portfolio#art",
 	},
 	{
 		id: 4,
-		name: "Apps",
-		href: "/apps",
+		name: "Components",
+		href: "/portfolio#components",
 	},
 	{
 		id: 5,
 		name: "Games",
-		href: "/games",
+		href: "/portfolio#games",
 	},
 ];
 
@@ -32,7 +32,7 @@ const siteLinks = [
 	{
 		id: 6,
 		name: "About",
-		href: "/",
+		href: "/about",
 	},
 	{
 		id: 7,
