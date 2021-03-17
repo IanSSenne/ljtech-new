@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Toggle from "./toggle";
 
-export default function Rubruk() {
+export default function Rubrik() {
 	const [active, setActive] = useState(false);
 
 	const handleChange = () => {
@@ -29,21 +29,21 @@ export default function Rubruk() {
 			],
 		},
 		{
-			id: 0,
+			id: 1,
 			name: "Basic",
 			month: 50,
 			year: 600,
 			array: ["✔", "✔", "✔", "❌", "❌", "❌"],
 		},
 		{
-			id: 1,
+			id: 2,
 			name: "Business",
 			month: 100,
 			year: 1000,
 			array: ["✔", "✔", "✔", "✔", "✔", "❌"],
 		},
 		{
-			id: 2,
+			id: 3,
 			name: "Enterprise",
 			month: 150,
 			year: 1800,
@@ -55,7 +55,7 @@ export default function Rubruk() {
 		<div>
 			<div className="grid grid-cols-4">
 				{plans.map((plan, i) => (
-					<div>
+					<div key={plan.id}>
 						{i == 0 && (
 							<div className="h-full p-2 flex content-center items-center justify-center border-b">
 								<div className="hidden md:block text-xs font-black">/mo</div>
@@ -99,14 +99,20 @@ export default function Rubruk() {
 			<div className="grid grid-cols-4">
 				{plans.map((plan, i) => (
 					<ul
+						key={i}
 						className={`${i == 0 ? "font-semibold text-xs" : ""}${
 							i > 0 ? "text-center" : ""
 						} ${
 							i == 2 ? "bg-light text-dark dark:bg-dark dark:text-light" : ""
 						}`}
 					>
-						{plans[i].array.map((arr) => (
-							<li className="h-12 flex items-center justify-center p-2">
+						{plans[i].array.map((arr, a) => (
+							<li
+								key={a}
+								className={`flex items-center ${
+									i > 0 ? "justify-center" : ""
+								} p-2 h-12`}
+							>
 								{arr}
 							</li>
 						))}

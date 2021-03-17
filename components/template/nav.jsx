@@ -62,7 +62,7 @@ const Nav = ({ classNames }) => (
 			<h2 className="text-2xl font-semibold opacity-60">Work</h2>
 			<ul>
 				{workLinks.map((link, i) => (
-					<li key={link.id}>
+					<li key={`${link.name} - ${link.id}`}>
 						<Link classNames="transition hover:text-blue-500" href={link.href}>
 							{link.name}
 						</Link>
@@ -74,7 +74,7 @@ const Nav = ({ classNames }) => (
 			<h2 className="text-2xl font-semibold opacity-60">About</h2>
 			<ul>
 				{siteLinks.map((link, i) => (
-					<li key={link.id}>
+					<li key={`${link.name} - ${link.id}`}>
 						<Link classNames="transition hover:text-blue-500" href={link.href}>
 							{link.name}
 						</Link>

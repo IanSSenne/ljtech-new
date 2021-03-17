@@ -1,17 +1,19 @@
-const Clip = ({ dark, light }) => (
-	<div className="relative top-2 z-30">
-		<img
-			className="select-none dark:hidden"
-			src={dark}
-			alt="header-dark"
-			draggable="false"
-		/>
-		<img
-			className="select-none hidden dark:block"
-			src={light}
-			alt="header-light"
-			draggable="false"
-		/>
+const Clip = ({ classNames, width, height }) => (
+	<div className={`${classNames}`}>
+		<svg
+			style={{ fill: "currentcolor" }}
+			xmlns="http://www.w3.org/2000/svg"
+			width={width}
+			height={height}
+			viewBox="0 0 1920 120"
+		>
+			<path
+				id="clip"
+				data-name="clip"
+				d="M0,0S480-20,960-20,1920,0,1920,0V100H0Z"
+				transform="translate(0 20)"
+			/>
+		</svg>
 	</div>
 );
 

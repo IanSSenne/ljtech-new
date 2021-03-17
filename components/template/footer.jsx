@@ -9,7 +9,7 @@ export default function Footer() {
 			<div className="w-full flex flex-wrap items-end justify-around sm:justify-between">
 				<div className="flex items-end space-x-4">
 					<Copyright />
-					<Nav classNames="hidden lg:flex" />
+					<Nav classNames="hidden lg:flex space-x-4" />
 				</div>
 				<Socials />
 			</div>

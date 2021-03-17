@@ -1,57 +1,59 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "./link";
 import Button from "./button";
+import Outline from "../components/outline";
+import Logo from "../components/logo";
+
+const slides = [
+	{
+		id: 1,
+		name: "Ask a question",
+		image: "green",
+		description:
+			"Ask a question publicly on 170+ Stack Exchange sites or privately using Stack Overflow for Teams.",
+	},
+	{
+		id: 2,
+		name: "Vote on everything",
+		image: "purple",
+		description:
+			"Upvoting helps exceptional content rise to the top and bring awareness to useful responses.",
+	},
+	{
+		id: 3,
+		name: "Answer questions",
+		image: "red",
+		description:
+			"Answer a question to share your knowledge with the world or in private with your team.",
+	},
+	{
+		id: 4,
+		name: "Tag your question",
+		image: "green",
+		description:
+			"Tags help make information searchable and find answers that are important to you.",
+	},
+	{
+		id: 5,
+		name: "Accept an answer",
+		image: "purple",
+		description:
+			"Accept the answer which solved your problem to let others benefit from the valuable information.",
+	},
+	{
+		id: 6,
+		name: "Get recognized",
+		image: "red",
+		description:
+			"Our reputation system rewards both the new & experienced based on contribution and activity.",
+	},
+];
 
 export default function Slides() {
-	// const intervalRef = useRef(null);
 	const [counter, setCounter] = useState(null);
 	const [active, setActive] = useState(0);
 	const [mounted, setMounted] = useState(false);
 	const [pause, setPause] = useState(false);
-	const [slides, setSlides] = useState([
-		{
-			id: 1,
-			name: "Ask a question",
-			image: "./ljtech-g.svg",
-			description:
-				"Ask a question publicly on 170+ Stack Exchange sites or privately using Stack Overflow for Teams.",
-		},
-		{
-			id: 2,
-			name: "Vote on everything",
-			image: "./ljtech-r.svg",
-			description:
-				"Upvoting helps exceptional content rise to the top and bring awareness to useful responses.",
-		},
-		{
-			id: 3,
-			name: "Answer questions",
-			image: "./ljtech-p.svg",
-			description:
-				"Answer a question to share your knowledge with the world or in private with your team.",
-		},
-		{
-			id: 4,
-			name: "Tag your question",
-			image: "./ljtech-g.svg",
-			description:
-				"Tags help make information searchable and find answers that are important to you.",
-		},
-		{
-			id: 5,
-			name: "Accept an answer",
-			image: "./ljtech-r.svg",
-			description:
-				"Accept the answer which solved your problem to let others benefit from the valuable information.",
-		},
-		{
-			id: 6,
-			name: "Get recognized",
-			image: "./ljtech-p.svg",
-			description:
-				"Our reputation system rewards both the new & experienced based on contribution and activity.",
-		},
-	]);
 
 	const handleClick = (e, i) => {
 		setPause(true);
@@ -77,19 +79,13 @@ export default function Slides() {
 		}
 	}, []);
 
-	useEffect(() => {
-		console.log("active", active);
-		console.log("counter", counter);
-		console.log("pause", pause);
-	});
-
 	return (
 		<div>
 			<h2 className="text-center text-3xl font-bold px-2 pt-2 pb-4">
 				This is a title
 			</h2>
-			<div className="flex content-center items-center justify-around max-w-lg w-full mx-auto">
-				<div className="pr-2">
+			<div className="md:flex md:content-center md:items-center md:justify-around max-w-lg w-full mx-auto">
+				<div className="flex content-center items-center justify-center md:block pr-2">
 					{slides.slice(0, 3).map((slideTag, i) => (
 						<div key={slideTag.id}>
 							{i === active ? (
@@ -110,29 +106,26 @@ export default function Slides() {
 						</div>
 					))}
 				</div>
-				<div className="relative px-2">
-					<img
-						className="absolute fade-in"
-						src="./ljtech-outline.svg"
-						alt="outline"
-						width={188}
-						height={267}
+				<div className="relative px-2 flex justify-center">
+					<Outline
+						classNames="mx-auto absolute z-30"
+						width="clamp(11rem, 33vw, 22rem)"
+						height="clamp(11rem, 33vw, 22rem)"
 					/>
 					{slides.map((slideActive, i) => (
 						<div key={slideActive.id}>
 							{i === active && (
-								<img
-									className="fade-in mx-auto"
-									src={slideActive.image}
-									alt={slideActive.name}
-									width={188}
-									height={267}
+								<Logo
+									classNames="mx-auto relative z-40 fade-in"
+									type={slideActive.image}
+									width="clamp(11rem, 33vw, 22rem)"
+									height="clamp(11rem, 33vw, 22rem)"
 								/>
 							)}
 						</div>
 					))}
 				</div>
-				<div className="pl-2">
+				<div className="flex content-center items-center justify-center md:block pl-2">
 					{slides.slice(3, 6).map((slideTag, i) => (
 						<div key={slideTag.id}>
 							{i + 3 === active ? (
