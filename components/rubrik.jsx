@@ -33,7 +33,7 @@ export default function Rubruk() {
 			name: "Basic",
 			month: 50,
 			year: 600,
-			array: [1000, "✔", "✔", "❌", "❌", "❌"],
+			array: ["✔", "✔", "✔", "❌", "❌", "❌"],
 		},
 		{
 			id: 1,
