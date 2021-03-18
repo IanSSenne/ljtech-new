@@ -9,22 +9,22 @@ const workLinks = [
 	{
 		id: 2,
 		name: "Apps",
-		href: "/portfolio#apps",
+		href: "/portfolio",
 	},
 	{
 		id: 3,
 		name: "Art",
-		href: "/portfolio#art",
+		href: "/portfolio",
 	},
 	{
 		id: 4,
 		name: "Components",
-		href: "/portfolio#components",
+		href: "/portfolio",
 	},
 	{
 		id: 5,
 		name: "Games",
-		href: "/portfolio#games",
+		href: "/portfolio",
 	},
 ];
 

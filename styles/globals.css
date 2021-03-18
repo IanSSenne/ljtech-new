@@ -48,12 +48,3 @@
 	-moz-animation-duration: 1s;
 	animation-duration: 1s;
 }
-
-.electricBoogaloo {
-	animation: dance 2s infinite alternate;
-}
-@keyframes dance {
-	100% {
-		transform: rotate(180deg);
-	}
-}

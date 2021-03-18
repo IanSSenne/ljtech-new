@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "../components/link";
 import Button from "../components/button";
 import Layout from "../components/template/layout";
+import Gallery from "../components/gallery";
 
 const tabs = ["Apps", "Art", "Components", "Games"];
 
@@ -24,7 +25,7 @@ export default function Pricing() {
 
 			<section className="bg-dark dark:bg-light text-light dark:text-dark py-8 sm:py-12 md:py-16">
 				<div className="max-w-6xl mx-auto">
-					<div className="flex items-center justify-start p-2">
+					<div className="flex flex-wrap items-center justify-start p-2">
 						{tabs.map((tab, i) => (
 							<Button
 								handleClick={(e) => handleClick(e, i)}
@@ -59,10 +60,7 @@ export default function Pricing() {
 											</p>
 											<h2 className="text-xl font-semibold pb-4">{tabs[i]}</h2>
 										</div>
-										<div>{i == 0 ? <div>Apps here</div> : null}</div>
-										<div>{i == 1 ? <div>Art here</div> : null}</div>
-										<div>{i == 2 ? <div>Components here</div> : null}</div>
-										<div>{i == 3 ? <div>Games here</div> : null}</div>
+										<Gallery index={i} />
 									</div>
 								) : null}
 							</div>

@@ -12,9 +12,7 @@ const Bubbles = ({ classNames, width, height }) => (
 				<circle cx="183" cy="183" r="182.5" fill="none" />
 			</g>
 			<g
-				style={{ fill: "#5a05a0" }}
 				id="Ellipse_2"
-				className="electricBoogaloo"
 				data-name="Ellipse 2"
 				transform="translate(284 316)"
 				stroke="none"
@@ -24,9 +22,7 @@ const Bubbles = ({ classNames, width, height }) => (
 				<circle cx="69" cy="69" r="68.5" fill="none" />
 			</g>
 			<g
-				style={{ fill: "#05a05a" }}
 				id="Ellipse_3"
-				className="electricBoogaloo"
 				data-name="Ellipse 3"
 				transform="translate(366 225)"
 				stroke="none"

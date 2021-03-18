@@ -1,9 +1,6 @@
 TODO:
 
-  ☐ double check that img tags do not have svgs
-  ☐ turn all imgs into svgs
-
-  ☐ components > template > socials
+  ✔ components > template > socials @done(21-03-17 11:37)
     - the fill needs to change based on active theme
 
   ☐ components > bubbles
@@ -18,13 +15,13 @@ TODO:
   ☐ pricing
     - describe services below the rubrik
 
-  ☐ portfolio
+  ✔ portfolio @done(21-03-17 11:37)
     - create gallery component
 
   ✔ components > template > footer @done(21-03-17 08:47)
     - extra padding between nav ul horizontal
 
-  ☐ components > template > header
+  ✔ components > template > header @done(21-03-17 11:37)
     - add transition to header buttons
 
   ✔ set unset keys @done(21-03-17 07:21)
