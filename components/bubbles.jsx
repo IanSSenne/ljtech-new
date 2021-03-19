@@ -3,11 +3,17 @@ const Bubbles = ({ classNames, width, height }) => (
 		<svg
 			style={{ fill: "currentColor" }}
 			xmlns="http://www.w3.org/2000/svg"
+			className="overflow-visible"
 			width={width}
 			height={height}
 			viewBox="0 0 457 454"
 		>
-			<g id="Ellipse_1" data-name="Ellipse 1" stroke="none" strokeWidth="1">
+			<g
+				id="Ellipse_1"
+				data-name="Ellipse 1"
+				stroke="none"
+				strokeWidth="1"
+			>
 				<circle cx="183" cy="183" r="183" stroke="none" />
 				<circle cx="183" cy="183" r="182.5" fill="none" />
 			</g>

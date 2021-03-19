@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Toggle from "./toggle";
+import Ballot from "./ballot";
 
 export default function Rubrik() {
 	const [active, setActive] = useState(false);
@@ -33,21 +34,42 @@ export default function Rubrik() {
 			name: "Basic",
 			month: 50,
 			year: 600,
-			array: ["✔", "✔", "✔", "❌", "❌", "❌"],
+			array: [
+				<Ballot checked={true} />,
+				<Ballot checked={true} />,
+				<Ballot checked={true} />,
+				<Ballot checked={false} />,
+				<Ballot checked={false} />,
+				<Ballot checked={false} />,
+			],
 		},
 		{
 			id: 2,
 			name: "Business",
 			month: 100,
 			year: 1000,
-			array: ["✔", "✔", "✔", "✔", "✔", "❌"],
+			array: [
+				<Ballot fill="#202124" checked={true} />,
+				<Ballot fill="#202124" checked={true} />,
+				<Ballot fill="#202124" checked={true} />,
+				<Ballot fill="#202124" checked={true} />,
+				<Ballot fill="#202124" checked={true} />,
+				<Ballot fill="#202124" checked={false} />,
+			],
 		},
 		{
 			id: 3,
 			name: "Enterprise",
 			month: 150,
 			year: 1800,
-			array: ["✔", "✔", "✔", "✔", "✔", "✔"],
+			array: [
+				<Ballot checked={true} />,
+				<Ballot checked={true} />,
+				<Ballot checked={true} />,
+				<Ballot checked={true} />,
+				<Ballot checked={true} />,
+				<Ballot checked={true} />,
+			],
 		},
 	];
 
@@ -66,9 +88,7 @@ export default function Rubrik() {
 						{i > 0 ? (
 							<div
 								className={`${
-									i == 2
-										? "bg-light text-dark dark:bg-dark dark:text-light border-b"
-										: ""
+									i == 2 ? "bg-gray-200 text-dark border-b" : ""
 								} p-2`}
 							>
 								<h2 className="text-xs md:text-xl font-bold text-center">
@@ -102,9 +122,7 @@ export default function Rubrik() {
 						key={i}
 						className={`${i == 0 ? "font-semibold text-xs" : ""}${
 							i > 0 ? "text-center" : ""
-						} ${
-							i == 2 ? "bg-light text-dark dark:bg-dark dark:text-light" : ""
-						}`}
+						} ${i == 2 ? "bg-gray-200" : ""}`}
 					>
 						{plans[i].array.map((arr, a) => (
 							<li

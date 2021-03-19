@@ -1,27 +1,8 @@
-TODO:
+☐ about page
 
-  ✔ components > template > socials @done(21-03-17 11:37)
-    - the fill needs to change based on active theme
 
-  ☐ components > bubbles
-    - do some sort of spinny orbit animation with them
+☐ faq page
 
-  ✔ components > plans @done(21-03-17 08:47)
-    - needs something additional to link to plans & pricing page
 
-  ☐ components > slides
-  - needs proper content
-
-  ☐ pricing
-    - describe services below the rubrik
-
-  ✔ portfolio @done(21-03-17 11:37)
-    - create gallery component
-
-  ✔ components > template > footer @done(21-03-17 08:47)
-    - extra padding between nav ul horizontal
-
-  ✔ components > template > header @done(21-03-17 11:37)
-    - add transition to header buttons
-
-  ✔ set unset keys @done(21-03-17 07:21)
+☐ blog page
+  - markdown stuff

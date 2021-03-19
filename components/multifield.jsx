@@ -17,9 +17,7 @@ export default function Multifield({
 	helper,
 }) {
 	return (
-		<fieldset
-			className={`${classNames} flex-1 sm:max-w-md border rounded-sm mb-2`}
-		>
+		<fieldset className={`${classNames} flex-1 border rounded-sm mb-2`}>
 			<legend className="mx-1 px-2">{legend}</legend>
 			<ul>
 				{fields.map((field, i) => (

@@ -83,12 +83,12 @@ export default function Survey() {
 			</Head>
 			<section className="py-8 sm:py-12 md:py-16">
 				<Steps step={step} />
-				<div className="flex items-start justify-center">
-					<form onSubmit={(e) => handleForm(e)}>
+				<div className="max-w-lg w-full mx-auto">
+					<form onSubmit={(e) => handleForm(e)} className="p-1">
 						{/* first part */}
 						{step === 0 && (
 							<div>
-								<div className="flex flex-wrap sm:space-x-2">
+								<div className="md:flex md:space-x-2">
 									<Inputfield
 										legend="First name"
 										name="first"
@@ -108,10 +108,10 @@ export default function Survey() {
 										isRequired={true}
 									/>
 								</div>
-								<div className="flex flex-wrap sm:space-x-2">
+								<div className="md:flex md:space-x-2">
 									<Inputfield
 										legend="Email address"
-										name="first"
+										name="email"
 										type="email"
 										placeholder="exmaple@email.com"
 										helper="Enter your email address."
@@ -192,44 +192,38 @@ export default function Survey() {
 						{/* part 3 */}
 						{step === 2 && (
 							<div>
-								<div className="flex flex-wrap">
-									<Selectfield
-										legend="Business size"
-										name="business"
-										helper="Enter your businesses size."
-										isRequired={true}
-										options={options}
-									/>
-								</div>
-								<div className="flex flex-wrap">
-									<Inputfield
-										style={{ padding: "0", border: "none", height: "40px" }}
-										legend="Brand color"
-										name="color"
-										type="color"
-										helper="Enter your brand color."
-										isRequired={true}
-									/>
-								</div>
-								<div className="flex flex-wrap">
-									<Inputfield
-										style={{
-											padding: "0",
-											border: "none",
-										}}
-										legend="Budget"
-										name="project"
-										type="range"
-										placeholder="new-project.com"
-										helper={`Your selected budget: ~${budget} CAD`}
-										min={1000}
-										step={500}
-										max={30000}
-										defaultValue={15000}
-										handleChange={(e) => handleBudget(e)}
-										isRequired={true}
-									/>
-								</div>
+								<Selectfield
+									legend="Business size"
+									name="business"
+									helper="Enter your businesses size."
+									isRequired={true}
+									options={options}
+								/>
+								<Inputfield
+									style={{ padding: "0", border: "none", height: "40px" }}
+									legend="Brand color"
+									name="color"
+									type="color"
+									helper="Enter your brand color."
+									isRequired={true}
+								/>
+								<Inputfield
+									style={{
+										padding: "0",
+										border: "none",
+									}}
+									legend="Budget"
+									name="project"
+									type="range"
+									placeholder="new-project.com"
+									helper={`Your selected budget: ~${budget} CAD`}
+									min={1000}
+									step={500}
+									max={30000}
+									defaultValue={15000}
+									handleChange={(e) => handleBudget(e)}
+									isRequired={true}
+								/>
 								<Multifield
 									legend="Competitor Websites"
 									fields={fields}
@@ -248,7 +242,7 @@ export default function Survey() {
 							{step === 0 && <div></div>}
 							{step >= 1 && (
 								<Button
-									classNames="border-blue-500 text-blue-500 hover:text-light"
+									classNames="border-blue-500 text-blue-500 hover:text-blue-400 hover:border-blue-400"
 									handleClick={(e) => backStep(e)}
 								>
 									Back
@@ -256,7 +250,7 @@ export default function Survey() {
 							)}
 							{step >= 0 && step < 2 && (
 								<Button
-									classNames="border-blue-500 text-blue-500 hover:text-light"
+									classNames="border-blue-500 text-blue-500 hover:text-blue-400 hover:border-blue-400"
 									handleClick={(e) => nextStep(e)}
 								>
 									Next

@@ -6,7 +6,13 @@ export default function Theme() {
 	const [active, setActive] = useState(false);
 	const { theme, setTheme } = useTheme();
 
-	useEffect(() => setActive(true), []);
+	useEffect(() => {
+		if (theme === "light") {
+			setActive(true);
+		} else {
+			setActive(false);
+		}
+	}, []);
 
 	const Toggle = () => {
 		setTheme(theme === "dark" ? "light" : "dark");
@@ -15,7 +21,7 @@ export default function Theme() {
 
 	return (
 		<label
-			className="border-transparent ring-gray-200 border-2 ring-1 inline-block cursor-pointer rounded-full relative w-6 h-3 m-3"
+			className="fade-in border-transparent ring-gray-200 border-2 ring-1 inline-block cursor-pointer rounded-full relative w-6 h-3 m-3"
 			htmlFor="theme"
 		>
 			<input
@@ -27,22 +33,11 @@ export default function Theme() {
 			/>
 			<div
 				style={{
-					left: `${active * 16}px`,
+					left: `${!active * 16}px`,
 					transition: ".5s",
 				}}
 				className="absolute -top-1.5"
 			>
-				{!active && (
-					<div
-						className={`absolute ring-gray-300 text-xs flex content-center items-center justify-center overflow-hidden hover:border-yellow-400 border bg-dark w-5 h-5 pb-0.5 rounded-full select-none`}
-						style={{
-							opacity: Number(!active),
-							left: "-8px",
-						}}
-					>
-						🌙
-					</div>
-				)}
 				{active && (
 					<div
 						className={`absolute text-xs flex content-center items-center justify-center overflow-hidden border border-purple-800 bg-purple-500 w-5 h-5 pb-0.5 rounded-full select-none`}
@@ -52,6 +47,17 @@ export default function Theme() {
 						}}
 					>
 						🌞
+					</div>
+				)}
+				{!active && (
+					<div
+						className={`absolute ring-gray-300 text-xs flex content-center items-center justify-center overflow-hidden hover:border-yellow-400 border bg-dark w-5 h-5 pb-0.5 rounded-full select-none`}
+						style={{
+							opacity: Number(!active),
+							left: "-8px",
+						}}
+					>
+						🌙
 					</div>
 				)}
 			</div>

@@ -14,9 +14,7 @@ export default function Inputfield({
 	helper,
 }) {
 	return (
-		<fieldset
-			className={`${classNames} flex-1 sm:max-w-md border rounded-sm mb-2`}
-		>
+		<fieldset className={`${classNames} flex-1 border rounded-sm mb-2`}>
 			<legend className="mx-1 px-2">{legend}</legend>
 			<label className="flex p-1" htmlFor={name}>
 				<input

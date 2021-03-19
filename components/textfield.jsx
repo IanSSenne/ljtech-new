@@ -10,7 +10,7 @@ export default function Textfield({
 	handleChange,
 }) {
 	return (
-		<fieldset className="w-full sm:max-w-md border rounded-sm mb-2">
+		<fieldset className="w-full border rounded-sm mb-2">
 			<legend className="mx-1 px-2">{legend}</legend>
 			<label className="flex p-1" htmlFor={name}>
 				<textarea
