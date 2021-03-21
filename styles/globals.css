@@ -48,3 +48,13 @@
 	-moz-animation-duration: 1s;
 	animation-duration: 1s;
 }
+
+.blur {
+	-webkit-backdrop-filter: saturate(180%) blur(5px) !important;
+	backdrop-filter: saturate(180%) blur(5px) !important;
+	background-color: hsla(0, 0%, 100%, 0.6) !important;
+}
+
+.noclick {
+	pointer-events: none;
+}

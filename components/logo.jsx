@@ -1,5 +1,5 @@
-const Logo = ({ type, children, classNames, width, height }) => (
-	<div className={classNames}>
+const Logo = ({ type, children, classNames, extraNames, width, height }) => (
+	<div className={`${classNames} ${extraNames}`}>
 		{type === "green" && (
 			<svg
 				className={`${classNames} m-1 inline-flex`}

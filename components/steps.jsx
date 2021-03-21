@@ -4,26 +4,26 @@ import Logo from "../components/logo";
 import Step from "../components/step";
 
 const Steps = ({ step }) => (
-	<div className="flex justify-center h-10">
+	<div className="flex justify-center h-8">
 		<div>
 			{step === 0 || step === 1 || step === 2 ? (
-				<Step active={true} classNames="rounded-l-full" />
+				<Step helper="Step 1" active={true} classNames="rounded-l-full" />
 			) : (
-				<Step active={false} classNames="rounded-r-full" />
+				<Step helper="Step 1" active={false} classNames="rounded-r-full" />
 			)}
 		</div>
 		<div>
 			{step === 1 || step === 2 ? (
-				<Step active={true} />
+				<Step helper="Step 2" active={true} />
 			) : (
-				<Step active={false} />
+				<Step helper="Step 2" active={false} />
 			)}
 		</div>
 		<div>
 			{step === 2 ? (
-				<Step active={true} classNames="rounded-r-full" />
+				<Step helper="Step 3" active={true} classNames="rounded-r-full" />
 			) : (
-				<Step active={false} classNames="rounded-r-full" />
+				<Step helper="Step 3" active={false} classNames="rounded-r-full" />
 			)}
 		</div>
 	</div>

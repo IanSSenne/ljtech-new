@@ -87,7 +87,7 @@ export default function Survey() {
 					<form onSubmit={(e) => handleForm(e)} className="p-1">
 						{/* first part */}
 						{step === 0 && (
-							<div>
+							<div style={{ minHeight: "30.7rem" }}>
 								<div className="md:flex md:space-x-2">
 									<Inputfield
 										legend="First name"
@@ -130,7 +130,7 @@ export default function Survey() {
 						)}
 						{/* second part */}
 						{step === 1 && (
-							<div>
+							<div style={{ minHeight: "30.7rem" }}>
 								<div className="flex content-center items-center justify-center">
 									<div>Old Project</div>
 									<Toggle
@@ -191,7 +191,7 @@ export default function Survey() {
 						)}
 						{/* part 3 */}
 						{step === 2 && (
-							<div>
+							<div style={{ minHeight: "30.7rem" }}>
 								<Selectfield
 									legend="Business size"
 									name="business"

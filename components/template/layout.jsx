@@ -7,7 +7,7 @@ export default function Layout({ children }) {
 		<div className="min-h-screen dark:bg-dark text-dark dark:text-light">
 			<Meta />
 			<Header />
-			<main>{children}</main>
+			<main style={{ minHeight: "calc(100vh - 14.8rem)" }}>{children}</main>
 			<Footer />
 		</div>
 	);
