@@ -1,4 +1,4 @@
-export default function Multifield({
+export default function Inputsfield({
 	fields,
 	style,
 	classNames,

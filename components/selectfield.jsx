@@ -1,9 +1,9 @@
 export default function Inputfield({
 	classNames,
-	legend,
-	name,
 	helper,
 	isRequired,
+	legend,
+	name,
 	options,
 }) {
 	return (

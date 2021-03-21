@@ -4,6 +4,7 @@ import Link from "../components/link";
 import Button from "../components/button";
 import Layout from "../components/template/layout";
 import Gallery from "../components/gallery";
+import Section from "../components/section";
 
 const tabs = ["Apps", "Art", "Components", "Games"];
 
@@ -23,7 +24,7 @@ export default function Pricing() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<section className="bg-dark dark:bg-light text-light dark:text-dark py-8 sm:py-12 md:py-16">
+			<Section>
 				<div className="max-w-6xl mx-auto">
 					<div className="flex flex-wrap items-center justify-start p-2">
 						{tabs.map((tab, i) => (
@@ -67,8 +68,7 @@ export default function Pricing() {
 						))}
 					</div>
 				</div>
-			</section>
-			<section className="py-8 sm:py-12 md:py-16"></section>
+			</Section>
 		</Layout>
 	);
 }

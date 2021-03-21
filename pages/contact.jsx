@@ -4,6 +4,8 @@ import Layout from "../components/template/layout";
 import Inputfield from "../components/inputfield";
 import Textfield from "../components/textfield";
 import Button from "../components/button";
+import Section from "../components/section";
+import Container from "../components/container";
 
 export default function Contact() {
 	const [count, setCount] = useState(1000);
@@ -21,9 +23,9 @@ export default function Contact() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<section className="bg-dark dark:bg-light text-light dark:text-dark py-8 sm:py-12 md:py-16">
+			<Section>
 				<div className="flex justify-center">
-					<div className="max-w-lg w-full mx-auto">
+					<Container size="small">
 						<div className="p-2">
 							<h1 className="text-3xl text-center font-black p-2">Contact</h1>
 							<p>
@@ -80,10 +82,9 @@ export default function Contact() {
 								</Button>
 							</div>
 						</form>
-					</div>
+					</Container>
 				</div>
-			</section>
-			<section className="py-8 sm:py-12 md:py-16"></section>
+			</Section>
 		</Layout>
 	);
 }

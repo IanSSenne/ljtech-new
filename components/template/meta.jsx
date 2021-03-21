@@ -10,19 +10,19 @@ const Meta = () => (
 			description: "ljtech.ca",
 			images: [
 				{
-					url: "img1",
+					url: "/800x600.png",
 					width: 800,
 					height: 600,
-					alt: "ljtech.ca image 1",
+					alt: "800x600 - ljtech.ca",
 				},
 				{
-					url: "img2",
+					url: "/900x800.png",
 					width: 900,
 					height: 800,
-					alt: "ljtech.ca image 2",
+					alt: "900x800 - ljtech.ca",
 				},
-				{ url: "img1" },
-				{ url: "img2" },
+				{ url: "/800x600.png" },
+				{ url: "/900x800.png" },
 			],
 			site_name: "ljtech.ca",
 		}}

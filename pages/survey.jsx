@@ -4,10 +4,12 @@ import Layout from "../components/template/layout";
 import Button from "../components/button";
 import Toggle from "../components/toggle";
 import Inputfield from "../components/inputfield";
+import Inputsfield from "../components/inputsfield";
 import Textfield from "../components/textfield";
 import Selectfield from "../components/selectfield";
-import Multifield from "../components/multifield";
+import Section from "../components/section";
 import Steps from "../components/steps";
+import Container from "../components/container";
 
 const options = [
 	"Small Business (1 - 99 employees)",
@@ -81,9 +83,9 @@ export default function Survey() {
 			<Head>
 				<title>ljtech.ca survey</title>
 			</Head>
-			<section className="py-8 sm:py-12 md:py-16">
+			<Section>
 				<Steps step={step} />
-				<div className="max-w-lg w-full mx-auto">
+				<Container size="small">
 					<form onSubmit={(e) => handleForm(e)} className="p-1">
 						{/* first part */}
 						{step === 0 && (
@@ -224,7 +226,7 @@ export default function Survey() {
 									handleChange={(e) => handleBudget(e)}
 									isRequired={true}
 								/>
-								<Multifield
+								<Inputsfield
 									legend="Competitor Websites"
 									fields={fields}
 									type="url"
@@ -259,8 +261,8 @@ export default function Survey() {
 							{step === 2 && <Button type="submit">Submit</Button>}
 						</div>
 					</form>
-				</div>
-			</section>
+				</Container>
+			</Section>
 		</Layout>
 	);
 }

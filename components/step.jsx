@@ -1,5 +1,5 @@
-import Logo from "./logo";
 import Filler from "./filler";
+import Logo from "./logo";
 
 const Step = ({ active, classNames, helper }) => (
 	<div>

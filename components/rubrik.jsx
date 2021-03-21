@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Toggle from "./toggle";
 import Ballot from "./ballot";
+import Toggle from "./toggle";
 
 export default function Rubrik() {
 	const [active, setActive] = useState(false);

@@ -1,10 +1,21 @@
 import Link from "../link";
 import Logo from "../logo";
-import Theme from "../theme";
 import Menu from "./menu";
+import Theme from "../theme";
 
-const list = ["Home", "About"];
-const testing1 = (
+// is passed into the menu component for href links
+const list = [
+	"/",
+	"/about",
+	"/blog",
+	"/contact",
+	"/faq",
+	"/portfolio",
+	"/pricing",
+	"/survey",
+];
+
+const green = (
 	<Logo
 		type="green"
 		extraNames="blur"
@@ -14,7 +25,7 @@ const testing1 = (
 		height={25}
 	/>
 );
-const testing2 = (
+const purple = (
 	<Logo
 		type="purple"
 		extraNames="blur"
@@ -28,7 +39,7 @@ const testing2 = (
 const Header = () => (
 	<header className="max-w-6xl mx-auto flex items-center justify-between p-2">
 		<div className="flex items-center space-x-2">
-			<Menu buttonOn={testing1} buttonOff={testing2} list={list} />
+			<Menu buttonOn={green} buttonOff={purple} list={list} />
 			<Link
 				href="/about"
 				classNames="transition hover:border-green-500 hover:text-green-500"

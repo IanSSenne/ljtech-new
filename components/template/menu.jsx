@@ -16,8 +16,10 @@ export default function Menu({ buttonOn, buttonOff, list }) {
 			{active ? (
 				<ul className="border blur fixed top-10 z-50 rounded-sm">
 					{list.map((item, i) => (
-						<li key={i} className="p-2 hover:bg-gray-200 text-dark">
-							<Link href={`/${item}`}>{item}</Link>
+						<li key={i}>
+							<Link classNames="p-2 grid hover:bg-gray-200 text-dark" href={item}>
+								{item}
+							</Link>
 						</li>
 					))}
 				</ul>

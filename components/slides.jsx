@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import Link from "./link";
 import Button from "./button";
-import Outline from "../components/outline";
+import Container from "../components/container";
+import Link from "./link";
 import Logo from "../components/logo";
+import Outline from "../components/outline";
 
 const slides = [
 	{
@@ -84,7 +85,10 @@ export default function Slides() {
 			<h2 className="text-center text-3xl font-bold px-2 pt-2 pb-4">
 				This is a title
 			</h2>
-			<div className="md:flex md:content-center md:items-center md:justify-around max-w-lg w-full mx-auto">
+			<Container
+				size="small"
+				classNames="md:flex md:content-center md:items-center md:justify-around"
+			>
 				<div className="flex content-center items-center justify-center md:block pr-2">
 					{slides.slice(0, 3).map((slideTag, i) => (
 						<div key={slideTag.id}>
@@ -146,7 +150,7 @@ export default function Slides() {
 						</div>
 					))}
 				</div>
-			</div>
+			</Container>
 			<div className="max-w-md w-full mx-auto px-2 pb-2 pt-4">
 				{slides.map((slideActive, i) => (
 					<div key={slideActive.id}>

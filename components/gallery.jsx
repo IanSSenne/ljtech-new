@@ -83,40 +83,48 @@ export default function Gallery({ index }) {
 			{index === 0 && (
 				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
 					{apps.map((item, i) => (
-						<Thumbnail key={item.id} classNames="" href={item.href}>
-							<div>{item.name}</div>
-							<div>button here</div>
-						</Thumbnail>
+						<Thumbnail
+							key={item.id}
+							title={item.name}
+							helper="View"
+							href={item.href}
+						/>
 					))}
 				</ol>
 			)}
 			{index === 1 && (
 				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
 					{art.map((item, i) => (
-						<Thumbnail key={item.id} classNames="" href={item.href}>
-							<div>{item.name}</div>
-							<div>button here</div>
-						</Thumbnail>
+						<Thumbnail
+							key={item.id}
+							title={item.name}
+							helper="View"
+							href={item.href}
+						/>
 					))}
 				</ol>
 			)}
 			{index === 2 && (
 				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
 					{components.map((item, i) => (
-						<Thumbnail key={item.id} classNames="" href={item.href}>
-							<div>{item.name}</div>
-							<div>button here</div>
-						</Thumbnail>
+						<Thumbnail
+							key={item.id}
+							title={item.name}
+							helper="View"
+							href={item.href}
+						/>
 					))}
 				</ol>
 			)}
 			{index === 3 && (
 				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
 					{games.map((item, i) => (
-						<Thumbnail key={item.id} classNames="" href={item.href}>
-							<div>{item.name}</div>
-							<div>button here</div>
-						</Thumbnail>
+						<Thumbnail
+							key={item.id}
+							title={item.name}
+							helper="View"
+							href={item.href}
+						/>
 					))}
 				</ol>
 			)}

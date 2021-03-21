@@ -4,6 +4,7 @@ import Bubbles from "../components/bubbles";
 import Slides from "../components/slides";
 import Plans from "../components/plans";
 import Clip from "../components/clip";
+import Section from "../components/section";
 
 export default function Home() {
 	return (
@@ -43,12 +44,12 @@ export default function Home() {
 					<Clip classNames="w-full place-self-end" width="100%" height="100%" />
 				</div>
 			</section>
-			<section className="bg-dark dark:bg-light text-light dark:text-dark py-8 sm:py-12 md:py-16">
+			<Section dark={true}>
 				<Slides />
-			</section>
-			<section className="py-8 sm:py-12 md:py-16">
+			</Section>
+			<Section>
 				<Plans />
-			</section>
+			</Section>
 		</Layout>
 	);
 }

@@ -1,13 +1,13 @@
 export default function Textfield({
-	legend,
-	name,
 	cols,
-	rows,
-	placeholder,
-	max,
+	handleChange,
 	helper,
 	isRequired,
-	handleChange,
+	legend,
+	max,
+	name,
+	placeholder,
+	rows,
 }) {
 	return (
 		<fieldset className="w-full border rounded-sm mb-2">

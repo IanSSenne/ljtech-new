@@ -1,6 +1,4 @@
 import React from "react";
-import Outline from "../components/outline";
-import Logo from "../components/logo";
 import Step from "../components/step";
 
 const Steps = ({ step }) => (
