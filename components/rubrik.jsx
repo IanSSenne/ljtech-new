@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Ballot from "./ballot";
+import Link from "./link";
 import Toggle from "./toggle";
 
 export default function Rubrik() {
@@ -11,7 +12,7 @@ export default function Rubrik() {
 
 	const plans = [
 		{
-			id: 0,
+			id: "toggle",
 			name: (
 				<Toggle
 					off="bg-gray-500"
@@ -21,54 +22,66 @@ export default function Rubrik() {
 				/>
 			),
 			array: [
-				"Dark Mode",
-				"SSL Certificate",
-				"Web Hosting",
-				"Analytic Reports",
-				"Increased SEO",
-				"CMS Capability",
+				<Link classNames="hover:opacity-60" href="#darkmode">
+					Dark Mode
+				</Link>,
+				<Link classNames="hover:opacity-60" href="#ssl">
+					SSL Certificate
+				</Link>,
+				<Link classNames="hover:opacity-60" href="#hosting">
+					Web Hosting
+				</Link>,
+				<Link classNames="hover:opacity-60" href="#analytics">
+					Analytic Reports
+				</Link>,
+				<Link classNames="hover:opacity-60" href="#seo">
+					Increased SEO
+				</Link>,
+				<Link classNames="hover:opacity-60" href="#cms">
+					CMS Capability
+				</Link>,
 			],
 		},
 		{
-			id: 1,
+			id: "basic",
 			name: "Basic",
 			month: 50,
 			year: 600,
 			array: [
-				<Ballot checked={true} />,
-				<Ballot checked={true} />,
-				<Ballot checked={true} />,
-				<Ballot checked={false} />,
-				<Ballot checked={false} />,
-				<Ballot checked={false} />,
+				<Ballot checked={true} fillOn="#05a05a" />,
+				<Ballot checked={true} fillOn="#05a05a" />,
+				<Ballot checked={true} fillOn="#05a05a" />,
+				<Ballot checked={false} fillOn="#05a05a" />,
+				<Ballot checked={false} fillOn="#05a05a" />,
+				<Ballot checked={false} fillOn="#05a05a" />,
 			],
 		},
 		{
-			id: 2,
+			id: "business",
 			name: "Business",
 			month: 100,
 			year: 1000,
 			array: [
-				<Ballot fill="#202124" checked={true} />,
-				<Ballot fill="#202124" checked={true} />,
-				<Ballot fill="#202124" checked={true} />,
-				<Ballot fill="#202124" checked={true} />,
-				<Ballot fill="#202124" checked={true} />,
-				<Ballot fill="#202124" checked={false} />,
+				<Ballot fillOn="#05a05a" checked={true} />,
+				<Ballot fillOn="#05a05a" checked={true} />,
+				<Ballot fillOn="#05a05a" checked={true} />,
+				<Ballot fillOn="#05a05a" checked={true} />,
+				<Ballot fillOn="#05a05a" checked={true} />,
+				<Ballot fillOff="#202124" checked={false} />,
 			],
 		},
 		{
-			id: 3,
+			id: "enterprise",
 			name: "Enterprise",
 			month: 150,
 			year: 1800,
 			array: [
-				<Ballot checked={true} />,
-				<Ballot checked={true} />,
-				<Ballot checked={true} />,
-				<Ballot checked={true} />,
-				<Ballot checked={true} />,
-				<Ballot checked={true} />,
+				<Ballot checked={true} fillOn="#05a05a" />,
+				<Ballot checked={true} fillOn="#05a05a" />,
+				<Ballot checked={true} fillOn="#05a05a" />,
+				<Ballot checked={true} fillOn="#05a05a" />,
+				<Ballot checked={true} fillOn="#05a05a" />,
+				<Ballot checked={true} fillOn="#05a05a" />,
 			],
 		},
 	];

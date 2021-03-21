@@ -1,6 +1,8 @@
+import Container from "../components/container";
 import Head from "next/head";
 import Layout from "../components/template/layout";
 import Section from "../components/section";
+import Title from "../components/title";
 
 export default function Pricing() {
 	return (
@@ -11,9 +13,11 @@ export default function Pricing() {
 			</Head>
 			<Section>
 				<div className="flex justify-center">
-					<div>
-						<h1 className="text-3xl text-center font-black p-2">About</h1>
-					</div>
+					<Container size="small">
+						<div className="p-2">
+							<Title>About</Title>
+						</div>
+					</Container>
 				</div>
 			</Section>
 		</Layout>

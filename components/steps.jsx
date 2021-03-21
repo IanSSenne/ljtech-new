@@ -1,4 +1,5 @@
 import React from "react";
+import Final from "../components/final";
 import Step from "../components/step";
 
 const Steps = ({ step }) => (
@@ -19,9 +20,16 @@ const Steps = ({ step }) => (
 		</div>
 		<div>
 			{step === 2 ? (
-				<Step helper="Step 3" active={true} classNames="rounded-r-full" />
+				<Step helper="Step 3" active={true} />
 			) : (
-				<Step helper="Step 3" active={false} classNames="rounded-r-full" />
+				<Step helper="Step 3" active={false} />
+			)}
+		</div>
+		<div>
+			{step === 2 ? (
+				<Final before="Submitted" active={true} classNames="rounded-r-full" />
+			) : (
+				<Final before="Submitted" active={false} classNames="rounded-r-full" />
 			)}
 		</div>
 	</div>

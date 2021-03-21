@@ -1,52 +1,53 @@
 import { useEffect, useState } from "react";
 import Button from "./button";
-import Container from "../components/container";
+import Container from "./container";
 import Link from "./link";
-import Logo from "../components/logo";
-import Outline from "../components/outline";
+import Logo from "./logo";
+import Outline from "./outline";
+import Title from "./title";
 
 const slides = [
 	{
 		id: 1,
-		name: "Ask a question",
+		name: "Consultation",
 		image: "green",
 		description:
-			"Ask a question publicly on 170+ Stack Exchange sites or privately using Stack Overflow for Teams.",
+			"Consult with the web developer directly and define your project goals and how ljtech can meet them.",
 	},
 	{
 		id: 2,
-		name: "Vote on everything",
+		name: "Rough Draft",
 		image: "purple",
 		description:
-			"Upvoting helps exceptional content rise to the top and bring awareness to useful responses.",
+			"Creating mockups to illustrate a finished project, this will help ljtech find the right look for your project.",
 	},
 	{
 		id: 3,
-		name: "Answer questions",
+		name: "Writing Code",
 		image: "red",
 		description:
-			"Answer a question to share your knowledge with the world or in private with your team.",
+			"Writing the code that powers your application, depending on the scope of work, this may take a while.",
 	},
 	{
 		id: 4,
-		name: "Tag your question",
+		name: "Test Launch",
 		image: "green",
 		description:
-			"Tags help make information searchable and find answers that are important to you.",
+			"Launching a working version of your project as soon as possible and working out the flaws in its design.",
 	},
 	{
 		id: 5,
-		name: "Accept an answer",
+		name: "Analytics",
 		image: "purple",
 		description:
-			"Accept the answer which solved your problem to let others benefit from the valuable information.",
+			"Monitoring your projects live performance and monthly usage, making sure its working as intended.",
 	},
 	{
 		id: 6,
-		name: "Get recognized",
+		name: "Optimization",
 		image: "red",
 		description:
-			"Our reputation system rewards both the new & experienced based on contribution and activity.",
+			"With information collected through analytics and personal use, ljtech can finely tune your application.",
 	},
 ];
 
@@ -81,14 +82,9 @@ export default function Slides() {
 	}, []);
 
 	return (
-		<div>
-			<h2 className="text-center text-3xl font-bold px-2 pt-2 pb-4">
-				This is a title
-			</h2>
-			<Container
-				size="small"
-				classNames="md:flex md:content-center md:items-center md:justify-around"
-			>
+		<div className="p-2">
+			<Title>The web dev process</Title>
+			<div className="md:flex md:content-center md:items-center md:justify-around">
 				<div className="flex content-center items-center justify-center md:block pr-2">
 					{slides.slice(0, 3).map((slideTag, i) => (
 						<div key={slideTag.id}>
@@ -150,8 +146,8 @@ export default function Slides() {
 						</div>
 					))}
 				</div>
-			</Container>
-			<div className="max-w-md w-full mx-auto px-2 pb-2 pt-4">
+			</div>
+			<div>
 				{slides.map((slideActive, i) => (
 					<div key={slideActive.id}>
 						<div>

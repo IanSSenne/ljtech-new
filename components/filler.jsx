@@ -1,5 +1,13 @@
-const Filler = ({ children, classNames, extraNames, width, height }) => (
+const Filler = ({
+	before,
+	children,
+	classNames,
+	extraNames,
+	width,
+	height,
+}) => (
 	<div className={`${classNames} ${extraNames}`}>
+		{before}
 		<svg
 			className={`${classNames} m-1 inline-flex`}
 			xmlns="http://www.w3.org/2000/svg"

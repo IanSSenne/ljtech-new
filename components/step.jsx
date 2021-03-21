@@ -1,13 +1,18 @@
 import Filler from "./filler";
 import Logo from "./logo";
 
-const Step = ({ active, classNames, helper }) => (
-	<div>
-		{active === true ? (
-			<div className="fade-in relative w-20 grid">
+export default function Step({ active, classNames, helper }) {
+	if (active === true) {
+		return (
+			<div
+				style={{ width: "min(5rem, 22vw)" }}
+				className="fade-in relative grid"
+			>
 				<div
-					style={{ top: "0.70rem" }}
-					className={`${classNames} absolute w-20 h-1 bg-green-400 z-10`}
+					style={{ top: "0.70rem", width: "min(5rem, 22vw)" }}
+					className={`${
+						classNames ? classNames : ""
+					} absolute h-1 bg-green-400 z-10`}
 				></div>
 				<Logo
 					width={20}
@@ -20,11 +25,19 @@ const Step = ({ active, classNames, helper }) => (
 					</sub>
 				</Logo>
 			</div>
-		) : (
-			<div className="relative w-20 grid">
+		);
+	} else {
+		return (
+			<div style={{ width: "min(5rem, 22vw)" }} className="relative grid">
 				<div
-					style={{ borderColor: "#ddd", top: "0.70rem" }}
-					className={`${classNames} absolute w-20 h-1 bg-gray-200 z-10`}
+					style={{
+						borderColor: "#ddd",
+						top: "0.70rem",
+						width: "min(5rem, 22vw)",
+					}}
+					className={`${
+						classNames ? classNames : ""
+					} absolute h-1 bg-gray-200 z-10`}
 				></div>
 				<Filler
 					width={20}
@@ -36,8 +49,6 @@ const Step = ({ active, classNames, helper }) => (
 					</sub>
 				</Filler>
 			</div>
-		)}
-	</div>
-);
-
-export default Step;
+		);
+	}
+}

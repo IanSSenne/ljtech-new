@@ -2,27 +2,27 @@ import Thumbnail from "./thumbnail";
 
 const apps = [
 	{
-		id: 1,
+		id: "sws",
 		name: "Still Water Stables",
 		href: "/",
 	},
 	{
-		id: 2,
+		id: "pup",
 		name: "Pipes Up",
 		href: "/",
 	},
 	{
-		id: 3,
+		id: "aaa",
 		name: "Still Water Stables",
 		href: "/",
 	},
 	{
-		id: 4,
+		id: "bbb",
 		name: "Still Water Stables",
 		href: "/",
 	},
 	{
-		id: 5,
+		id: "ccc",
 		name: "Still Water Stables",
 		href: "/",
 	},
@@ -30,17 +30,17 @@ const apps = [
 
 const art = [
 	{
-		id: 1,
+		id: "ord",
 		name: "Olson's Recycling & Demolition",
 		href: "/",
 	},
 	{
-		id: 1,
+		id: "ljd",
 		name: "ljtech",
 		href: "/",
 	},
 	{
-		id: 1,
+		id: "ddd",
 		name: "Olson's Recycling & Demolition",
 		href: "/",
 	},
@@ -48,12 +48,12 @@ const art = [
 
 const games = [
 	{
-		id: 1,
+		id: "con",
 		name: "Concentrate",
 		href: "/",
 	},
 	{
-		id: 2,
+		id: "min",
 		name: "Minesweeper",
 		href: "/",
 	},
@@ -61,17 +61,17 @@ const games = [
 
 const components = [
 	{
-		id: 1,
+		id: "ale",
 		name: "Alerts",
 		href: "/",
 	},
 	{
-		id: 2,
+		id: "dro",
 		name: "Dropdowns",
 		href: "/",
 	},
 	{
-		id: 3,
+		id: "tog",
 		name: "Toggles",
 		href: "/",
 	},
@@ -82,48 +82,48 @@ export default function Gallery({ index }) {
 		<div className="p-2">
 			{index === 0 && (
 				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
-					{apps.map((item, i) => (
+					{apps.map((app, i) => (
 						<Thumbnail
-							key={item.id}
-							title={item.name}
+							key={app.id}
+							title={app.name}
 							helper="View"
-							href={item.href}
+							href={app.href}
 						/>
 					))}
 				</ol>
 			)}
 			{index === 1 && (
 				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
-					{art.map((item, i) => (
+					{art.map((piece, i) => (
 						<Thumbnail
-							key={item.id}
-							title={item.name}
+							key={piece.id}
+							title={piece.name}
 							helper="View"
-							href={item.href}
+							href={piece.href}
 						/>
 					))}
 				</ol>
 			)}
 			{index === 2 && (
 				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
-					{components.map((item, i) => (
+					{components.map((component, i) => (
 						<Thumbnail
-							key={item.id}
-							title={item.name}
+							key={component.id}
+							title={component.name}
 							helper="View"
-							href={item.href}
+							href={component.href}
 						/>
 					))}
 				</ol>
 			)}
 			{index === 3 && (
 				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
-					{games.map((item, i) => (
+					{games.map((game, i) => (
 						<Thumbnail
-							key={item.id}
-							title={item.name}
+							key={game.id}
+							title={game.name}
 							helper="View"
-							href={item.href}
+							href={game.href}
 						/>
 					))}
 				</ol>

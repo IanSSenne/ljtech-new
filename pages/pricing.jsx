@@ -4,6 +4,7 @@ import Rubrik from "../components/rubrik";
 import Services from "../components/services";
 import Section from "../components/section";
 import Container from "../components/container";
+import Title from "../components/title";
 
 export default function Pricing() {
 	return (
@@ -16,9 +17,7 @@ export default function Pricing() {
 			<Section dark={true}>
 				<div className="flex justify-center">
 					<div>
-						<h1 className="text-3xl text-center font-black p-2">
-							Plans &amp; Pricing
-						</h1>
+						<Title>Plans &amp; Pricing</Title>
 						<Rubrik />
 					</div>
 				</div>
@@ -30,9 +29,7 @@ export default function Pricing() {
 							What does this all mean?
 						</h2>
 						<p className="text-justify md:text-left">
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-							Accusamus facere adipisci fuga neque quae eligendi laborum ad
-							vitae eos. Beatae quibusdam.
+							Learn more about what each service entails in the chart below.
 						</p>
 					</div>
 					<Services />

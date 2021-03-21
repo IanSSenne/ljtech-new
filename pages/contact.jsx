@@ -1,11 +1,12 @@
 import { useState } from "react";
-import Head from "next/head";
-import Layout from "../components/template/layout";
-import Inputfield from "../components/inputfield";
-import Textfield from "../components/textfield";
 import Button from "../components/button";
-import Section from "../components/section";
 import Container from "../components/container";
+import Head from "next/head";
+import Inputfield from "../components/inputfield";
+import Layout from "../components/template/layout";
+import Section from "../components/section";
+import Textfield from "../components/textfield";
+import Title from "../components/title";
 
 export default function Contact() {
 	const [count, setCount] = useState(1000);
@@ -27,7 +28,7 @@ export default function Contact() {
 				<div className="flex justify-center">
 					<Container size="small">
 						<div className="p-2">
-							<h1 className="text-3xl text-center font-black p-2">Contact</h1>
+							<Title>Contact</Title>
 							<p>
 								You can fill out this form below and I will get back to you as
 								soon as possible!

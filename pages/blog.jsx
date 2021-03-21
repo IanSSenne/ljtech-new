@@ -1,9 +1,11 @@
+import { getSortedPostsData } from "../lib/posts";
+import Container from "../components/container";
 import Head from "next/head";
 import Layout from "../components/template/layout";
-import Thumbnail from "../components/thumbnail";
-import { getSortedPostsData } from "../lib/posts";
 import Section from "../components/section";
-import Container from "../components/container";
+import Thumbnail from "../components/thumbnail";
+import Title from "../components/title";
+
 
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData();
@@ -25,13 +27,9 @@ export default function Pricing({ allPostsData }) {
 				<div className="flex justify-center">
 					<Container size="small">
 						<div className="p-2">
-							<h1 className="text-3xl text-center font-black p-2">Blog</h1>
+							<Title>Blog</Title>
 							<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
-								earum repellat dolor temporibus minima optio harum nam facilis
-								nobis laborum atque quis explicabo in veritatis quos fugiat
-								quod, sequi ipsam aliquam perferendis facere accusantium? Quis
-								quos reiciendis doloremque aliquam quidem?
+								Welcome to the ljtech blog, here I will post my thoughts on coding and web design.
 							</p>
 						</div>
 						<ol className="flex flex-wrap justify-center">

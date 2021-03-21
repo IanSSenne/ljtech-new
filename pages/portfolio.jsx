@@ -1,10 +1,12 @@
 import { useState } from "react";
-import Head from "next/head";
-import Link from "../components/link";
 import Button from "../components/button";
-import Layout from "../components/template/layout";
+import Container from "../components/container";
+import Head from "next/head";
 import Gallery from "../components/gallery";
+import Link from "../components/link";
+import Layout from "../components/template/layout";
 import Section from "../components/section";
+import Title from "../components/title";
 
 const tabs = ["Apps", "Art", "Components", "Games"];
 
@@ -25,23 +27,26 @@ export default function Pricing() {
 			</Head>
 
 			<Section>
-				<div className="max-w-6xl mx-auto">
-					<div className="flex flex-wrap items-center justify-start p-2">
-						{tabs.map((tab, i) => (
-							<Button
-								handleClick={(e) => handleClick(e, i)}
-								key={`${tab}${i}`}
-								classNames={`${
-									actives[i] ? "bg-gray-100 underline" : ""
-								} m-1 border-transparent font-semibold text-purple-500 hover:text-purple-400 transition`}
-							>
-								{tab}
-							</Button>
-						))}
+				<Container size="medium">
+					<div className="p-2">
+						<Title>Portfolio</Title>
+						<div className="flex flex-wrap items-center justify-start">
+							{tabs.map((tab, i) => (
+								<Button
+									handleClick={(e) => handleClick(e, i)}
+									key={tab}
+									classNames={`${
+										actives[i] ? "bg-gray-100 underline" : ""
+									} m-1 border-transparent font-semibold text-purple-500 hover:text-purple-400 transition`}
+								>
+									{tab}
+								</Button>
+							))}
+						</div>
 					</div>
 					<div>
 						{actives.map((active, i) => (
-							<div>
+							<div key={i}>
 								{active == 1 ? (
 									<div>
 										<div className="p-2">
@@ -67,7 +72,7 @@ export default function Pricing() {
 							</div>
 						))}
 					</div>
-				</div>
+				</Container>
 			</Section>
 		</Layout>
 	);

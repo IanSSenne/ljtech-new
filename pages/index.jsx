@@ -1,10 +1,11 @@
+import Bubbles from "../components/bubbles";
+import Container from "../components/container";
+import Clip from "../components/clip";
 import Head from "next/head";
 import Layout from "../components/template/layout";
-import Bubbles from "../components/bubbles";
-import Slides from "../components/slides";
 import Plans from "../components/plans";
-import Clip from "../components/clip";
 import Section from "../components/section";
+import Slides from "../components/slides";
 
 export default function Home() {
 	return (
@@ -45,10 +46,18 @@ export default function Home() {
 				</div>
 			</section>
 			<Section dark={true}>
-				<Slides />
+				<div className="flex justify-center">
+					<Container size="small">
+						<Slides />
+					</Container>
+				</div>
 			</Section>
 			<Section>
-				<Plans />
+				<div className="flex justify-center">
+					<Container size="small">
+						<Plans />
+					</Container>
+				</div>
 			</Section>
 		</Layout>
 	);

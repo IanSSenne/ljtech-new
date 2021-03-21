@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
-import Head from "next/head";
-import Layout from "../components/template/layout";
 import Button from "../components/button";
-import Toggle from "../components/toggle";
+import Container from "../components/container";
+import Head from "next/head";
 import Inputfield from "../components/inputfield";
 import Inputsfield from "../components/inputsfield";
-import Textfield from "../components/textfield";
-import Selectfield from "../components/selectfield";
+import Layout from "../components/template/layout";
 import Section from "../components/section";
+import Selectfield from "../components/selectfield";
 import Steps from "../components/steps";
-import Container from "../components/container";
+import Textfield from "../components/textfield";
+import Toggle from "../components/toggle";
+import Title from "../components/title";
 
 const options = [
 	"Small Business (1 - 99 employees)",
@@ -84,6 +85,7 @@ export default function Survey() {
 				<title>ljtech.ca survey</title>
 			</Head>
 			<Section>
+				<Title>Survey</Title>
 				<Steps step={step} />
 				<Container size="small">
 					<form onSubmit={(e) => handleForm(e)} className="p-1">
