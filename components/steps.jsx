@@ -1,38 +1,89 @@
-import React from "react";
-import Final from "../components/final";
-import Step from "../components/step";
+import Logo from "./logo";
+import Filler from "./filler";
+import Container from "./container";
 
-const Steps = ({ step }) => (
-	<div className="flex justify-center h-8">
-		<div>
-			{step === 0 || step === 1 || step === 2 ? (
-				<Step helper="Step 1" active={true} classNames="rounded-l-full" />
-			) : (
-				<Step helper="Step 1" active={false} classNames="rounded-r-full" />
-			)}
-		</div>
-		<div>
-			{step === 1 || step === 2 ? (
-				<Step helper="Step 2" active={true} />
-			) : (
-				<Step helper="Step 2" active={false} />
-			)}
-		</div>
-		<div>
-			{step === 2 ? (
-				<Step helper="Step 3" active={true} />
-			) : (
-				<Step helper="Step 3" active={false} />
-			)}
-		</div>
-		<div>
-			{step === 2 ? (
-				<Final before="Submitted" active={true} classNames="rounded-r-full" />
-			) : (
-				<Final before="Submitted" active={false} classNames="rounded-r-full" />
-			)}
-		</div>
-	</div>
-);
-
-export default Steps;
+export default function Steps({ step, min, max }) {
+	return (
+		<Container size="small">
+			<div className="relative flex content-center items-center justify-center">
+				<div className="text-xs w-full m-1 absolute flex">
+					{step >= 0 ? (
+						<div className="relative flex flex-1 items-center">
+							<Logo type="green" width="100%" height={30} />
+							<span className="select-none absolute text-center w-full m-1">
+								1
+							</span>
+						</div>
+					) : (
+						<div className="relative flex flex-1 items-center">
+							<Filler width="100%" height={30} />
+							<span className="select-none absolute text-center w-full m-1">
+								1
+							</span>
+						</div>
+					)}
+					{step >= 1 ? (
+						<div className="relative flex flex-1 items-center">
+							<Logo type="green" width="100%" height={30} />
+							<span className="select-none absolute text-center w-full m-1">
+								2
+							</span>
+						</div>
+					) : (
+						<div className="relative flex flex-1 items-center">
+							<Filler width="100%" height={30} />
+							<span className="select-none absolute text-center w-full m-1">
+								2
+							</span>
+						</div>
+					)}
+					{step >= 2 ? (
+						<div className="relative flex flex-1 items-center">
+							<Logo type="green" width="100%" height={30} />
+							<span className="select-none absolute text-center w-full m-1">
+								3
+							</span>
+						</div>
+					) : (
+						<div className="relative flex flex-1 items-center">
+							<Filler width="100%" height={30} />
+							<span className="select-none absolute text-center w-full m-1">
+								3
+							</span>
+						</div>
+					)}
+					{step === 3 ? (
+						<div className="relative flex flex-1 items-center">
+							<Logo type="purple" width="100%" height={30} />
+							<span className="select-none absolute text-center w-full m-1">
+								4
+							</span>
+						</div>
+					) : (
+						<div className="relative flex flex-1 items-center">
+							<Filler width="100%" height={30} />
+							<span className="select-none absolute text-center w-full m-1">
+								4
+							</span>
+						</div>
+					)}
+				</div>
+				{console.log(step)}
+				<progress
+					className="h-1 w-full m-1 border rounded-sm overflow-hidden"
+					min={min}
+					max={max}
+					value={
+						step === 0
+							? 0.5
+							: step === 1 || step === 3
+							? step * 0.5 + step
+							: 2.5
+					}
+				>
+					{step}
+				</progress>
+			</div>
+		</Container>
+	);
+}

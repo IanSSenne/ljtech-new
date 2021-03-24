@@ -86,7 +86,7 @@ export default function Survey() {
 			</Head>
 			<Section>
 				<Title>Survey</Title>
-				<Steps step={step} />
+				<Steps min={0} max={4} step={step} />
 				<Container size="small">
 					<form onSubmit={(e) => handleForm(e)} className="p-1">
 						{/* first part */}

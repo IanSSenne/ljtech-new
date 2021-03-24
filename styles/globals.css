@@ -58,3 +58,11 @@
 * {
 	scroll-behavior: smooth;
 }
+
+progress::-webkit-progress-value {
+	background-image: -webkit-linear-gradient(left, #10b981, #10b981);
+}
+
+progress::-webkit-progress-bar {
+	background: transparent;
+}

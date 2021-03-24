@@ -1,24 +1,7 @@
-☐ about
-
-
-☐ faq
-
-
-✔ blog @done(21-03-21 13:15)
-  markdown stuff
-
-
-
-
-
-
-
-
-the 6 steps for the 6 slides :
-
-  ☐ Design Consultation
-  ☐ Rough Drafting
-  ☐ Coding Everything
-  ☐ Project Launch
-  ☐ Perfomance Analytics
-  ☐ Monitoring and Optimization
+☐ steps @started(21-03-23 18:41)
+  - house the step
+☐ step @started(21-03-23 18:41)
+  - add to steps, and remove extra component  
+  - have type, beginning, middle, end
+☐ final @started(21-03-23 18:41)
+  - remove it entirely
