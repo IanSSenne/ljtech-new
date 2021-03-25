@@ -1,8 +1,7 @@
-import Container from "../components/container";
 import Head from "next/head";
+import { Container, Section } from "../components/container/all";
+import { Title } from "../components/container/title";
 import Layout from "../components/template/layout";
-import Section from "../components/section";
-import Title from "../components/title";
 
 export default function Pricing() {
 	return (

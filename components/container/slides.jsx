@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import Button from "./button";
+import Button from "../button/button";
 import Container from "./container";
-import Link from "./link";
-import Logo from "./logo";
-import Outline from "./outline";
-import Title from "./title";
+import Link from "../text/link";
+import Logo from "../svg/logo";
+import Outline from "../svg/outline";
+import Title from "../text/title";
 
 const slides = [
 	{

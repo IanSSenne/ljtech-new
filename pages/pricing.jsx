@@ -1,10 +1,12 @@
 import Head from "next/head";
+import {
+	Container,
+	Rubrik,
+	Services,
+	Section,
+} from "../components/container/all";
+import { Title } from "../components/text/all";
 import Layout from "../components/template/layout";
-import Rubrik from "../components/rubrik";
-import Services from "../components/services";
-import Section from "../components/section";
-import Container from "../components/container";
-import Title from "../components/title";
 
 export default function Pricing() {
 	return (

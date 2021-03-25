@@ -1,11 +1,8 @@
 import { getSortedPostsData } from "../lib/posts";
-import Container from "../components/container";
 import Head from "next/head";
+import { Container, Section, Thumbnail } from "../components/container/all";
+import { Title } from "../components/text/all";
 import Layout from "../components/template/layout";
-import Section from "../components/section";
-import Thumbnail from "../components/thumbnail";
-import Title from "../components/title";
-
 
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData();
@@ -29,7 +26,8 @@ export default function Pricing({ allPostsData }) {
 						<div className="p-2">
 							<Title>Blog</Title>
 							<p>
-								Welcome to the ljtech blog, here I will post my thoughts on coding and web design.
+								Welcome to the ljtech blog, here I will post my thoughts on
+								coding and web design.
 							</p>
 						</div>
 						<ol className="flex flex-wrap justify-center">

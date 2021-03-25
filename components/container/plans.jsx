@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Container from "./container";
-import Link from "./link";
-import Toggle from "./toggle";
-import Title from "./title";
+import Link from "../text/link";
+import Toggle from "../button/toggle";
+import Title from "../text/title";
 
 const plans = [
 	{

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Ballot from "./ballot";
-import Link from "./link";
-import Toggle from "./toggle";
+import Ballot from "../text/ballot";
+import Link from "../text/link";
+import Toggle from "../button/toggle";
 
 export default function Rubrik() {
 	const [active, setActive] = useState(false);
@@ -120,7 +120,7 @@ export default function Rubrik() {
 										<span className="text-xs md:text-sm">/yr</span>
 									) : (
 										<span className="text-xs md:text-sm">/mo</span>
-									)}{" "}
+									)}
 								</h3>
 							</div>
 						) : (

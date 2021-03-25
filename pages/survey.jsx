@@ -1,16 +1,15 @@
-import { useEffect, useState } from "react";
-import Button from "../components/button";
-import Container from "../components/container";
+import { useState } from "react";
 import Head from "next/head";
-import Inputfield from "../components/inputfield";
-import Inputsfield from "../components/inputsfield";
+import { Button, Toggle } from "../components/button/all";
+import { Container, Section, Steps } from "../components/container/all";
+import {
+	Inputfield,
+	Inputsfield,
+	Selectfield,
+	Textfield,
+} from "../components/form/all";
+import { Title } from "../components/text/all";
 import Layout from "../components/template/layout";
-import Section from "../components/section";
-import Selectfield from "../components/selectfield";
-import Steps from "../components/steps";
-import Textfield from "../components/textfield";
-import Toggle from "../components/toggle";
-import Title from "../components/title";
 
 const options = [
 	"Small Business (1 - 99 employees)",
@@ -42,8 +41,6 @@ export default function Survey() {
 
 	const changeFields = (e, i) => {
 		const newTarget = e.target.value;
-		console.log(e.target.value);
-		console.log(newTarget);
 		const newArray = [...fields];
 		newArray[i] = newTarget;
 		setFields(newArray);
@@ -54,7 +51,6 @@ export default function Survey() {
 		const newArray = [...fields];
 		newArray.splice(i, 1);
 		setFields(newArray);
-		console.log(fields);
 	};
 
 	const nextStep = (e) => {
@@ -75,10 +71,6 @@ export default function Survey() {
 		e.preventDefault();
 	};
 
-	useEffect(() => {
-		console.log(step);
-	});
-
 	return (
 		<Layout>
 			<Head>
@@ -86,12 +78,11 @@ export default function Survey() {
 			</Head>
 			<Section>
 				<Title>Survey</Title>
-				<Steps min={0} max={4} step={step} />
+				<Steps step={step} />
 				<Container size="small">
 					<form onSubmit={(e) => handleForm(e)} className="p-1">
-						{/* first part */}
 						{step === 0 && (
-							<div style={{ minHeight: "30.7rem" }}>
+							<div>
 								<div className="md:flex md:space-x-2">
 									<Inputfield
 										legend="First name"
@@ -132,9 +123,8 @@ export default function Survey() {
 								</div>
 							</div>
 						)}
-						{/* second part */}
 						{step === 1 && (
-							<div style={{ minHeight: "30.7rem" }}>
+							<div>
 								<div className="flex content-center items-center justify-center">
 									<div>Old Project</div>
 									<Toggle
@@ -193,9 +183,8 @@ export default function Survey() {
 								</div>
 							</div>
 						)}
-						{/* part 3 */}
 						{step === 2 && (
-							<div style={{ minHeight: "30.7rem" }}>
+							<div>
 								<Selectfield
 									legend="Business size"
 									name="business"
@@ -207,6 +196,7 @@ export default function Survey() {
 									style={{ padding: "0", border: "none", height: "40px" }}
 									legend="Brand color"
 									name="color"
+									defaultValue="#05a05a"
 									type="color"
 									helper="Enter your brand color."
 									isRequired={true}

@@ -1,11 +1,7 @@
-import Bubbles from "../components/bubbles";
-import Container from "../components/container";
-import Clip from "../components/clip";
 import Head from "next/head";
+import { Container, Plans, Section, Slides } from "../components/container/all";
+import { Bubbles, Clip } from "../components/svg/all";
 import Layout from "../components/template/layout";
-import Plans from "../components/plans";
-import Section from "../components/section";
-import Slides from "../components/slides";
 
 export default function Home() {
 	return (

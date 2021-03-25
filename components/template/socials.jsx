@@ -1,5 +1,5 @@
-import { Facebook, Github, Linkedin, Twitch, Twitter } from "../social/all";
-import Link from "../link";
+import { Facebook, Github, Linkedin, Twitch, Twitter } from "../svg/all";
+import Link from "../text/link";
 
 const socialLinks = [
 	{

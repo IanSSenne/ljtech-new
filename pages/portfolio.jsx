@@ -1,12 +1,9 @@
 import { useState } from "react";
-import Button from "../components/button";
-import Container from "../components/container";
 import Head from "next/head";
-import Gallery from "../components/gallery";
-import Link from "../components/link";
+import { Button } from "../components/button/all";
+import { Container, Section, Gallery } from "../components/container/all";
+import { Link, Title } from "../components/text/all";
 import Layout from "../components/template/layout";
-import Section from "../components/section";
-import Title from "../components/title";
 
 const tabs = ["Apps", "Art", "Components", "Games"];
 

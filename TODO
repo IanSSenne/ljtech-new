@@ -1,7 +1,113 @@
-☐ steps @started(21-03-23 18:41)
-  - house the step
-☐ step @started(21-03-23 18:41)
-  - add to steps, and remove extra component  
-  - have type, beginning, middle, end
-☐ final @started(21-03-23 18:41)
-  - remove it entirely
+Thursday, March 25:
+
+  ☐ header
+    - toggle small on mobile
+    - nav menu is fuckered
+      - consider making hamburger
+      - logo routes to index
+
+
+
+  ☐ landing
+    - bubbles is weird and uninteresting
+    - look at [vercel] fancy text for inspiration
+      eg - (https://vercel.com/home?utm_source=next-site&utm_medium=banner&utm_campaign=next-website)
+
+
+
+  ☐ slideshow
+    - need images
+    - text overhaul
+      - needs padding or font-weight
+
+
+
+  ☐ plans
+    - replace lorem ipsum
+    - put text underneath
+    - plans feel small on desktop
+      - also bad on mobile
+
+
+    
+  ☐ about
+    - look for stuffs
+    - design page mockup
+
+
+
+  ☐ blog
+    - min-width container fix
+    - add mockup content for test
+    - add padding
+
+
+
+  ☐ contact
+    - add fieldset, legend and border to form
+    - inputfield rename and replace fieldset, legend and border
+      - this includes inputsfield textfield and selectfield
+        export these components first
+
+
+
+  ☐ faq
+    - look for stuffs
+    - design page mockup
+
+
+
+  ☐ portfolio
+    - add mockup images for test
+    - center the gallery on devices
+  
+
+
+  ☐ pricing
+    - further mobile testing
+    - toggle too small on mobile
+
+
+
+  ☐ survey
+    - add fieldset, legend and border to form
+    - inputfield rename and replace fieldset, legend and border
+      - this includes inputsfield textfield and selectfield
+        export these components first
+    - change text on steps
+      - should steps be filled 1 step if they have not completed anything? probably not
+
+
+  ☐ extra
+    - clean up the components folder
+      - introduce new folders
+        ✔ template(header, menu, nav, socials, copyright, footer, meta, layout) @done(21-03-25 13:25)
+        ✔ text(title, ballot, link) @done(21-03-25 13:25)
+        ✔ container(section, thumbnail, container, rubrik, gallery, slides, services#hashlist) @done(21-03-25 13:25)
+        ✔ form(inputfield, inputsfield, textfield,) @done(21-03-25 13:39)
+        ✔ button(button, theme) @done(21-03-25 12:59)
+        ✔ svg(logo, clip, bubbles, outline) @done(21-03-25 13:39)
+    - refactor / check pages for proper layouts using container component
+
+
+
+    ☐ rubrik
+      - turn into a reusable component
+
+
+
+    ☐ services
+      - rename to something like hashlist
+      - make services reusable
+      - pass dat data back
+
+
+
+    ☐ outline
+      - add outline to logo?
+
+
+
+    ☐ logo
+      - make sure it doesnt render all the svgs
+        this should render the requested one only

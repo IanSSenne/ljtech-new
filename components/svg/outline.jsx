@@ -1,6 +1,6 @@
 const Outline = ({ classNames, width, height }) => (
 	<svg
-		className={`${classNames} m-1 inline-flex`}
+		className={`${classNames ? classNames : ""}`}
 		xmlns="http://www.w3.org/2000/svg"
 		width={width}
 		height={height}

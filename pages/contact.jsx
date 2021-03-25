@@ -1,12 +1,10 @@
 import { useState } from "react";
-import Button from "../components/button";
-import Container from "../components/container";
 import Head from "next/head";
-import Inputfield from "../components/inputfield";
+import { Button } from "../components/button/all";
+import { Container, Section } from "../components/container/all";
+import { Inputfield, Textfield } from "../components/form/all";
+import { Title } from "../components/text/all";
 import Layout from "../components/template/layout";
-import Section from "../components/section";
-import Textfield from "../components/textfield";
-import Title from "../components/title";
 
 export default function Contact() {
 	const [count, setCount] = useState(1000);

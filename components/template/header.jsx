@@ -1,9 +1,8 @@
-import Link from "../link";
-import Logo from "../logo";
+import Link from "../text/link";
+import Logo from "../svg/logo";
 import Menu from "./menu";
-import Theme from "../theme";
+import Theme from "../button/theme";
 
-// is passed into the menu component for href links
 const list = [
 	"/",
 	"/about",
@@ -18,7 +17,7 @@ const list = [
 const green = (
 	<Logo
 		type="green"
-		extraNames="blur"
+		style={{ margin: ".25rem" }}
 		classNames="rounded-sm"
 		src="./ljtech-g.svg"
 		width={25}
@@ -28,7 +27,7 @@ const green = (
 const purple = (
 	<Logo
 		type="purple"
-		extraNames="blur"
+		style={{ margin: ".25rem" }}
 		classNames="rounded-sm"
 		src="./ljtech-g.svg"
 		width={25}
@@ -38,7 +37,7 @@ const purple = (
 
 const Header = () => (
 	<header className="max-w-6xl mx-auto flex items-center justify-between p-2">
-		<div className="flex items-center space-x-2">
+		<div className="flex items-center space-x-4">
 			<Menu buttonOn={green} buttonOff={purple} list={list} />
 			<Link
 				href="/about"
