@@ -20,14 +20,14 @@ export default function Inputs({
 		<div className={`${classNames ?? ""} flex-1 mb-2`}>
 			<ul>
 				{fields.map((field, i) => (
-					<li className="flex" key={`field${i}`}>
+					<li className="flex" key={i}>
 						<label className="flex flex-wrap p-1" htmlFor={name}>
-							<div className="w-full mx-1 px-2">{label}</div>
+							<div className="w-full px-2">{label}</div>
 							<input
 								style={style}
 								className="px-2 py-1 w-full bg-transparent"
-								name={`${name}${[i]}`}
-								id={`${name}${[i]}`}
+								name={`${name}${i}`}
+								id={`${name}${i}`}
 								type={type}
 								id={name}
 								onChange={(e) => handleChange(e, i)}

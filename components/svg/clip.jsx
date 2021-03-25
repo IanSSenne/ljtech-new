@@ -1,5 +1,5 @@
 const Clip = ({ classNames, width, height }) => (
-	<div className={`${classNames} relative -bottom-1`}>
+	<div className={`${classNames ?? ""} relative -bottom-1`}>
 		<svg
 			style={{ fill: "currentcolor" }}
 			xmlns="http://www.w3.org/2000/svg"

@@ -16,7 +16,7 @@ const Thumbnail = ({
 			maxWidth: "min(20rem,100vw)",
 			minWidth: "min(20rem,100vw)",
 		}}
-		className={`${classNames} flex-1 m-1 rounded-md overflow-hidden shadow-sm border-black border`}
+		className={`${classNames ?? ""} flex-1 m-1 rounded-md overflow-hidden shadow-sm border-black border`}
 	>
 		<img src={src} alt={title} className="w-full h-24" />
 		<div className="p-2 text-light">

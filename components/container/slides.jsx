@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import Button from "../button/button";
-import Container from "./container";
 import Link from "../text/link";
 import Logo from "../svg/logo";
-import Outline from "../svg/outline";
 import Title from "../text/title";
 
 const slides = [
@@ -107,8 +105,9 @@ export default function Slides() {
 					))}
 				</div>
 				<div className="relative px-2 flex justify-center">
-					<Outline
-						classNames="mx-auto absolute z-30"
+					<Logo
+						classNames="mx-auto inset-x-0 absolute z-30"
+						type="outline"
 						width="clamp(11rem, 33vw, 22rem)"
 						height="clamp(11rem, 33vw, 22rem)"
 					/>

@@ -35,14 +35,14 @@ export default function Contact() {
 						<form onSubmit={(e) => handleForm(e)} className="p-1">
 							<div className="md:flex md:space-x-2">
 								<Inputfield
-									legend="First name"
+									label="First name"
 									helper="Enter your first name"
 									name="first"
 									type="text"
 									placeholder="John"
 								/>
 								<Inputfield
-									legend="Last name"
+									label="Last name"
 									helper="Enter your last name"
 									name="last"
 									type="text"
@@ -51,14 +51,14 @@ export default function Contact() {
 							</div>
 							<div className="md:flex md:space-x-2">
 								<Inputfield
-									legend="Email address"
+									label="Email address"
 									helper="Enter your email address"
 									name="email"
 									type="email"
 									placeholder="example@email.com"
 								/>
 								<Inputfield
-									legend="Telephone #"
+									label="Telephone #"
 									helper="Enter your tel #"
 									name="telephone"
 									type="tel"
@@ -66,11 +66,11 @@ export default function Contact() {
 								/>
 							</div>
 							<Textfield
-								legend="Your message"
+								label="Your message"
 								placeholder="Whats on your mind?"
 								max={1000}
 								handleChange={(e) => setCount(1000 - e.target.value.length)}
-								helper={count}
+								helper={`Remaining: ${count}`}
 							/>
 							<div className="grid">
 								<Button

@@ -4,7 +4,7 @@ export default function Step({ classNames, step, text, type }) {
 	return (
 		<div className="flex-1 flex content-center items-center justify-center h-8 relative">
 			<span
-				className={`${classNames ? classNames : ""} border flex-1 h-1 z-20 ${
+				className={`${classNames ?? ""} border flex-1 h-1 z-20 ${
 					step === "1" ? "rounded-l-full" : "wtf"
 				}`}
 			></span>

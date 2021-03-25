@@ -1,4 +1,4 @@
-import { Facebook, Github, Linkedin, Twitch, Twitter } from "../svg/all";
+import { Social } from "../svg/all";
 import Link from "../text/link";
 
 const socialLinks = [
@@ -6,31 +6,31 @@ const socialLinks = [
 		id: 0,
 		name: "Facebook",
 		href: "https://www.facebook.com/ljtechdotca",
-		icon: <Facebook width={38} height={38} />,
+		icon: <Social type="facebook" width={38} height={38} />,
 	},
 	{
 		id: 1,
 		name: "Github",
 		href: "https://github.com/landonjohnsontechnologies",
-		icon: <Github width={38} height={38} />,
+		icon: <Social type="github" width={38} height={38} />,
 	},
 	{
 		id: 2,
 		name: "Linkedin",
 		href: "https://www.linkedin.com/in/ljtechnology/",
-		icon: <Linkedin width={38} height={38} />,
+		icon: <Social type="linkedin" width={38} height={38} />,
 	},
 	{
 		id: 3,
 		name: "Twitch",
 		href: "https://www.twitch.tv/ljtechdotca",
-		icon: <Twitch width={38} height={38} />,
+		icon: <Social type="twitch" width={38} height={38} />,
 	},
 	{
 		id: 4,
 		name: "Twitter",
 		href: "https://twitter.com/ljtechnology",
-		icon: <Twitter width={38} height={38} />,
+		icon: <Social type="twitter" width={38} height={38} />,
 	},
 ];
 
