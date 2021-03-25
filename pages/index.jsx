@@ -1,7 +1,7 @@
 import Head from "next/head";
-import { Container, Plans, Section, Slides } from "../components/container/all";
-import { Bubbles, Clip } from "../components/svg/all";
-import Layout from "../components/template/layout";
+import Layout from "@template/layout";
+import { Container, Plans, Section, Slides } from "@container/all";
+import { Bubbles, Clip } from "@svg/all";
 
 export default function Home() {
 	return (

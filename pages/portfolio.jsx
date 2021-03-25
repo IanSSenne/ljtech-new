@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Head from "next/head";
-import { Button } from "../components/button/all";
-import { Container, Section, Gallery } from "../components/container/all";
-import { Link, Title } from "../components/text/all";
-import Layout from "../components/template/layout";
+import Layout from "@template/layout";
+import { Button } from "@button/all";
+import { Container, Section, Gallery } from "@container/all";
+import { Link, Title } from "@text/all";
 
 const tabs = ["Apps", "Art", "Components", "Games"];
 

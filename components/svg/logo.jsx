@@ -1,9 +1,9 @@
 const Logo = ({ before, children, classNames, style, type, width, height }) => (
-	<div style={style} className={`${classNames ? classNames : ""} `}>
+	<div style={style} className={classNames ?? ""}>
 		{before}
 		{type === "green" && (
 			<svg
-				className={`${classNames} inline-flex`}
+				className={`${classNames ?? ""} inline-flex`}
 				xmlns="http://www.w3.org/2000/svg"
 				width={width}
 				height={height}
@@ -56,7 +56,7 @@ const Logo = ({ before, children, classNames, style, type, width, height }) => (
 		)}
 		{type === "purple" && (
 			<svg
-				className={`${classNames} inline-flex`}
+				className={`${classNames ?? ""} inline-flex`}
 				xmlns="http://www.w3.org/2000/svg"
 				width={width}
 				height={height}
@@ -109,7 +109,7 @@ const Logo = ({ before, children, classNames, style, type, width, height }) => (
 		)}
 		{type === "red" && (
 			<svg
-				className={`${classNames} inline-flex`}
+				className={`${classNames ?? ""} inline-flex`}
 				xmlns="http://www.w3.org/2000/svg"
 				width={width}
 				height={height}
@@ -162,7 +162,7 @@ const Logo = ({ before, children, classNames, style, type, width, height }) => (
 		)}
 		{type === "filler" && (
 			<svg
-				className={`${classNames} inline-flex`}
+				className={`${classNames ?? ""} inline-flex`}
 				xmlns="http://www.w3.org/2000/svg"
 				width={width}
 				height={height}
@@ -173,6 +173,22 @@ const Logo = ({ before, children, classNames, style, type, width, height }) => (
 					data-name="Union 1"
 					d="M23.51,75.6,1.792,56.068A5.462,5.462,0,0,1,0,52.1V24.959A5.438,5.438,0,0,1,1.792,20.93L23.51,1.4a5.4,5.4,0,0,1,7.256,0L52.471,20.918a5.452,5.452,0,0,1,1.8,4.041V52.1a5.438,5.438,0,0,1-1.8,4.028L30.766,75.6a5.4,5.4,0,0,1-7.256,0Zm.928-73.172L2.72,21.96a4.028,4.028,0,0,0-1.271,3V52.1a4.026,4.026,0,0,0,1.334,3L24.437,74.571a4.028,4.028,0,0,0,5.4,0L51.544,55.04A4.041,4.041,0,0,0,52.891,52.1V24.959a4.041,4.041,0,0,0-1.347-3L29.838,2.428a4.028,4.028,0,0,0-5.4,0Zm-.2,69.627L4.321,54.137a4.316,4.316,0,0,1-1.435-3.227V26.078a4.358,4.358,0,0,1,1.435-3.2v0L24.234,4.945a4.331,4.331,0,0,1,5.808,0l19.9,17.931a4.335,4.335,0,0,1,1.449,3.241V50.909a4.319,4.319,0,0,1-1.435,3.227L30.042,72.055a4.333,4.333,0,0,1-5.808,0Z"
 					transform="translate(0 0)"
+					fill="#ddd"
+				/>
+			</svg>
+		)}
+		{type === "outline" && (
+			<svg
+				className={`${classNames ?? ""}`}
+				xmlns="http://www.w3.org/2000/svg"
+				width={width}
+				height={height}
+				viewBox="0 0 54.202 76.896"
+			>
+				<path
+					id="outline"
+					data-name="outline"
+					d="M27.132,77a5.4,5.4,0,0,1-3.622-1.4L1.792,56.068A5.464,5.464,0,0,1,0,52.1V24.959A5.439,5.439,0,0,1,1.792,20.93L23.51,1.4a5.4,5.4,0,0,1,7.256,0L52.471,20.918a5.452,5.452,0,0,1,1.8,4.041V52.1a5.439,5.439,0,0,1-1.8,4.028L30.766,75.6A5.414,5.414,0,0,1,27.132,77ZM2.72,21.96a4.028,4.028,0,0,0-1.271,3V52.1a4.028,4.028,0,0,0,1.334,3L24.437,74.571a4.028,4.028,0,0,0,5.4,0L51.544,55.039A4.041,4.041,0,0,0,52.891,52.1V24.959a4.041,4.041,0,0,0-1.347-3L29.838,2.428a4.028,4.028,0,0,0-5.4,0Z"
 					fill="#ddd"
 				/>
 			</svg>

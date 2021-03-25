@@ -1,15 +1,10 @@
 import { useState } from "react";
 import Head from "next/head";
-import { Button, Toggle } from "../components/button/all";
-import { Container, Section, Steps } from "../components/container/all";
-import {
-	Inputfield,
-	Inputsfield,
-	Selectfield,
-	Textfield,
-} from "../components/form/all";
-import { Title } from "../components/text/all";
-import Layout from "../components/template/layout";
+import Layout from "@template/layout";
+import { Button, Toggle } from "@button/all";
+import { Container, Section, Steps } from "@container/all";
+import { Inputfield, Inputsfield, Selectfield, Textfield } from "@form/all";
+import { Title } from "@text/all";
 
 const options = [
 	"Small Business (1 - 99 employees)",
