@@ -1,4 +1,4 @@
-import Bubble from "./bubbles";
+import Bubbles from "./bubbles";
 import Clip from "./clip";
 import Facebook from "./facebook";
 import Github from "./github";
@@ -9,7 +9,7 @@ import Twitch from "./twitch";
 import Twitter from "./twitter";
 
 export {
-	Bubble,
+	Bubbles,
 	Clip,
 	Facebook,
 	Github,

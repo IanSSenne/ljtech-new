@@ -1,7 +1,7 @@
-export default function Inputfield({
+export default function Input({
 	style,
 	classNames,
-	legend,
+	label,
 	name,
 	type,
 	placeholder,
@@ -14,13 +14,9 @@ export default function Inputfield({
 	helper,
 }) {
 	return (
-		<fieldset
-			className={`${
-				classNames ? classNames : ""
-			} flex-1 border rounded-sm mb-2`}
-		>
-			<legend className="mx-1 px-2">{legend}</legend>
-			<label className="flex p-1" htmlFor={name}>
+		<div className={`${classNames ?? ""} flex-1 mb-2`}>
+			<label className="flex flex-wrap p-1" htmlFor={name}>
+				<div className="w-full mx-1 px-2">{label}</div>
 				<input
 					style={style}
 					className="flex-1 border px-2 py-1 rounded-sm bg-transparent"
@@ -37,6 +33,6 @@ export default function Inputfield({
 				/>
 			</label>
 			<div className="opacity-60 text-sm font-semibold px-2 pb-1">{helper}</div>
-		</fieldset>
+		</div>
 	);
 }

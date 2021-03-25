@@ -80,7 +80,7 @@ export default function Survey() {
 							<div>
 								<div className="md:flex md:space-x-2">
 									<Inputfield
-										legend="First name"
+										label="First name"
 										name="first"
 										type="text"
 										placeholder="John"
@@ -89,7 +89,7 @@ export default function Survey() {
 										isRequired={true}
 									/>
 									<Inputfield
-										legend="Last name"
+										label="Last name"
 										name="last"
 										type="text"
 										placeholder="Smith"
@@ -100,7 +100,7 @@ export default function Survey() {
 								</div>
 								<div className="md:flex md:space-x-2">
 									<Inputfield
-										legend="Email address"
+										label="Email address"
 										name="email"
 										type="email"
 										placeholder="exmaple@email.com"
@@ -108,7 +108,7 @@ export default function Survey() {
 										isRequired={true}
 									/>
 									<Inputfield
-										legend="Phone number"
+										label="Phone number"
 										name="tel"
 										type="tel"
 										placeholder="(555) 555-4545"
@@ -132,7 +132,7 @@ export default function Survey() {
 								</div>
 								{active ? (
 									<Inputfield
-										legend="Project name"
+										label="Project name"
 										name="project"
 										type="text"
 										placeholder="new-project.com"
@@ -141,7 +141,7 @@ export default function Survey() {
 									/>
 								) : (
 									<Inputfield
-										legend="Website name"
+										label="Website name"
 										name="project"
 										type="text"
 										placeholder="website.com"
@@ -150,7 +150,7 @@ export default function Survey() {
 									/>
 								)}
 								<Textfield
-									legend="Your goals"
+									label="Your goals"
 									name="goals"
 									placeholder="What are your goals for this project?"
 									handleChange={(e) => setCount(2000 - e.target.value.length)}
@@ -159,7 +159,7 @@ export default function Survey() {
 								/>
 								<div className="flex flex-wrap space-x-2">
 									<Inputfield
-										legend="Page count"
+										label="Page count"
 										name="pages"
 										type="number"
 										placeholder="1"
@@ -169,7 +169,7 @@ export default function Survey() {
 										isRequired={true}
 									/>
 									<Inputfield
-										legend="Project deadline"
+										label="Project deadline"
 										name="deadline"
 										type="date"
 										helper="Enter your project deadline."
@@ -181,7 +181,7 @@ export default function Survey() {
 						{step === 2 && (
 							<div>
 								<Selectfield
-									legend="Business size"
+									label="Business size"
 									name="business"
 									helper="Enter your businesses size."
 									isRequired={true}
@@ -189,7 +189,7 @@ export default function Survey() {
 								/>
 								<Inputfield
 									style={{ padding: "0", border: "none", height: "40px" }}
-									legend="Brand color"
+									label="Brand color"
 									name="color"
 									defaultValue="#05a05a"
 									type="color"
@@ -201,7 +201,7 @@ export default function Survey() {
 										padding: "0",
 										border: "none",
 									}}
-									legend="Budget"
+									label="Budget"
 									name="project"
 									type="range"
 									placeholder="new-project.com"
@@ -214,7 +214,7 @@ export default function Survey() {
 									isRequired={true}
 								/>
 								<Inputsfield
-									legend="Competitor Websites"
+									label="Competitor Websites"
 									fields={fields}
 									type="url"
 									placeholder="https://example.com"

@@ -79,8 +79,8 @@ Thursday, March 25:
 
 
   ☐ extra
-    - clean up the components folder
-      - introduce new folders
+    ✔ clean up the components folder @done(21-03-25 15:29)
+      ✔ introduce new folders @done(21-03-25 15:29)
         ✔ template(header, menu, nav, socials, copyright, footer, meta, layout) @done(21-03-25 13:25)
         ✔ text(title, ballot, link) @done(21-03-25 13:25)
         ✔ container(section, thumbnail, container, rubrik, gallery, slides, services#hashlist) @done(21-03-25 13:25)

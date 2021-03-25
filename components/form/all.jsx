@@ -1,6 +1,6 @@
-import Inputfield from "./inputfield";
-import Inputsfield from "./inputsfield";
-import Selectfield from "./selectfield";
-import Textfield from "./textfield";
+import Inputfield from "./input";
+import Inputsfield from "./inputs";
+import Selectfield from "./select";
+import Textfield from "./textarea";
 
 export { Inputfield, Inputsfield, Selectfield, Textfield };
