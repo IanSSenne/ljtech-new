@@ -1,6 +1,6 @@
-import Bubbles from "./bubbles";
 import Clip from "./clip";
 import Logo from "./logo";
+import Love from "./love";
 import Social from "./social";
 
-export { Bubbles, Clip, Logo, Social };
+export { Clip, Logo, Love, Social };

@@ -1,61 +1,69 @@
-import Link from "../text/link";
-import Logo from "../svg/logo";
-import Menu from "./menu";
-import Theme from "../button/theme";
+import { useState } from "react";
+import Link from "@text/link";
+import Logo from "@svg/logo";
+import Menu from "@button/menu";
+import Theme from "@button/theme";
 
-const list = [
-	"/",
-	"/about",
-	"/blog",
-	"/contact",
-	"/faq",
-	"/portfolio",
-	"/pricing",
-	"/survey",
+const menuList = [
+	{
+		name: "Home",
+		href: "/",
+	},
+	{
+		name: "About",
+		href: "/about",
+	},
+	{
+		name: "Blog",
+		href: "/blog",
+	},
+	{
+		name: "Contact",
+		href: "/contact",
+	},
+	{
+		name: "Portfolio",
+		href: "/portfolio",
+	},
+	{
+		name: "Pricing",
+		href: "/pricing",
+	},
+	{
+		name: "Survey",
+		href: "/survey",
+	},
 ];
 
-const green = (
-	<Logo
-		type="green"
-		style={{ margin: ".25rem" }}
-		classNames="rounded-sm"
-		src="./ljtech-g.svg"
-		width={25}
-		height={25}
-	/>
-);
-const purple = (
-	<Logo
-		type="purple"
-		style={{ margin: ".25rem" }}
-		classNames="rounded-sm"
-		src="./ljtech-g.svg"
-		width={25}
-		height={25}
-	/>
-);
+export default function Header() {
+	const [active, setActive] = useState(false);
 
-const Header = () => (
-	<header className="max-w-6xl mx-auto flex items-center justify-between p-2">
-		<div className="flex items-center space-x-4">
-			<Menu buttonOn={green} buttonOff={purple} list={list} />
-			<Link
-				href="/about"
-				classNames="transition hover:border-green-500 hover:text-green-500"
-			>
-				Why ljtech?
-			</Link>
-		</div>
-		<div className="flex items-center space-x-2">
-			<Theme />
-			<Link
-				href="/contact"
-				classNames="transition px-2 py-1 border rounded-sm hover:border-purple-500 hover:text-purple-500"
-			>
-				Contact
-			</Link>
-		</div>
-	</header>
-);
+	const handleClick = () => {
+		setActive((prev) => !prev);
+	};
 
-export default Header;
+	return (
+		<header className="max-w-6xl mx-auto flex items-center justify-between p-2">
+			<div className="flex items-center space-x-2">
+				<Menu active={active} handleClick={handleClick} menuList={menuList} />
+				<div className="w-4 h-6 block"></div>
+				<Logo type="green" width={25} height={25} />
+				<Link
+					href="/about"
+					classNames="hover:border-green-500 hover:text-green-500"
+				>
+					Why ljtech?
+				</Link>
+			</div>
+			<div className="flex items-center space-x-2">
+				<Theme />
+				<Link
+					href="/contact"
+					classNames="px-2 py-1 border rounded-sm hover:border-purple-500 hover:text-purple-500"
+				>
+					Contact
+				</Link>
+			</div>
+		</header>
+	);
+}

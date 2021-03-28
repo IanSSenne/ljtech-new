@@ -3,53 +3,7 @@ import Link from "../text/link";
 import Toggle from "../button/toggle";
 import Title from "../text/title";
 
-const plans = [
-	{
-		id: 1,
-		classNames: "border md:border-r-0 rounded-md md:rounded-r-none",
-		color: "bg-green-500",
-		name: "Basic",
-		description: "For small personal websites.",
-		priceMo: 50,
-		priceYr: 600 * 0.8,
-		offers: ["+ Dark Mode", "+ SSL Certificate", "+ Web Hosting"],
-	},
-	{
-		id: 2,
-		classNames: "border rounded-md",
-		color: "bg-pink-500",
-		name: "Enterprise",
-		description: "For selling products online.",
-		priceMo: 150,
-		priceYr: 1800 * 0.8,
-		offers: [
-			"Dark Mode",
-			"SSL Certificate",
-			"Web Hosting",
-			"Analytic Reports",
-			"Increased SEO",
-			"+ CMS Capability",
-		],
-	},
-	{
-		id: 3,
-		classNames: "border md:border-l-0 rounded-md md:rounded-l-none",
-		color: "bg-purple-500",
-		name: "Business",
-		description: "For growing businesses.",
-		priceMo: 100,
-		priceYr: 1200 * 0.8,
-		offers: [
-			"Dark Mode",
-			"SSL Certificate",
-			"Web Hosting",
-			"+ Analytic Reports",
-			"+ Increased SEO",
-		],
-	},
-];
-
-export default function Plans() {
+export default function Plans({ plans }) {
 	const [active, setActive] = useState(false);
 
 	const handleChange = () => {
@@ -60,12 +14,6 @@ export default function Plans() {
 		<div>
 			<div className="p-2">
 				<Title>Check out the ljtech plans</Title>
-				<p className="text-xl">
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Velit nisi
-					molestiae sed eum deleniti odio voluptatibus nemo, soluta veniam fugit
-					quisquam impedit corporis quos quia tempora illo recusandae delectus
-					culpa.
-				</p>
 			</div>
 			<div className="p-2">
 				<div className="md:flex md:content-center md:items-center md:justify-around">
@@ -86,25 +34,32 @@ export default function Plans() {
 							{plans.map((plan, i) => (
 								<div
 									key={plan.id}
-									className={`${plan.classNames} border-black max-w-sm w-full shadow-md p-2 mx-auto mb-1 md:m-0`}
+									className={`${plan.classNames} flex justify-around md:block border-black max-w-sm w-full shadow-md p-2 mx-auto mb-1 md:m-0 md:p-4 lg:p-8`}
 								>
-									<h2 className="text-center text-xl font-black">
-										{plan.name}
-										{active ? (
-											<div className="font-bold">${plan.priceYr}/yr</div>
-										) : (
-											<div className="font-bold">${plan.priceMo}/mo</div>
-										)}
-									</h2>
-									<h3 className="text-sm text-center opacity-60">
-										{plan.description}
-									</h3>
-									<div className="flex content-center items-center justify-center p-2">
-										<div className={`w-6 h-1 rounded-full ${plan.color}`}></div>
+									<div>
+										<h2 className="md:text-center text-xl font-black">
+											{plan.name}
+											{active ? (
+												<div className="font-bold">${plan.priceYr}/yr</div>
+											) : (
+												<div className="font-bold">${plan.priceMo}/mo</div>
+											)}
+										</h2>
+										<h3 className="text-sm md:text-center opacity-60">
+											{plan.description}
+										</h3>
 									</div>
-									<ul className="p-2 font-semibold">
+									<div className="flex content-center items-center justify-center p-2">
+										<div
+											className={`w-1 h-6 md:w-6 md:h-1 rounded-full ${plan.color}`}
+										></div>
+									</div>
+									<ul className="md:px-2 pt-2 pb-4 font-semibold">
 										{plan.offers.map((offer, i) => (
-											<li key={i} className="w-40 mx-auto">
+											<li
+												key={i}
+												className="border rounded-sm p-0.5 shadow-sm my-0.5 text-right text-xs md:text-base md:border-none md:shadow-none md:text-left md:w-40 mx-auto"
+											>
 												{offer}
 											</li>
 										))}
@@ -114,13 +69,20 @@ export default function Plans() {
 						</div>
 					</div>
 				</div>
-				<div className="text-center p-4">
-					<Link
-						classNames="px-2 py-1 border border-blue-500 text-blue-500 hover:border-blue-400 hover:text-blue-400 rounded-sm"
-						href="/pricing"
-					>
-						More Details
-					</Link>
+				<div className="flex flex-wrap content-center items-center justify-center px-2 py-8">
+					<div className="flex-1">
+						<p className="text-xl">
+							Want to learn more what each plan includes?
+						</p>
+					</div>
+					<div className="text-center flex-1">
+						<Link
+							classNames="px-2 py-1 border border-blue-500 text-blue-500 hover:border-blue-400 hover:text-blue-400 rounded-sm"
+							href="/pricing"
+						>
+							More Details
+						</Link>
+					</div>
 				</div>
 			</div>
 		</div>

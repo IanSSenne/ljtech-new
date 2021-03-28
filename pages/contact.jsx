@@ -25,61 +25,65 @@ export default function Contact() {
 			<Section>
 				<div className="flex justify-center">
 					<Container size="small">
-						<div className="p-2">
-							<Title>Contact</Title>
-							<p>
-								You can fill out this form below and I will get back to you as
-								soon as possible!
-							</p>
-						</div>
 						<form onSubmit={(e) => handleForm(e)} className="p-1">
-							<div className="md:flex md:space-x-2">
-								<Inputfield
-									label="First name"
-									helper="Enter your first name"
-									name="first"
-									type="text"
-									placeholder="John"
+							<fieldset className="border rounded-md sm:p-2">
+								<legend className="text-center">
+									<Title>Contact</Title>
+								</legend>
+								<div className="p-2">
+									<p>
+										You can fill out this form below and I will get back to you
+										as soon as possible!
+									</p>
+								</div>
+								<div className="md:flex md:space-x-2">
+									<Inputfield
+										label="First name"
+										helper="Enter your first name"
+										name="first"
+										type="text"
+										placeholder="John"
+									/>
+									<Inputfield
+										label="Last name"
+										helper="Enter your last name"
+										name="last"
+										type="text"
+										placeholder="Smith"
+									/>
+								</div>
+								<div className="md:flex md:space-x-2">
+									<Inputfield
+										label="Email address"
+										helper="Enter your email address"
+										name="email"
+										type="email"
+										placeholder="example@email.com"
+									/>
+									<Inputfield
+										label="Telephone #"
+										helper="Enter your tel #"
+										name="telephone"
+										type="tel"
+										placeholder="(555) 555-4545"
+									/>
+								</div>
+								<Textfield
+									label="Your message"
+									placeholder="Whats on your mind?"
+									max={1000}
+									handleChange={(e) => setCount(1000 - e.target.value.length)}
+									helper={`Remaining: ${count}`}
 								/>
-								<Inputfield
-									label="Last name"
-									helper="Enter your last name"
-									name="last"
-									type="text"
-									placeholder="Smith"
-								/>
-							</div>
-							<div className="md:flex md:space-x-2">
-								<Inputfield
-									label="Email address"
-									helper="Enter your email address"
-									name="email"
-									type="email"
-									placeholder="example@email.com"
-								/>
-								<Inputfield
-									label="Telephone #"
-									helper="Enter your tel #"
-									name="telephone"
-									type="tel"
-									placeholder="(555) 555-4545"
-								/>
-							</div>
-							<Textfield
-								label="Your message"
-								placeholder="Whats on your mind?"
-								max={1000}
-								handleChange={(e) => setCount(1000 - e.target.value.length)}
-								helper={`Remaining: ${count}`}
-							/>
-							<div className="grid">
-								<Button
-									classNames="border-green-500 text-green-500 hover:border-green-400 hover:text-green-400 transition"
-									type="submit"
-								>
-									💌 Submit
-								</Button>
-							</div>
+								<div className="grid pb-4">
+									<Button
+										classNames="border-green-500 text-green-500 hover:border-green-400 hover:text-green-400 transition"
+										type="submit"
+									>
+										💌 Submit
+									</Button>
+								</div>
+							</fieldset>
 						</form>
 					</Container>
 				</div>

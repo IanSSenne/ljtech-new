@@ -1,0 +1,30 @@
+@keyframes aurora {
+  0% {
+    fill: #10B981;
+    color: #10B981;
+  }
+  25% {
+    fill: #8B5CF6;
+    color: #8B5CF6;
+  }
+  50% {
+    fill: #EC4899;
+    color: #EC4899;
+  }
+  75% {
+    fill: #8B5CF6;
+    color: #8B5CF6;
+  }
+  100% {
+    fill: #10B981;
+    color: #10B981;
+  }
+}
+
+.aurora {
+  font-weight: 600;
+  overflow: visible;
+  animation-name: aurora;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}

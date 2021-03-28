@@ -4,7 +4,7 @@ import Plans from "./plans";
 import Rubrik from "./rubrik";
 import Section from "./section";
 import Services from "./services";
-import Slides from "./slides";
+import Slideshow from "./slideshow";
 import Step from "./step";
 import Steps from "./steps";
 import Thumbnail from "./thumbnail";
@@ -16,7 +16,7 @@ export {
 	Rubrik,
 	Section,
 	Services,
-	Slides,
+	Slideshow,
 	Step,
 	Steps,
 	Thumbnail,

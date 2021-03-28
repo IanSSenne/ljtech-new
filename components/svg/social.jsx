@@ -104,6 +104,7 @@ export default function Social({ type, width, height }) {
 						/>
 					</g>
 				</svg>
+				
 			)}
 		</div>
 	);

@@ -1,62 +1,6 @@
 import Link from "../text/link";
 
-const workLinks = [
-	{
-		id: 1,
-		name: "Plans & Pricing",
-		href: "/pricing",
-	},
-	{
-		id: 2,
-		name: "Apps",
-		href: "/portfolio",
-	},
-	{
-		id: 3,
-		name: "Art",
-		href: "/portfolio",
-	},
-	{
-		id: 4,
-		name: "Components",
-		href: "/portfolio",
-	},
-	{
-		id: 5,
-		name: "Games",
-		href: "/portfolio",
-	},
-];
-
-const siteLinks = [
-	{
-		id: 6,
-		name: "About",
-		href: "/about",
-	},
-	{
-		id: 7,
-		name: "Blog",
-		href: "/blog",
-	},
-	{
-		id: 8,
-		name: "FAQ",
-		href: "/faq",
-	},
-	{
-		id: 9,
-		name: "Contact",
-		href: "/contact",
-	},
-	{
-		id: 10,
-		name: "Survey",
-		href: "/survey",
-	},
-];
-
-const Nav = ({ classNames }) => (
+const Nav = ({ classNames, workLinks, siteLinks }) => (
 	<div className={classNames}>
 		<div className="p-2">
 			<h2 className="text-2xl font-semibold opacity-60">Work</h2>

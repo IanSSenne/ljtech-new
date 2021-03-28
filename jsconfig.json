@@ -7,7 +7,8 @@
       "@form/*": ["components/form/*"],
       "@svg/*": ["components/svg/*"],
       "@template/*": ["components/template/*"],
-      "@text/*": ["components/text/*"]
+      "@text/*": ["components/text/*"],
+      "@styles/*": ["styles/*"],
     }
   }
 }

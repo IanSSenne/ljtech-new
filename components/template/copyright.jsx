@@ -1,5 +1,5 @@
 import Link from "../text/link";
-import Logo from "../svg/logo";
+import Logo from "@svg/logo";
 
 const Copyright = () => (
 	<div className="p-2">

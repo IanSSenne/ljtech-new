@@ -22,20 +22,25 @@ export default function Pricing({ allPostsData }) {
 			</Head>
 			<Section>
 				<div className="flex justify-center">
-					<Container size="small">
+					<Container>
 						<div className="p-2">
 							<Title>Blog</Title>
-							<p>
-								Welcome to the ljtech blog, here I will post my thoughts on
-								coding and web design.
-							</p>
+							<div className="flex justify-center">
+								<p>
+									Welcome to the ljtech blog, here I will post my thoughts on
+									coding and web design.
+								</p>
+							</div>
 						</div>
 						<ol className="flex flex-wrap justify-center">
 							{allPostsData.map(({ id, date, title }) => (
-								<Thumbnail key={id} helper={`Read`} href={`/posts/${id}`}>
-									<div>{title}</div>
-									<p>{date}</p>
-								</Thumbnail>
+								<Thumbnail
+									key={id}
+									helper={`Read`}
+									href={`/posts/${id}`}
+									title={title}
+									date={date}
+								/>
 							))}
 						</ol>
 					</Container>

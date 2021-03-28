@@ -1,5 +1,5 @@
 const Logo = ({ before, children, classNames, style, type, width, height }) => (
-	<div style={style} className={classNames ?? ""}>
+	<div style={style} className={`${classNames ?? ""} flex`}>
 		{before}
 		{type === "green" && (
 			<svg

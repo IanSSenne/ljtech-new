@@ -1,87 +1,10 @@
 import Thumbnail from "./thumbnail";
 
-const apps = [
-	{
-		id: "sws",
-		name: "Still Water Stables",
-		href: "/",
-	},
-	{
-		id: "pup",
-		name: "Pipes Up",
-		href: "/",
-	},
-	{
-		id: "aaa",
-		name: "Still Water Stables",
-		href: "/",
-	},
-	{
-		id: "bbb",
-		name: "Still Water Stables",
-		href: "/",
-	},
-	{
-		id: "ccc",
-		name: "Still Water Stables",
-		href: "/",
-	},
-];
-
-const art = [
-	{
-		id: "ord",
-		name: "Olson's Recycling & Demolition",
-		href: "/",
-	},
-	{
-		id: "ljd",
-		name: "ljtech",
-		href: "/",
-	},
-	{
-		id: "ddd",
-		name: "Olson's Recycling & Demolition",
-		href: "/",
-	},
-];
-
-const games = [
-	{
-		id: "con",
-		name: "Concentrate",
-		href: "/",
-	},
-	{
-		id: "min",
-		name: "Minesweeper",
-		href: "/",
-	},
-];
-
-const components = [
-	{
-		id: "ale",
-		name: "Alerts",
-		href: "/",
-	},
-	{
-		id: "dro",
-		name: "Dropdowns",
-		href: "/",
-	},
-	{
-		id: "tog",
-		name: "Toggles",
-		href: "/",
-	},
-];
-
-export default function Gallery({ index }) {
+export default function Gallery({ apps, art, games, components, index }) {
 	return (
-		<div className="p-2">
+		<div className="p-2 flex justify-center lg:justify-start">
 			{index === 0 && (
-				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
+				<ol className="flex flex-wrap justify-center">
 					{apps.map((app, i) => (
 						<Thumbnail
 							key={app.id}
@@ -93,7 +16,7 @@ export default function Gallery({ index }) {
 				</ol>
 			)}
 			{index === 1 && (
-				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
+				<ol className="flex flex-wrap justify-center">
 					{art.map((piece, i) => (
 						<Thumbnail
 							key={piece.id}
@@ -105,7 +28,7 @@ export default function Gallery({ index }) {
 				</ol>
 			)}
 			{index === 2 && (
-				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
+				<ol className="flex flex-wrap justify-center">
 					{components.map((component, i) => (
 						<Thumbnail
 							key={component.id}
@@ -117,7 +40,7 @@ export default function Gallery({ index }) {
 				</ol>
 			)}
 			{index === 3 && (
-				<ol className="flex flex-wrap content-center items-center justify-center md:justify-start">
+				<ol className="flex flex-wrap justify-center">
 					{games.map((game, i) => (
 						<Thumbnail
 							key={game.id}

@@ -7,6 +7,83 @@ import { Link, Title } from "@text/all";
 
 const tabs = ["Apps", "Art", "Components", "Games"];
 
+const apps = [
+	{
+		id: "sws",
+		name: "Still Water Stables",
+		href: "/",
+	},
+	{
+		id: "pup",
+		name: "Pipes Up",
+		href: "/",
+	},
+	{
+		id: "aaa",
+		name: "Still Water Stables",
+		href: "/",
+	},
+	{
+		id: "bbb",
+		name: "Still Water Stables",
+		href: "/",
+	},
+	{
+		id: "ccc",
+		name: "Still Water Stables",
+		href: "/",
+	},
+];
+
+const art = [
+	{
+		id: "ord",
+		name: "Olson's Recycling & Demolition",
+		href: "/",
+	},
+	{
+		id: "ljd",
+		name: "ljtech",
+		href: "/",
+	},
+	{
+		id: "ddd",
+		name: "Olson's Recycling & Demolition",
+		href: "/",
+	},
+];
+
+const games = [
+	{
+		id: "con",
+		name: "Concentrate",
+		href: "/",
+	},
+	{
+		id: "min",
+		name: "Minesweeper",
+		href: "/",
+	},
+];
+
+const components = [
+	{
+		id: "ale",
+		name: "Alerts",
+		href: "/",
+	},
+	{
+		id: "dro",
+		name: "Dropdowns",
+		href: "/",
+	},
+	{
+		id: "tog",
+		name: "Toggles",
+		href: "/",
+	},
+];
+
 export default function Pricing() {
 	const [actives, setActives] = useState([1, 0, 0, 0]);
 
@@ -22,9 +99,8 @@ export default function Pricing() {
 				<title>ljtech.ca</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
 			<Section>
-				<Container size="medium">
+				<Container>
 					<div className="p-2">
 						<Title>Portfolio</Title>
 						<div className="flex flex-wrap items-center justify-start">
@@ -63,7 +139,13 @@ export default function Pricing() {
 											</p>
 											<h2 className="text-xl font-semibold pb-4">{tabs[i]}</h2>
 										</div>
-										<Gallery index={i} />
+										<Gallery
+											index={i}
+											apps={apps}
+											art={art}
+											components={components}
+											games={games}
+										/>
 									</div>
 								) : null}
 							</div>

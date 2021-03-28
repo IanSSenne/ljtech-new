@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Link from "../text/link";
 
+
+
 export default function Menu({ buttonOn, buttonOff, list }) {
 	const [active, setActive] = useState(false);
 
@@ -9,13 +11,16 @@ export default function Menu({ buttonOn, buttonOff, list }) {
 	};
 
 	return (
-		<div className="relative top-2 w-6 h-6">
-			<button className="z-50 fixed top-2" onClick={handleClick}>
+		<div
+			style={{ width: "2.0625rem", height: "2.0625rem" }}
+			className="relative"
+		>
+			<button className="z-50 fixed" onClick={handleClick}>
 				{active ? buttonOn : buttonOff}
 			</button>
 			{active ? (
 				<ul
-					style={{ height: "min(100%, calc(100vh - 100px))" }}
+					style={{ height: "min(20rem, calc(100vh - 100px))" }}
 					className="overflow-hidden overflow-y-scroll border blur fixed top-12 z-50 rounded-sm"
 				>
 					{list.map((item, i) => (

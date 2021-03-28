@@ -4,52 +4,7 @@ import Link from "../text/link";
 import Logo from "../svg/logo";
 import Title from "../text/title";
 
-const slides = [
-	{
-		id: 1,
-		name: "Consultation",
-		image: "green",
-		description:
-			"Consult with the web developer directly and define your project goals and how ljtech can meet them.",
-	},
-	{
-		id: 2,
-		name: "Rough Draft",
-		image: "purple",
-		description:
-			"Creating mockups to illustrate a finished project, this will help ljtech find the right look for your project.",
-	},
-	{
-		id: 3,
-		name: "Writing Code",
-		image: "red",
-		description:
-			"Writing the code that powers your application, depending on the scope of work, this may take a while.",
-	},
-	{
-		id: 4,
-		name: "Test Launch",
-		image: "green",
-		description:
-			"Launching a working version of your project as soon as possible and working out the flaws in its design.",
-	},
-	{
-		id: 5,
-		name: "Analytics",
-		image: "purple",
-		description:
-			"Monitoring your projects live performance and monthly usage, making sure its working as intended.",
-	},
-	{
-		id: 6,
-		name: "Optimization",
-		image: "red",
-		description:
-			"With information collected through analytics and personal use, ljtech can finely tune your application.",
-	},
-];
-
-export default function Slides() {
+export default function Slideshow({ slides }) {
 	const [counter, setCounter] = useState(null);
 	const [active, setActive] = useState(0);
 	const [mounted, setMounted] = useState(false);
@@ -89,14 +44,14 @@ export default function Slides() {
 							{i === active ? (
 								<Button
 									handleClick={(e) => handleClick(e, i)}
-									classNames="border-black shadow-md text-sm text-left shadow-sm m-1"
+									classNames="border-blue-500 shadow-md font-bold text-sm text-left shadow-sm m-1"
 								>
 									{slideTag.name}
 								</Button>
 							) : (
 								<Button
 									handleClick={(e) => handleClick(e, i)}
-									classNames="hover:border-black shadow-sm hover:shadow-md text-sm text-left border-transparent m-1"
+									classNames="hover:border-purple-500 shadow-sm font-bold hover:shadow-md text-sm text-left border-transparent m-1"
 								>
 									{slideTag.name}
 								</Button>
@@ -106,7 +61,7 @@ export default function Slides() {
 				</div>
 				<div className="relative px-2 flex justify-center">
 					<Logo
-						classNames="mx-auto inset-x-0 absolute z-30"
+						classNames="p-4 mx-auto inset-x-0 absolute z-30"
 						type="outline"
 						width="clamp(11rem, 33vw, 22rem)"
 						height="clamp(11rem, 33vw, 22rem)"
@@ -115,7 +70,7 @@ export default function Slides() {
 						<div key={slideActive.id}>
 							{i === active && (
 								<Logo
-									classNames="mx-auto relative z-40 fade-in"
+									classNames="p-4 mx-auto relative z-40 fade-in"
 									type={slideActive.image}
 									width="clamp(11rem, 33vw, 22rem)"
 									height="clamp(11rem, 33vw, 22rem)"
@@ -124,20 +79,20 @@ export default function Slides() {
 						</div>
 					))}
 				</div>
-				<div className="flex content-center items-center justify-center md:block pl-2">
+				<div className="flex content-center items-center justify-center md:block pl-2 md:text-right">
 					{slides.slice(3, 6).map((slideTag, i) => (
 						<div key={slideTag.id}>
 							{i + 3 === active ? (
 								<Button
 									handleClick={(e) => handleClick(e, i + 3)}
-									classNames="border-black shadow-md text-sm text-left shadow-sm m-1"
+									classNames="border-blue-500 shadow-md font-bold text-sm text-left shadow-sm m-1"
 								>
 									{slideTag.name}
 								</Button>
 							) : (
 								<Button
 									handleClick={(e) => handleClick(e, i + 3)}
-									classNames="hover:border-black shadow-sm hover:shadow-md text-sm text-left border-transparent m-1"
+									classNames="hover:border-purple-500 shadow-sm font-bold hover:shadow-md text-sm text-left border-transparent m-1"
 								>
 									{slideTag.name}
 								</Button>

@@ -1,6 +1,6 @@
 Thursday, March 25:
 
-  ☐ header
+  ✔ header @done(21-03-27 15:26)
     - toggle small on mobile
     - nav menu is fuckered
       - consider making hamburger
@@ -8,46 +8,46 @@ Thursday, March 25:
 
 
 
-  ☐ landing
+  ✔ landing @done(21-03-27 15:27)
     - bubbles is weird and uninteresting
     - look at [vercel] fancy text for inspiration
       eg - (https://vercel.com/home?utm_source=next-site&utm_medium=banner&utm_campaign=next-website)
 
 
 
-  ☐ slideshow
+  ✔ slideshow @done(21-03-27 15:50)
     - need images
-    - text overhaul
+    ✔ text overhaul @done(21-03-27 15:27)
       - needs padding or font-weight
 
 
 
-  ☐ plans
-    - replace lorem ipsum
-    - put text underneath
-    - plans feel small on desktop
-      - also bad on mobile
+  ✔ plans @done(21-03-27 15:51)
+    ✔ replace lorem ipsum @done(21-03-27 15:51)
+    ✔ put text underneath @done(21-03-27 15:51)
+    ✔ plans feel small on desktop @done(21-03-27 15:51)
+      ✔ also bad on mobile @done(21-03-27 15:51)
 
 
     
-  ☐ about
-    - look for stuffs
-    - design page mockup
+  ✔ about @done(21-03-27 16:46)
+    ✔ look for stuffs @done(21-03-27 16:22)
+    ✔ design page mockup @done(21-03-27 16:47)
 
 
 
-  ☐ blog
-    - min-width container fix
-    - add mockup content for test
-    - add padding
+  ✔ blog @done(21-03-27 16:59)
+    ✔ min-width container fix @done(21-03-27 16:59)
+    ✘ add mockup content for test @cancelled(21-03-27 16:47)
+    ✔ add padding @done(21-03-27 16:59)
 
 
 
-  ☐ contact
-    - add fieldset, legend and border to form
-    - inputfield rename and replace fieldset, legend and border
-      - this includes inputsfield textfield and selectfield
-        export these components first
+  ✔ contact @done(21-03-25 17:13)
+    ✔ add fieldset, legend and border to form @done(21-03-25 17:13)
+    ✔ inputfield rename and replace fieldset, legend and border @done(21-03-25 17:13)
+      ✔ this includes inputsfield textfield and selectfield @done(21-03-25 17:13)
+        ✔ export these components first @done(21-03-25 17:13)
 
 
 
@@ -57,9 +57,9 @@ Thursday, March 25:
 
 
 
-  ☐ portfolio
-    - add mockup images for test
-    - center the gallery on devices
+  ✔ portfolio @done(21-03-27 17:19)
+    ✘ add mockup images for test @cancelled(21-03-27 17:19)
+    ✔ center the gallery on devices @done(21-03-27 17:19)
   
 
 
@@ -69,13 +69,13 @@ Thursday, March 25:
 
 
 
-  ☐ survey
-    - add fieldset, legend and border to form
-    - inputfield rename and replace fieldset, legend and border
-      - this includes inputsfield textfield and selectfield
-        export these components first
-    - change text on steps
-      - should steps be filled 1 step if they have not completed anything? probably not
+  ✔ survey @done(21-03-25 17:12)
+    ✔ add fieldset, legend and border to form @done(21-03-25 17:12)
+    ✔ inputfield rename and replace fieldset, legend and border @done(21-03-25 17:12)
+      ✔ this includes inputsfield textfield and selectfield @done(21-03-25 17:12)
+        ✔ export these components first @done(21-03-25 17:13)
+    ✔ change text on steps @done(21-03-25 17:12)
+      ✔ should steps be filled 1 step if they have not completed anything? probably not @done(21-03-25 17:12)
 
 
   ☐ extra
@@ -87,7 +87,7 @@ Thursday, March 25:
         ✔ form(inputfield, inputsfield, textfield,) @done(21-03-25 13:39)
         ✔ button(button, theme) @done(21-03-25 12:59)
         ✔ svg(logo, clip, bubbles, outline) @done(21-03-25 13:39)
-    - refactor / check pages for proper layouts using container component
+    ☐ refactor / check pages for proper layouts using container component
 
 
 
@@ -103,11 +103,11 @@ Thursday, March 25:
 
 
 
-    ☐ outline
-      - add outline to logo?
+    ✔ outline @done(21-03-25 17:15)
+      ✔ add outline to logo? @done(21-03-25 17:15)
 
 
 
-    ☐ logo
-      - make sure it doesnt render all the svgs
-        this should render the requested one only
+    ✔ logo @done(21-03-25 17:15)
+      ✔ make sure it doesnt render all the svgs @done(21-03-25 17:15)
+        ✔ this should render the requested one only @done(21-03-25 17:14)
