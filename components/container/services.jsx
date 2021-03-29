@@ -2,7 +2,7 @@ const Services = ({ services }) => (
 	<ul className="p-2">
 		{services.map((service, i) => (
 			<li
-				key={`service${i}`}
+				key={service.id}
 				id={service.id}
 				className="md:flex md:space-x-4 p-2 border-b"
 			>

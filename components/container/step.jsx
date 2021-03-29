@@ -1,4 +1,4 @@
-import Logo from "../svg/logo";
+import Logo from "@svg/logo";
 
 export default function Step({ classNames, step, text, type }) {
 	return (

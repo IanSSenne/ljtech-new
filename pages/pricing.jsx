@@ -1,7 +1,10 @@
 import Head from "next/head";
 import Layout from "@template/layout";
-import { Container, Rubrik, Services, Section } from "@container/all";
-import { Title } from "@text/all";
+import Container from "@container/container";
+import Section from "@container/section";
+import Rubrik from "@container/rubrik";
+import Services from "@container/services";
+import Title from "@text/title";
 
 const services = [
 	{

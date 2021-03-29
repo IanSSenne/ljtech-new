@@ -1,12 +1,19 @@
 import { useState } from "react";
 import Head from "next/head";
 import Layout from "@template/layout";
-import { Button, Toggle } from "@button/all";
-import { Container, Section, Steps } from "@container/all";
-import { Inputfield, Inputsfield, Selectfield, Textfield } from "@form/all";
-import { Title } from "@text/all";
+import Button from "@button/button";
+import Toggle from "@button/toggle";
+import Container from "@container/container";
+import Section from "@container/section";
+import Steps from "@container/steps";
+import Input from "@form/input";
+import Inputs from "@form/inputs";
+import Select from "@form/select";
+import Textarea from "@form/textarea";
+import Title from "@text/title";
 
 const options = [
+	"Sole Proprietorship (Unincorporated Business)",
 	"Small Business (1 - 99 employees)",
 	"Medium Business (100 - 499 employees)",
 	"Large Business (500+ employees)",
@@ -84,7 +91,7 @@ export default function Survey() {
 							{step === 0 && (
 								<div>
 									<div className="md:flex md:space-x-2">
-										<Inputfield
+										<Input
 											label="First name"
 											name="first"
 											type="text"
@@ -93,7 +100,7 @@ export default function Survey() {
 											helper="Enter your first name."
 											isRequired={true}
 										/>
-										<Inputfield
+										<Input
 											label="Last name"
 											name="last"
 											type="text"
@@ -104,7 +111,7 @@ export default function Survey() {
 										/>
 									</div>
 									<div className="md:flex md:space-x-2">
-										<Inputfield
+										<Input
 											label="Email address"
 											name="email"
 											type="email"
@@ -112,7 +119,7 @@ export default function Survey() {
 											helper="Enter your email address."
 											isRequired={true}
 										/>
-										<Inputfield
+										<Input
 											label="Phone number"
 											name="tel"
 											type="tel"
@@ -136,7 +143,7 @@ export default function Survey() {
 										<div>New Project</div>
 									</div>
 									{active ? (
-										<Inputfield
+										<Input
 											label="Project name"
 											name="project"
 											type="text"
@@ -145,7 +152,7 @@ export default function Survey() {
 											isRequired={true}
 										/>
 									) : (
-										<Inputfield
+										<Input
 											label="Website name"
 											name="project"
 											type="text"
@@ -154,7 +161,7 @@ export default function Survey() {
 											isRequired={true}
 										/>
 									)}
-									<Textfield
+									<Textarea
 										label="Your goals"
 										name="goals"
 										placeholder="What are your goals for this project?"
@@ -163,7 +170,7 @@ export default function Survey() {
 										isRequired={false}
 									/>
 									<div className="flex flex-wrap space-x-2">
-										<Inputfield
+										<Input
 											label="Page count"
 											name="pages"
 											type="number"
@@ -173,7 +180,7 @@ export default function Survey() {
 											helper="Estimate project size."
 											isRequired={true}
 										/>
-										<Inputfield
+										<Input
 											label="Project deadline"
 											name="deadline"
 											type="date"
@@ -185,14 +192,14 @@ export default function Survey() {
 							)}
 							{step === 2 && (
 								<div>
-									<Selectfield
+									<Select
 										label="Business size"
 										name="business"
 										helper="Enter your businesses size."
 										isRequired={true}
 										options={options}
 									/>
-									<Inputfield
+									<Input
 										style={{ padding: "0", border: "none", height: "40px" }}
 										label="Brand color"
 										name="color"
@@ -201,9 +208,10 @@ export default function Survey() {
 										helper="Enter your brand color."
 										isRequired={true}
 									/>
-									<Inputfield
+									<Input
 										style={{
 											padding: "0",
+											margin: "0 .25rem",
 											border: "none",
 										}}
 										label="Budget"
@@ -218,7 +226,7 @@ export default function Survey() {
 										handleChange={(e) => handleBudget(e)}
 										isRequired={true}
 									/>
-									<Inputsfield
+									<Inputs
 										label="Competitor Websites"
 										fields={fields}
 										type="url"
@@ -250,7 +258,14 @@ export default function Survey() {
 										Next
 									</Button>
 								)}
-								{step === 2 && <Button type="submit">Submit</Button>}
+								{step === 2 && (
+									<Button
+										classNames="border-green-500 text-green-500 hover:text-green-400 hover:border-green-400"
+										type="submit"
+									>
+										Submit
+									</Button>
+								)}
 							</div>
 						</fieldset>
 					</form>

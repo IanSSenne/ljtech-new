@@ -1,13 +1,21 @@
-import Link from "../text/link";
+import { useRouter } from "next/router";
+import Link from "@text/link";
 
-const Nav = ({ classNames, workLinks, siteLinks }) => (
+const Nav = ({ classNames, work, about }) => (
 	<div className={classNames}>
 		<div className="p-2">
 			<h2 className="text-2xl font-semibold opacity-60">Work</h2>
 			<ul>
-				{workLinks.map((link, i) => (
-					<li key={`${link.name} - ${link.id}`}>
-						<Link classNames="transition hover:text-blue-500" href={link.href}>
+				{work.map((link, i) => (
+					<li key={`${link.name}A`}>
+						<Link
+							classNames={
+								useRouter().pathname === link.href
+									? "text-blue-600 hover:opacity-50"
+									: "hover:opacity-50"
+							}
+							href={link.href}
+						>
 							{link.name}
 						</Link>
 					</li>
@@ -17,9 +25,16 @@ const Nav = ({ classNames, workLinks, siteLinks }) => (
 		<div className="p-2">
 			<h2 className="text-2xl font-semibold opacity-60">About</h2>
 			<ul>
-				{siteLinks.map((link, i) => (
-					<li key={`${link.name} - ${link.id}`}>
-						<Link classNames="transition hover:text-blue-500" href={link.href}>
+				{about.map((link, i) => (
+					<li key={`${link.name}B`}>
+						<Link
+							classNames={
+								useRouter().pathname === link.href
+									? "text-blue-600 hover:opacity-50"
+									: "hover:opacity-50"
+							}
+							href={link.href}
+						>
 							{link.name}
 						</Link>
 					</li>

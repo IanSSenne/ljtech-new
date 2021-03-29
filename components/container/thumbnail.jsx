@@ -1,4 +1,4 @@
-import Link from "../text/link";
+import Link from "@text/link";
 
 const Thumbnail = ({
 	content,

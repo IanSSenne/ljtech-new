@@ -1,13 +1,12 @@
+import { actions } from "@lib/content";
 import Container from "./container";
 import Step from "./step";
 
 export default function Steps({ step }) {
-	const forms = ["1", "2", "3", "✔"];
-
 	return (
 		<Container size="small">
 			<div className="flex px-2">
-				{forms.map((form, i) => (
+				{actions.map((form, i) => (
 					<Step
 						type={step >= i ? "green" : "filler"}
 						classNames={step >= i ? "bg-green-500" : "bg-transparent"}

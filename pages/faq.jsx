@@ -1,7 +1,8 @@
 import Head from "next/head";
 import Layout from "@template/layout";
-import { Container, Section } from "@container/all";
-import { Title } from "@container/title";
+import Container from "@container/container";
+import Section from "@container/section";
+import Title from "@text/title";
 
 export default function Pricing() {
 	return (

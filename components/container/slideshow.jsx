@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import Button from "../button/button";
-import Link from "../text/link";
-import Logo from "../svg/logo";
-import Title from "../text/title";
+import Button from "@button/button";
+import Link from "@text/link";
+import Logo from "@svg/logo";
+import Title from "@text/title";
 
 export default function Slideshow({ slides }) {
 	const [counter, setCounter] = useState(null);
@@ -21,6 +21,7 @@ export default function Slideshow({ slides }) {
 			clearInterval(counter);
 		}
 	}, [pause]);
+
 	useEffect(() => {
 		if (!mounted) {
 			setMounted(true);

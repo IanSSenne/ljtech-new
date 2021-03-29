@@ -1,7 +1,7 @@
 import { Router, useRouter } from "next/router";
 import Link from "@text/link";
 
-export default function Menu({ active, handleClick, menuList }) {
+export default function Menu({ active, handleClick, pages }) {
 	return (
 		<div>
 			<button
@@ -27,7 +27,7 @@ export default function Menu({ active, handleClick, menuList }) {
 					style={{ height: "calc(100vh - 48px)", maxHeight: "14.125rem" }}
 					className="overflow-hidden overflow-y-scroll border rounded-sm blur fixed z-50 top-10"
 				>
-					{menuList.map((link, i) => (
+					{pages.map((link, i) => (
 						<li key={link.name}>
 							<Link
 								href={link.href}

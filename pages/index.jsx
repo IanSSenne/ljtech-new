@@ -1,7 +1,11 @@
 import Head from "next/head";
 import Layout from "@template/layout";
-import { Container, Plans, Section, Slideshow } from "@container/all";
-import { Love, Clip } from "@svg/all";
+import Container from "@container/container";
+import Section from "@container/section";
+import Plans from "@container/plans";
+import Slideshow from "@container/slideshow";
+import Clip from "@svg/clip";
+import Love from "@svg/love";
 import aurora from "@styles/aurora.module.css";
 
 const plans = [

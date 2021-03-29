@@ -1,8 +1,10 @@
 import { getSortedPostsData } from "../lib/posts";
 import Head from "next/head";
 import Layout from "@template/layout";
-import { Container, Section, Thumbnail } from "@container/all";
-import { Title } from "@text/all";
+import Container from "@container/container";
+import Section from "@container/section";
+import Thumbnail from "@container/thumbnail";
+import Title from "@text/title";
 
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData();

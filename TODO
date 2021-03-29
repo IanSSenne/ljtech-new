@@ -1,113 +1,15 @@
-Thursday, March 25:
+Monday, March 29:
 
-  ✔ header @done(21-03-27 15:26)
-    - toggle small on mobile
-    - nav menu is fuckered
-      - consider making hamburger
-      - logo routes to index
+  Change components:
+    // Change the following components accordingly
 
-
-
-  ✔ landing @done(21-03-27 15:27)
-    - bubbles is weird and uninteresting
-    - look at [vercel] fancy text for inspiration
-      eg - (https://vercel.com/home?utm_source=next-site&utm_medium=banner&utm_campaign=next-website)
+    ☐ Logo
+      - make an 3 arrays for seperate colors? or include an aurora animtaion?
+      - shorten the component by removing redundant code
 
 
+  Change pages: 
+    // Change something about these pages
 
-  ✔ slideshow @done(21-03-27 15:50)
-    - need images
-    ✔ text overhaul @done(21-03-27 15:27)
-      - needs padding or font-weight
-
-
-
-  ✔ plans @done(21-03-27 15:51)
-    ✔ replace lorem ipsum @done(21-03-27 15:51)
-    ✔ put text underneath @done(21-03-27 15:51)
-    ✔ plans feel small on desktop @done(21-03-27 15:51)
-      ✔ also bad on mobile @done(21-03-27 15:51)
-
-
-    
-  ✔ about @done(21-03-27 16:46)
-    ✔ look for stuffs @done(21-03-27 16:22)
-    ✔ design page mockup @done(21-03-27 16:47)
-
-
-
-  ✔ blog @done(21-03-27 16:59)
-    ✔ min-width container fix @done(21-03-27 16:59)
-    ✘ add mockup content for test @cancelled(21-03-27 16:47)
-    ✔ add padding @done(21-03-27 16:59)
-
-
-
-  ✔ contact @done(21-03-25 17:13)
-    ✔ add fieldset, legend and border to form @done(21-03-25 17:13)
-    ✔ inputfield rename and replace fieldset, legend and border @done(21-03-25 17:13)
-      ✔ this includes inputsfield textfield and selectfield @done(21-03-25 17:13)
-        ✔ export these components first @done(21-03-25 17:13)
-
-
-
-  ☐ faq
-    - look for stuffs
-    - design page mockup
-
-
-
-  ✔ portfolio @done(21-03-27 17:19)
-    ✘ add mockup images for test @cancelled(21-03-27 17:19)
-    ✔ center the gallery on devices @done(21-03-27 17:19)
-  
-
-
-  ☐ pricing
-    - further mobile testing
-    - toggle too small on mobile
-
-
-
-  ✔ survey @done(21-03-25 17:12)
-    ✔ add fieldset, legend and border to form @done(21-03-25 17:12)
-    ✔ inputfield rename and replace fieldset, legend and border @done(21-03-25 17:12)
-      ✔ this includes inputsfield textfield and selectfield @done(21-03-25 17:12)
-        ✔ export these components first @done(21-03-25 17:13)
-    ✔ change text on steps @done(21-03-25 17:12)
-      ✔ should steps be filled 1 step if they have not completed anything? probably not @done(21-03-25 17:12)
-
-
-  ☐ extra
-    ✔ clean up the components folder @done(21-03-25 15:29)
-      ✔ introduce new folders @done(21-03-25 15:29)
-        ✔ template(header, menu, nav, socials, copyright, footer, meta, layout) @done(21-03-25 13:25)
-        ✔ text(title, ballot, link) @done(21-03-25 13:25)
-        ✔ container(section, thumbnail, container, rubrik, gallery, slides, services#hashlist) @done(21-03-25 13:25)
-        ✔ form(inputfield, inputsfield, textfield,) @done(21-03-25 13:39)
-        ✔ button(button, theme) @done(21-03-25 12:59)
-        ✔ svg(logo, clip, bubbles, outline) @done(21-03-25 13:39)
-    ☐ refactor / check pages for proper layouts using container component
-
-
-
-    ☐ rubrik
-      - turn into a reusable component
-
-
-
-    ☐ services
-      - rename to something like hashlist
-      - make services reusable
-      - pass dat data back
-
-
-
-    ✔ outline @done(21-03-25 17:15)
-      ✔ add outline to logo? @done(21-03-25 17:15)
-
-
-
-    ✔ logo @done(21-03-25 17:15)
-      ✔ make sure it doesnt render all the svgs @done(21-03-25 17:15)
-        ✔ this should render the requested one only @done(21-03-25 17:14)
+    ☐ Portfolio all section
+      - show all projects??

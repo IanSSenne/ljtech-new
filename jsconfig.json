@@ -9,6 +9,7 @@
       "@template/*": ["components/template/*"],
       "@text/*": ["components/text/*"],
       "@styles/*": ["styles/*"],
+      "@lib/*": ["lib/*"],
     }
   }
 }

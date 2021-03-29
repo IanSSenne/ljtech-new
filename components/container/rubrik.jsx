@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Ballot from "../text/ballot";
-import Link from "../text/link";
-import Toggle from "../button/toggle";
+import Ballot from "@text/ballot";
+import Link from "@text/link";
+import Toggle from "@button/toggle";
 
 export default function Rubrik() {
 	const [active, setActive] = useState(false);

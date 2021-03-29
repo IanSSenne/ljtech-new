@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Link from "../text/link";
-import Toggle from "../button/toggle";
-import Title from "../text/title";
+import Link from "@text/link";
+import Toggle from "@button/toggle";
+import Title from "@text/title";
 
 export default function Plans({ plans }) {
 	const [active, setActive] = useState(false);

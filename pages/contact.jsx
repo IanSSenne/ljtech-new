@@ -1,10 +1,12 @@
 import { useState } from "react";
 import Head from "next/head";
 import Layout from "@template/layout";
-import { Button } from "@button/all";
-import { Container, Section } from "@container/all";
-import { Inputfield, Textfield } from "@form/all";
-import { Title } from "@text/all";
+import Button from "@button/button";
+import Container from "@container/container";
+import Section from "@container/section";
+import Input from "@form/input";
+import Textarea from "@form/textarea";
+import Title from "@text/title";
 
 export default function Contact() {
 	const [count, setCount] = useState(1000);
@@ -37,14 +39,14 @@ export default function Contact() {
 									</p>
 								</div>
 								<div className="md:flex md:space-x-2">
-									<Inputfield
+									<Input
 										label="First name"
 										helper="Enter your first name"
 										name="first"
 										type="text"
 										placeholder="John"
 									/>
-									<Inputfield
+									<Input
 										label="Last name"
 										helper="Enter your last name"
 										name="last"
@@ -53,14 +55,14 @@ export default function Contact() {
 									/>
 								</div>
 								<div className="md:flex md:space-x-2">
-									<Inputfield
+									<Input
 										label="Email address"
 										helper="Enter your email address"
 										name="email"
 										type="email"
 										placeholder="example@email.com"
 									/>
-									<Inputfield
+									<Input
 										label="Telephone #"
 										helper="Enter your tel #"
 										name="telephone"
@@ -68,7 +70,7 @@ export default function Contact() {
 										placeholder="(555) 555-4545"
 									/>
 								</div>
-								<Textfield
+								<Textarea
 									label="Your message"
 									placeholder="Whats on your mind?"
 									max={1000}
