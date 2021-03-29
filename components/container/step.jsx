@@ -1,6 +1,6 @@
 import Logo from "@svg/logo";
 
-export default function Step({ classNames, step, text, type }) {
+export default function Step({ classNames, step, text }) {
 	return (
 		<div className="flex-1 flex content-center items-center justify-center h-8 relative">
 			<span
@@ -18,9 +18,9 @@ export default function Step({ classNames, step, text, type }) {
 			</div>
 			<Logo
 				classNames="w-5 h-5 absolute -right-1 z-30"
-				type={type}
 				width="20"
 				height="20"
+				index={0}
 			/>
 		</div>
 	);

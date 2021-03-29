@@ -17,7 +17,7 @@ export default function Header() {
 			<div className="flex items-center space-x-2">
 				<Menu active={active} handleClick={handleClick} pages={pages} />
 				<div className="w-4 h-6 block"></div>
-				<Logo type="green" width={25} height={25} />
+				<Logo type="disco" width={25} height={25} />
 				<Link
 					href="/about"
 					classNames="hover:border-green-500 hover:text-green-500"

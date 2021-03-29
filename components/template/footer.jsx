@@ -9,7 +9,7 @@ export default function Footer() {
 			<Navlist
 				work={work}
 				about={about}
-				classNames="flex justify-around space-x-4 mb-8 lg:mb-0 lg:hidden"
+				classNames="flex justify-around space-x-4 my-8 lg:mb-0 lg:hidden"
 			/>
 			<div className="w-full flex flex-wrap items-end justify-around sm:justify-between">
 				<div className="flex items-end space-x-4">

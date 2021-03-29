@@ -28,3 +28,189 @@
   animation-duration: 10s;
   animation-iteration-count: infinite;
 }
+
+@keyframes outline {
+  0% {
+    fill: #82cfac;
+    color: #82cfac;
+  }
+  25% {
+    fill: #8B5CF6;
+    color: #8B5CF6;
+  }
+  50% {
+    fill: #f9a8d4;
+    color: #f9a8d4;
+  }
+  75% {
+    fill: #8B5CF6;
+    color: #8B5CF6;
+  }
+  100% {
+    fill: #82cfac;
+    color: #82cfac;
+  }
+}
+
+@keyframes colorA {
+  0% {
+    fill: #1da96a;
+    color: #1da96a;
+  }
+  25% {
+    fill: #8B5CF6;
+    color: #8B5CF6;
+  }
+  50% {
+    fill: #EC4899;
+    color: #EC4899;
+  }
+  75% {
+    fill: #8B5CF6;
+    color: #8B5CF6;
+  }
+  100% {
+    fill: #1da96a;
+    color: #1da96a;
+  }
+}
+
+@keyframes colorB {
+  0% {
+    fill: #05a05a;
+    color: #05a05a;
+  }
+  25% {
+    fill: #7c3aed;
+    color: #7c3aed;
+  }
+  50% {
+    fill: #db2777;
+    color: #db2777;
+  }
+  75% {
+    fill: #7c3aed;
+    color: #7c3aed;
+  }
+  100% {
+    fill: #05a05a;
+    color: #05a05a;
+  }
+}
+
+@keyframes colorC {
+  0% {
+    fill: #36b37a;
+    color: #36b37a;
+  }
+  25% {
+    fill: #a78bfa;
+    color: #a78bfa;
+  }
+  50% {
+    fill: #f472b6;
+    color: #f472b6;
+  }
+  75% {
+    fill: #a78bfa;
+    color: #a78bfa;
+  }
+  100% {
+    fill: #36b37a;
+    color: #36b37a;
+  }
+}
+
+@keyframes colorD {
+  0% {
+    fill: #36b37a;
+    color: #36b37a;
+  }
+  25% {
+    fill: #a78bfa;
+    color: #a78bfa;
+  }
+  50% {
+    fill: #f472b6;
+    color: #f472b6;
+  }
+  75% {
+    fill: #a78bfa;
+    color: #a78bfa;
+  }
+  100% {
+    fill: #36b37a;
+    color: #36b37a;
+  }
+}
+
+@keyframes colorE {
+  0% {
+    fill: #049051;
+    color: #049051;
+  }
+  25% {
+    fill: #6d28d9;
+    color: #6d28d9;
+  }
+  50% {
+    fill: #be185d;
+    color: #be185d;
+  }
+  75% {
+    fill: #6d28d9;
+    color: #6d28d9;
+  }
+  100% {
+    fill: #049051;
+    color: #049051;
+  }
+}
+
+.outline {
+  font-weight: 600;
+  overflow: visible;
+  animation-name: outline;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.colorA {
+  font-weight: 600;
+  overflow: visible;
+  animation-name: colorA;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.colorB {
+  font-weight: 600;
+  overflow: visible;
+  animation-name: colorB;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.colorC {
+  font-weight: 600;
+  overflow: visible;
+  animation-name: colorC;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.colorD {
+  font-weight: 600;
+  overflow: visible;
+  animation-name: colorD;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+.colorE {
+  font-weight: 600;
+  overflow: visible;
+  animation-name: colorE;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}

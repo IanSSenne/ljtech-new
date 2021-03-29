@@ -7,9 +7,9 @@ const Copyright = () => (
 			<Link href="/" classNames="text-2xl transition hover:opacity-80">
 				<Logo
 					classNames="flex content-center items-center justify-center"
-					type="green"
 					width={25}
 					height={25}
+					index={0}
 				>
 					ljtech
 				</Logo>

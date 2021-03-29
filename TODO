@@ -3,7 +3,7 @@ Monday, March 29:
   Change components:
     // Change the following components accordingly
 
-    ☐ Logo
+    ✔ Logo @done(21-03-29 17:37)
       - make an 3 arrays for seperate colors? or include an aurora animtaion?
       - shorten the component by removing redundant code
 
