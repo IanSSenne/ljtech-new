@@ -14,14 +14,12 @@ const Thumbnail = ({
 	<li
 		style={{
 			backgroundColor: "#363739",
-			maxWidth: "min(20rem,100vw)",
-			minWidth: "min(20rem,100vw)",
 		}}
 		className={`${
 			classNames ?? ""
 		} grid flex-1 m-1 rounded-md overflow-hidden shadow-sm border-black border`}
 	>
-		<img src={src} alt={title} className="w-full h-24" />
+		<img src={src} alt={title} className="w-full h-24 object-cover fade-in" />
 		<div className="grid p-2 md:px-4 text-light">
 			{title ? <h2 className="text-md font-semibold pb-3">{title}</h2> : null}
 			{date ? <p className="text-sm pb-2">{date}</p> : null}

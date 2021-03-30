@@ -32,6 +32,8 @@ export default function Slideshow({ slides }) {
 					5000
 				)
 			);
+		} else {
+			clearInterval(counter);
 		}
 	}, []);
 

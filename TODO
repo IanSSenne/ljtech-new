@@ -1,21 +1,14 @@
 Monday, March 29:
 
-  Change components:
-    // Change the following components accordingly
-
-    ✔ Logo @done(21-03-29 17:37)
-      - make an 3 arrays for seperate colors? or include an aurora animtaion?
-      - shorten the component by removing redundant code
-    ✔ Header @done(21-03-29 18:07)
-      - make it responsive
-      - fix contrast issue
-    ✔ Slideshow fix logo @done(21-03-29 18:11)
-    ✘ Footer fade @cancelled(21-03-29 18:16)
-    ✔ Fix Steps @done(21-03-29 18:19)
-    ✔ Highlight route @done(21-03-29 18:25)
-
-  Change pages: 
+  Page Content: 
     // Change something about these pages
 
-    ☐ Portfolio all section
-      - show all projects??
+    ✔ Portfolio all section @done(21-03-29 19:22)
+      - show all projects tab??
+
+    ✔ Blog @done(21-03-29 19:47)
+    // refactor portfolio first
+    // copy portfolio for uniform design
+
+      ✔ Post @done(21-03-29 21:06)
+        // good nuff for now!

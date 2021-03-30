@@ -14,8 +14,6 @@ export default function Plans({ plans }) {
 		<div>
 			<div className="p-2">
 				<Title>Check out the ljtech plans</Title>
-			</div>
-			<div className="p-2">
 				<div className="md:flex md:content-center md:items-center md:justify-around">
 					<div className="max-w-xl w-full mx-auto">
 						<div className="flex content-center items-center justify-center">

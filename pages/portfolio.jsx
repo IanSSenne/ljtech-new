@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { tabs, apps, art, components, games } from "@lib/content";
+import { tabs, apps, art, components, games, all } from "@lib/content";
 import Head from "next/head";
 import Layout from "@template/layout";
 import Button from "@button/button";
@@ -10,7 +10,7 @@ import Title from "@text/title";
 import Link from "@text/link";
 
 export default function Pricing() {
-	const [actives, setActives] = useState([1, 0, 0, 0]);
+	const [actives, setActives] = useState([1, 0, 0, 0, 0]);
 
 	const handleClick = (e, i) => {
 		const newArray = new Array(actives.length).fill(0);
@@ -28,7 +28,7 @@ export default function Pricing() {
 				<Container>
 					<div className="p-2">
 						<Title>Portfolio</Title>
-						<div className="flex flex-wrap items-center justify-center lg:justify-start">
+						<div className="flex flex-wrap items-center justify-start max-w-sm md:max-w-lg lg:max-w-3xl mx-auto">
 							{tabs.map((tab, i) => (
 								<Button
 									handleClick={(e) => handleClick(e, i)}
@@ -47,7 +47,7 @@ export default function Pricing() {
 							<div key={i}>
 								{active == 1 ? (
 									<div>
-										<div className="p-2 max-w-sm md:max-w-lg lg:max-w-none mx-auto">
+										<div className="p-2 max-w-sm md:max-w-lg lg:max-w-3xl mx-auto">
 											<h2 className="font-bold pb-4 text-center md:text-left">
 												Check Out My Work
 											</h2>
@@ -64,16 +64,15 @@ export default function Pricing() {
 													Github
 												</Link>
 											</p>
-											<h2 className="text-xl font-black text-center text-purple-500">
-												{tabs[i]}
-											</h2>
 										</div>
 										<Gallery
 											index={i}
+											all={all}
 											apps={apps}
 											art={art}
 											components={components}
 											games={games}
+											tabs={tabs}
 										/>
 									</div>
 								) : null}
