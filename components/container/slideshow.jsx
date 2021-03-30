@@ -72,7 +72,7 @@ export default function Slideshow({ slides }) {
 							{i === active && (
 								<Logo
 									classNames="p-4 mx-auto relative z-40 fade-in"
-									type={slideActive.image}
+									color={slideActive.image}
 									width="clamp(11rem, 33vw, 22rem)"
 									height="clamp(11rem, 33vw, 22rem)"
 								/>

@@ -6,7 +6,7 @@ export default function Menu({ active, handleClick, pages }) {
 		<div>
 			<button
 				onClick={handleClick}
-				className="border fixed z-50 top-3.5 blur flex content-center items-center justify-center w-6 h-6 rounded-sm"
+				className="border z-50 top-3.5 blur flex content-center items-center justify-center w-6 h-6 rounded-sm"
 			>
 				{!active && (
 					<div>
@@ -33,7 +33,7 @@ export default function Menu({ active, handleClick, pages }) {
 								href={link.href}
 								classNames={
 									useRouter().pathname === link.href
-										? "text-blue-600 grid px-2 py-1 hover:bg-gray-50"
+										? "text-blue-600 grid px-2 py-1 bg-gray-200"
 										: "text-dark grid px-2 py-1 hover:bg-gray-50"
 								}
 							>

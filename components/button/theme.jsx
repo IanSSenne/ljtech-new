@@ -21,7 +21,7 @@ export default function Theme() {
 
 	return (
 		<label
-			className="fade-in border-transparent ring-gray-200 border-2 ring-1 inline-block cursor-pointer rounded-full relative w-6 h-3 m-3"
+			className="blur fade-in border-transparent ring-gray-200 border-2 ring-1 inline-block cursor-pointer rounded-full relative w-6 h-3 m-3"
 			htmlFor="theme"
 		>
 			<input

@@ -29,7 +29,7 @@ export default function Logo({
 	};
 
 	return (
-		<div style={style} className={`${classNames ?? ""} flex`}>
+		<div style={style} className={`${classNames ?? ""} flex fade-in`}>
 			{before}
 			{!type && color && (
 				<svg

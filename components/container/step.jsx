@@ -20,6 +20,7 @@ export default function Step({ classNames, step, text }) {
 				classNames="w-5 h-5 absolute -right-1 z-30"
 				width="20"
 				height="20"
+				color="green"
 				index={0}
 			/>
 		</div>

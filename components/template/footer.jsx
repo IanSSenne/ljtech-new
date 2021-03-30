@@ -11,7 +11,7 @@ export default function Footer() {
 				about={about}
 				classNames="flex justify-around space-x-4 my-8 lg:mb-0 lg:hidden"
 			/>
-			<div className="w-full flex flex-wrap items-end justify-around sm:justify-between">
+			<div className="flex-col-reverse w-full flex flex-wrap items-center justify-around sm:flex-row sm:items-end sm:justify-between">
 				<div className="flex items-end space-x-4">
 					<Copyright />
 					<Navlist

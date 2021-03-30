@@ -18,8 +18,8 @@ const Love = ({ classNames, width, height }) => (
 					x2="0.5"
 					gradientUnits="objectBoundingBox"
 				>
-					<stop offset="0.21" stop-color="#fff" stopOpacity="0" />
-					<stop offset="1" stop-color="#fff" stopOpacity="0.2" />
+					<stop offset="0.21" stopColor="#fff" stopOpacity="0" />
+					<stop offset="1" stopColor="#fff" stopOpacity="0.2" />
 				</linearGradient>
 			</defs>
 			<g id="Love_1" data-name="Love 1" transform="translate(0 0)">

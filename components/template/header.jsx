@@ -13,26 +13,29 @@ export default function Header() {
 	};
 
 	return (
-		<header className="max-w-6xl mx-auto flex items-center justify-between p-2">
-			<div className="flex items-center space-x-2">
-				<Menu active={active} handleClick={handleClick} pages={pages} />
-				<div className="w-4 h-6 block"></div>
-				<Logo type="disco" width={25} height={25} />
-				<Link
-					href="/about"
-					classNames="hover:border-green-500 hover:text-green-500"
-				>
-					Why ljtech?
-				</Link>
-			</div>
-			<div className="flex items-center space-x-2">
-				<Theme />
-				<Link
-					href="/contact"
-					classNames="px-2 py-1 border rounded-sm hover:border-purple-500 hover:text-purple-500"
-				>
-					Contact
-				</Link>
+		<header className="sticky z-50 top-0 p-2">
+			<div className="max-w-6xl mx-auto flex items-center justify-between">
+				<div className="flex items-center space-x-2">
+					<Menu active={active} handleClick={handleClick} pages={pages} />
+					<Link href="/">
+						<Logo type="disco" width={25} height={25} />
+					</Link>
+					<Link
+						href="/about"
+						classNames="border border-dark text-dark blur px-2 rounded-full hover:text-green-700"
+					>
+						Why ljtech?
+					</Link>
+				</div>
+				<div className="flex items-center space-x-2">
+					<Theme />
+					<Link
+						href="/contact"
+						classNames="text-dark blur fade-in px-2 py-1 rounded-sm hover:text-purple-700"
+					>
+						Contact
+					</Link>
+				</div>
 			</div>
 		</header>
 	);
