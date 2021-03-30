@@ -1,3 +1,4 @@
+import { frameworks, languages, products } from "@lib/content";
 import Head from "next/head";
 import Layout from "@template/layout";
 import Container from "@container/container";
@@ -12,7 +13,7 @@ export default function Pricing() {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Section>
-				<div className="flex justify-center">
+				<div className="flex justify-center pb-4">
 					<Container size="small">
 						<div className="p-2">
 							<Title>About</Title>
@@ -28,8 +29,8 @@ export default function Pricing() {
 								</p>
 								<div className="flex p-2">
 									<img
-										className="border"
-										src="/"
+										className="border fade-in rounded-sm object-cover"
+										src="../800x600.png"
 										alt="something"
 										width="100"
 										height="100"
@@ -54,8 +55,8 @@ export default function Pricing() {
 								</p>
 								<div className="flex p-2">
 									<img
-										className="border"
-										src="/"
+										className="border fade-in rounded-sm object-cover"
+										src="../800x600.png"
 										alt="something"
 										width="100"
 										height="100"
@@ -69,14 +70,33 @@ export default function Pricing() {
 			<Section dark={true}>
 				<div className="flex justify-center">
 					<Container size="small">
-						<div className="p-2">
-							<ul className="grid grid-cols-2 md:grid-cols-4 opacity-40 max-w-sm mx-auto">
-								<li className="font-bold place-self-center p-2">🔺Vercel</li>
-								<li className="font-bold place-self-center p-2">🔺Vercel</li>
-								<li className="font-bold place-self-center p-2">🔺Vercel</li>
-								<li className="font-bold place-self-center p-2">🔺Vercel</li>
-								<li className="font-bold place-self-center p-2">🔺Vercel</li>
-								<li className="font-bold place-self-center p-2">🔺Vercel</li>
+						<div className="p-2 flex flex-wrap">
+							<ul className="opacity-40 max-w-sm mx-auto">
+								{languages.map((language, i) => (
+									<li
+										key={language}
+										className="font-bold place-self-center p-2"
+									>
+										{language}
+									</li>
+								))}
+							</ul>
+							<ul className="opacity-40 max-w-sm mx-auto">
+								{frameworks.map((framework, i) => (
+									<li
+										key={framework}
+										className="font-bold place-self-center p-2"
+									>
+										{framework}
+									</li>
+								))}
+							</ul>
+							<ul className="opacity-40 max-w-sm mx-auto">
+								{products.map((product, i) => (
+									<li key={product} className="font-bold place-self-center p-2">
+										{product}
+									</li>
+								))}
 							</ul>
 						</div>
 					</Container>

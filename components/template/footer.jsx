@@ -5,7 +5,7 @@ import Socials from "./socials";
 
 export default function Footer() {
 	return (
-		<footer className="max-w-6xl mx-auto lg:flex lg:items-center lg:justify-between p-2">
+		<footer className="max-w-6xl mx-auto lg:flex lg:items-center lg:justify-between p-2 lg:pt-16">
 			<Navlist
 				work={work}
 				about={about}
