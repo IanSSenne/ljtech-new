@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { tabs, apps, art, components, games, all } from "@lib/content";
+import { tabs, apps, art, components, games, all, socials } from "@lib/content";
+import Action from "@container/action";
 import Head from "next/head";
 import Layout from "@template/layout";
 import Button from "@button/button";
@@ -7,7 +8,6 @@ import Container from "@container/container";
 import Section from "@container/section";
 import Gallery from "@container/gallery";
 import Title from "@text/title";
-import Link from "@text/link";
 
 export default function Pricing() {
 	const [actives, setActives] = useState([1, 0, 0, 0, 0]);
@@ -35,7 +35,7 @@ export default function Pricing() {
 									key={tab}
 									classNames={`${
 										actives[i] ? "bg-gray-100 underline" : ""
-									} m-1 border-transparent font-semibold text-purple-500 hover:text-purple-400 transition`}
+									} m-1 border-transparent font-semibold text-purple-500 hover:text-purple-400`}
 								>
 									{tab}
 								</Button>
@@ -47,24 +47,6 @@ export default function Pricing() {
 							<div key={i}>
 								{active == 1 ? (
 									<div>
-										<div className="p-2 max-w-sm md:max-w-lg lg:max-w-3xl mx-auto">
-											<h2 className="font-bold pb-4 text-center md:text-left">
-												Check Out My Work
-											</h2>
-											<p className="pb-2">
-												Here is the full collection of work by ljtech.
-											</p>
-											<p className="pb-4">
-												For more detailed information, visit my{" "}
-												<Link
-													classNames="text-blue-500 hover:text-blue-400 transition"
-													href="https://github.com/landonjohnsontechnologies"
-													target="_blank"
-												>
-													Github
-												</Link>
-											</p>
-										</div>
 										<Gallery
 											index={i}
 											all={all}
@@ -80,6 +62,15 @@ export default function Pricing() {
 						))}
 					</div>
 				</Container>
+			</Section>
+			<Section dark={true}>
+				<Action
+					href={socials[3].href}
+					title="Want more ljtech projects?"
+					call="Find more"
+				>
+					of my work on Github
+				</Action>
 			</Section>
 		</Layout>
 	);

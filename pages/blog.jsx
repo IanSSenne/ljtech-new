@@ -37,7 +37,7 @@ export default function Pricing({ allPostsData }) {
 							<p className="pb-4">
 								If you want, you can follow me on{" "}
 								<Link
-									classNames="text-blue-500 hover:text-blue-400 transition"
+									classNames="text-blue-500 hover:text-blue-400"
 									href="https://github.com/landonjohnsontechnologies"
 									target="_blank"
 								>

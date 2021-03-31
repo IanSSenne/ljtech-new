@@ -8,6 +8,7 @@ import Clip from "@svg/clip";
 import Love from "@svg/love";
 import aurora from "@styles/aurora.module.css";
 
+//todo: put this in content
 const plans = [
 	{
 		id: 1,
@@ -54,6 +55,7 @@ const plans = [
 	},
 ];
 
+//todo: get this in content?
 const slides = [
 	{
 		id: 1,

@@ -11,8 +11,8 @@ const Nav = ({ classNames, work, about }) => (
 						<Link
 							classNames={
 								useRouter().pathname === link.href
-									? "text-blue-600 hover:opacity-50"
-									: "hover:opacity-50"
+									? "text-blue-500 hover:opacity-60"
+									: "hover:opacity-60"
 							}
 							href={link.href}
 						>
@@ -30,8 +30,8 @@ const Nav = ({ classNames, work, about }) => (
 						<Link
 							classNames={
 								useRouter().pathname === link.href
-									? "text-blue-600 hover:opacity-50"
-									: "hover:opacity-50"
+									? "text-blue-500 hover:opacity-60"
+									: "hover:opacity-60"
 							}
 							href={link.href}
 						>

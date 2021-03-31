@@ -1,28 +1,12 @@
-Monday, March 29:
+Tuesday, March 30:
 
-  ✔ Actually make the post page pretty 👸 @done(21-03-29 21:54)
-
-  ☐ Fix the about page 👻
-      list of stuff I used:
-        HTML
-        CSS
-        JavaScript
-        PHP
-        MySQL
-
-      list frameworks I used:
-        Symfony
-        Laravel
-        React
-        Next.js
-        Vue
-        Nuxt.js
-
-      other stuff: 
-        adobe products
-        figma
-        
-
-
-
-  ☐ slideshow images
+  ☐ Landing page image on mobile is tiny
+  ☐ Slideshow images
+  ☐ Slideshow memory leak
+  ✔ About page content, images @done(21-03-30 20:41)
+  ✔ About page flex for mobile @done(21-03-30 20:41)
+  ✔ About page languages / products design @done(21-03-30 20:41)
+  ✔ Portfolio footer useRouter is catching everything @done(21-03-30 18:44)
+  ☐ FAQ content and design
+  ✔ footer socials link to cellphone/email @done(21-03-30 18:15)
+  ✔ Header why ljtech ballooning @done(21-03-30 18:23)

@@ -10,7 +10,7 @@ export default function Gallery({
 	tabs,
 }) {
 	return (
-		<div className="p-2">
+		<div style={{ minHeight: "calc(100vh - 31.25rem)" }} className="p-2">
 			<h2 className="p-2 text-xl font-black text-center text-purple-500">
 				{tabs[index]}
 			</h2>
@@ -30,7 +30,7 @@ export default function Gallery({
 					</ol>
 				)}
 				{index === 1 && (
-					<ol className="grid grid-cols-3">
+					<ol className="grid md:grid-cols-3">
 						{art.map((piece, i) => (
 							<Thumbnail
 								key={piece.id}
@@ -44,7 +44,7 @@ export default function Gallery({
 					</ol>
 				)}
 				{index === 2 && (
-					<ol className="grid grid-cols-3">
+					<ol className="grid md:grid-cols-3">
 						{components.map((component, i) => (
 							<Thumbnail
 								key={component.id}
@@ -58,7 +58,7 @@ export default function Gallery({
 					</ol>
 				)}
 				{index === 3 && (
-					<ol className="grid grid-cols-3">
+					<ol className="grid md:grid-cols-3">
 						{games.map((game, i) => (
 							<Thumbnail
 								key={game.id}
@@ -72,7 +72,7 @@ export default function Gallery({
 					</ol>
 				)}
 				{index === 4 && (
-					<ol className="grid grid-cols-3">
+					<ol className="grid md:grid-cols-3">
 						{all.map((item, i) => (
 							<Thumbnail
 								key={`${item.id}B`}

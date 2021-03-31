@@ -17,7 +17,7 @@ export default function Slideshow({ slides }) {
 	};
 
 	useEffect(() => {
-		if (pause) {
+		if (mounted && pause) {
 			clearInterval(counter);
 		}
 	}, [pause]);
@@ -25,6 +25,8 @@ export default function Slideshow({ slides }) {
 	useEffect(() => {
 		if (!mounted) {
 			setMounted(true);
+			//TODO: something memory leaky here what
+			//NOTE: do an async promise or something
 			setCounter(
 				setInterval(
 					() =>
@@ -32,9 +34,8 @@ export default function Slideshow({ slides }) {
 					5000
 				)
 			);
-		} else {
-			clearInterval(counter);
 		}
+		return () => clearInterval(counter);
 	}, []);
 
 	return (

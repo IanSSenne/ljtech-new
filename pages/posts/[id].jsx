@@ -1,11 +1,12 @@
 import { getAllPostIds, getPostData } from "@lib/posts";
+import { socials } from "@lib/content";
+import Action from "@container/action";
 import Head from "next/head";
 import Layout from "@template/layout";
 import Container from "@container/container";
 import Section from "@container/section";
 import Title from "@text/title";
-import Link from "@text/link";
-import Love from "@svg/love";
+
 import styles from "@styles/post.module.css";
 
 export async function getStaticProps({ params }) {
@@ -45,7 +46,7 @@ export default function Post({ postData }) {
 									height="100"
 								/>
 							</div>
-							<div className="flex px-2 opacity-50">
+							<div className="flex px-2 opacity-60">
 								<p className="flex-1">{postData.date}</p>
 								<p className="flex-1 text-center">{postData.id}</p>
 								<p className="flex-1 text-right">{postData.author}</p>
@@ -59,24 +60,13 @@ export default function Post({ postData }) {
 				</div>
 			</Section>
 			<Section dark={true}>
-				<div className="flex justify-center">
-					<Container size="small">
-						<div>
-							<div className="flex flex-wrap content-center items-center justify-center space-x-4 pb-4">
-								<Love type="heart" width={100} height={100} />
-								<p className="text-xl">Learn more about ljtech.</p>
-							</div>
-							<div className="text-center px-2 pt-8">
-								<Link
-									classNames="px-2 py-1 border border-blue-500 text-blue-500 hover:border-blue-400 hover:text-blue-400 rounded-sm"
-									href="/pricing"
-								>
-									About Me
-								</Link>
-							</div>
-						</div>
-					</Container>
-				</div>
+				<Action
+					href={socials[3].href}
+					title="Want more ljtech content?"
+					call="Follow me"
+				>
+					on Twitch and AMA
+				</Action>
 			</Section>
 		</Layout>
 	);

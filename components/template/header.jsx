@@ -22,7 +22,7 @@ export default function Header() {
 					</Link>
 					<Link
 						href="/about"
-						classNames="border border-dark text-dark blur px-2 rounded-full hover:text-green-700"
+						classNames="hidden sm:block border border-dark text-dark blur px-2 rounded-full hover:text-green-700"
 					>
 						Why ljtech?
 					</Link>

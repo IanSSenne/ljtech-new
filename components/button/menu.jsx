@@ -33,7 +33,7 @@ export default function Menu({ active, handleClick, pages }) {
 								href={link.href}
 								classNames={
 									useRouter().pathname === link.href
-										? "text-blue-600 grid px-2 py-1 bg-gray-200"
+										? "text-blue-500 grid px-2 py-1 bg-gray-200"
 										: "text-dark grid px-2 py-1 hover:bg-gray-50"
 								}
 							>

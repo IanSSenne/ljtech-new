@@ -52,7 +52,10 @@ export default function Inputs({
 					))}
 					{fields.length <= maxFields && (
 						<div className="text-right">
-							<button onClick={handleAdd} className="border-green-500 border w-6 h-8 rounded-sm">
+							<button
+								onClick={handleAdd}
+								className="border-green-500 border w-6 h-8 rounded-sm"
+							>
 								+
 							</button>
 						</div>

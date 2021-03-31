@@ -79,7 +79,7 @@ export default function Contact() {
 								/>
 								<div className="grid pb-4">
 									<Button
-										classNames="border-green-500 text-green-500 hover:border-green-400 hover:text-green-400 transition"
+										classNames="border-green-500 text-green-500 hover:border-green-400 hover:text-green-400"
 										type="submit"
 									>
 										💌 Submit
