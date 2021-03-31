@@ -38,7 +38,7 @@ export default function Contact() {
 										as soon as possible!
 									</p>
 								</div>
-								<div className="md:flex md:space-x-2">
+								<div className="sm:flex sm:space-x-2">
 									<Input
 										label="First name"
 										helper="Enter your first name"
@@ -54,7 +54,7 @@ export default function Contact() {
 										placeholder="Smith"
 									/>
 								</div>
-								<div className="md:flex md:space-x-2">
+								<div className="sm:flex sm:space-x-2">
 									<Input
 										label="Email address"
 										helper="Enter your email address"
@@ -79,7 +79,7 @@ export default function Contact() {
 								/>
 								<div className="grid pb-4">
 									<Button
-										classNames="border-green-500 text-green-500 hover:border-green-400 hover:text-green-400"
+										classNames="border-green-500 text-green-500 hover:border-green-400 hover:text-green-400 m-1"
 										type="submit"
 									>
 										💌 Submit

@@ -24,7 +24,7 @@ export default function Menu({ active, handleClick, pages }) {
 			</button>
 			{active && (
 				<ul
-					style={{ height: "calc(100vh - 48px)", maxHeight: "14.125rem" }}
+					style={{ height: "calc(100vh - 48px)", maxHeight: "16.5rem" }}
 					className="overflow-hidden overflow-y-scroll border rounded-sm blur fixed z-50 top-10"
 				>
 					{pages.map((link, i) => (

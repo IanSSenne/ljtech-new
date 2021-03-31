@@ -1,7 +1,7 @@
 export default function Block({ reverse, children, src, set, alt }) {
 	if (reverse === true) {
 		return (
-			<div className="flex justify-center flex-wrap flex-row-reverse md:text-right">
+			<div className="flex justify-center flex-wrap flex-row-reverse md:text-right p-2">
 				<p className="md:flex-1 pb-4 md:pb-0 max-w-lg pl-2">{children}</p>
 				<picture className="fade-in flex">
 					<source media="(min-width:768px)" srcSet={set} />
@@ -18,7 +18,7 @@ export default function Block({ reverse, children, src, set, alt }) {
 		);
 	} else {
 		return (
-			<div className="flex justify-center flex-wrap">
+			<div className="flex justify-center flex-wrap p-2">
 				<p className="md:flex-1 pb-4 md:pb-0 max-w-lg pr-2">{children}</p>
 				<picture className="fade-in flex">
 					<source media="(min-width:768px)" srcSet={set} />

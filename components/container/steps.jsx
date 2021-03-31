@@ -10,6 +10,7 @@ export default function Steps({ step }) {
 					<Step
 						type={step >= i ? "green" : "filler"}
 						classNames={step >= i ? "bg-green-500" : "bg-transparent"}
+						color={step >= i ? "green" : "gray"}
 						text={step >= i ? "text-light" : "text-dark"}
 						step={form}
 						key={i}

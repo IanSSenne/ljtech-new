@@ -90,7 +90,7 @@ export default function Survey() {
 							</div>
 							{step === 0 && (
 								<div>
-									<div className="md:flex md:space-x-2">
+									<div className="sm:flex sm:space-x-2">
 										<Input
 											label="First name"
 											name="first"
@@ -110,7 +110,7 @@ export default function Survey() {
 											isRequired={true}
 										/>
 									</div>
-									<div className="md:flex md:space-x-2">
+									<div className="sm:flex sm:space-x-2">
 										<Input
 											label="Email address"
 											name="email"
@@ -169,7 +169,7 @@ export default function Survey() {
 										helper={`Characters remaining: ${count}`}
 										isRequired={false}
 									/>
-									<div className="flex flex-wrap space-x-2">
+									<div className="sm:flex sm:space-x-2">
 										<Input
 											label="Page count"
 											name="pages"
@@ -211,7 +211,7 @@ export default function Survey() {
 									<Input
 										style={{
 											padding: "0",
-											margin: "0 .25rem",
+											margin: "0 .5rem",
 											border: "none",
 										}}
 										label="Budget"
@@ -227,9 +227,11 @@ export default function Survey() {
 										isRequired={true}
 									/>
 									<Inputs
-										label="Competitor Websites"
+										title="Competitor Websites"
+										label="Website"
 										fields={fields}
 										type="url"
+										name="url"
 										placeholder="https://example.com"
 										handleRemove={removeFields}
 										handleChange={changeFields}
@@ -244,7 +246,7 @@ export default function Survey() {
 								{step === 0 && <div></div>}
 								{step >= 1 && (
 									<Button
-										classNames="border-blue-500 text-blue-500 hover:text-blue-400 hover:border-blue-400"
+										classNames="border-blue-500 text-blue-500 hover:text-blue-400 hover:border-blue-400 m-1"
 										handleClick={(e) => backStep(e)}
 									>
 										Back
@@ -252,7 +254,7 @@ export default function Survey() {
 								)}
 								{step >= 0 && step < 2 && (
 									<Button
-										classNames="border-blue-500 text-blue-500 hover:text-blue-400 hover:border-blue-400"
+										classNames="border-blue-500 text-blue-500 hover:text-blue-400 hover:border-blue-400 m-1"
 										handleClick={(e) => nextStep(e)}
 									>
 										Next
@@ -260,7 +262,7 @@ export default function Survey() {
 								)}
 								{step === 2 && (
 									<Button
-										classNames="border-green-500 text-green-500 hover:text-green-400 hover:border-green-400"
+										classNames="border-green-500 text-green-500 hover:text-green-400 hover:border-green-400 m-1"
 										type="submit"
 									>
 										Submit

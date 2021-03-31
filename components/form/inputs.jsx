@@ -3,7 +3,7 @@ export default function Inputs({
 	style,
 	classNames,
 	label,
-	name,
+	title,
 	type,
 	placeholder,
 	min,
@@ -18,51 +18,53 @@ export default function Inputs({
 }) {
 	return (
 		<div className={`${classNames ?? ""} flex-1 mb-2`}>
-			<div className="p-1">
-				<div className="flex-1 px-2">{label}</div>
-				<ul>
-					{fields.map((field, i) => (
-						<li className="flex" key={i}>
-							<label className="flex-1 flex flex-wrap" htmlFor={name}>
-								<input
-									style={style}
-									className="px-2 py-1 w-full bg-transparent"
-									name={`${name}${i}`}
-									id={`${name}${i}`}
-									type={type}
-									id={name}
-									onChange={(e) => handleChange(e, i)}
-									name={name}
-									placeholder={placeholder}
-									value={fields[i]}
-									min={min}
-									max={max}
-									required={isRequired}
-								/>
-							</label>
-							{fields.length > minFields && (
-								<button
-									onClick={(e) => handleRemove(e, i)}
-									className="w-6 h-8 rounded-sm ml-0.5"
-								>
-									-
-								</button>
-							)}
-						</li>
-					))}
-					{fields.length <= maxFields && (
-						<div className="text-right">
+			<h2 className="px-2">Have online competitors? Link them:</h2>
+			<ul>
+				{fields.map((field, i) => (
+					<li className="flex flex-wrap flex-1 mb-2" key={i}>
+						<label className="w-full px-2" htmlFor={`url${i}`}>
+							{label} #{i + 1}
+						</label>
+						<input
+							style={style}
+							className={`${
+								fields.length > minFields
+									? "border-t border-b border-l rounded-l-sm px-2 py-1 flex-1 bg-transparent"
+									: "border rounded-sm px-2 py-1 flex-1 bg-transparent"
+							}`}
+							name={`url${i}`}
+							id={`url${i}`}
+							type={type}
+							onChange={(e) => handleChange(e, i)}
+							placeholder={placeholder}
+							value={fields[i]}
+							min={min}
+							max={max}
+							required={isRequired}
+						/>
+						{fields.length > minFields && (
 							<button
-								onClick={handleAdd}
-								className="border-green-500 border w-6 h-8 rounded-sm"
+								onClick={(e) => handleRemove(e, i)}
+								style={{ height: "2.125rem" }}
+								className="border-red-500 text-red-500 border w-6 rounded-r-sm"
 							>
-								+
+								-
 							</button>
-						</div>
-					)}
-				</ul>
-				<div className="opacity-60 px-2 text-sm">{helper}</div>
-			</div>
+						)}
+					</li>
+				))}
+				{fields.length <= maxFields && (
+					<div className="text-right">
+						<button
+							onClick={handleAdd}
+							className="border-purple-500 text-purple-500 border px-2 py-1 rounded-sm"
+						>
+							Add +
+						</button>
+					</div>
+				)}
+			</ul>
+			<div className="opacity-60 px-2 text-sm">{helper}</div>
 		</div>
 	);
 }

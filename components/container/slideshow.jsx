@@ -79,7 +79,7 @@ export default function Slideshow() {
 
 	return (
 		<div className="p-2">
-			<Title>The web dev process</Title>
+			<Title>The Process</Title>
 			<div className="md:flex md:content-center md:items-center md:justify-around">
 				<div className="flex content-center items-center justify-center md:block md:pr-2">
 					{slides.slice(0, 3).map((slideTag, i) => (
@@ -107,11 +107,11 @@ export default function Slideshow() {
 						<div key={slideActive.id}>
 							{i === active && (
 								<img
-									className="p-2 fade-in h-40"
+									className="p-2 fade-in h-40 md:h-80"
 									src={slideActive.image}
 									alt={slideActive.id}
-									width="160"
-									height="160"
+									width="320"
+									height="320"
 									draggable={false}
 								/>
 							)}
@@ -147,7 +147,7 @@ export default function Slideshow() {
 							{i === active && (
 								<div>
 									<div>
-										<p className="text-xl text-center">
+										<p className="md:text-xl text-center">
 											{slideActive.description}
 										</p>
 									</div>
