@@ -17,11 +17,7 @@ export default function Select({
 					required={isRequired}
 				>
 					{options.map((option, i) => (
-						<option
-							className="dark:bg-dark"
-							key={`${option}${i}`}
-							value={option}
-						>
+						<option className="dark:bg-dark" key={option} value={option}>
 							{option}
 						</option>
 					))}

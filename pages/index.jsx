@@ -56,50 +56,7 @@ const plans = [
 ];
 
 //todo: get this in content?
-const slides = [
-	{
-		id: 1,
-		name: "Consultation",
-		image: "green",
-		description:
-			"Consult with the web developer directly and define your project goals and how ljtech can meet them.",
-	},
-	{
-		id: 2,
-		name: "Rough Draft",
-		image: "purple",
-		description:
-			"Creating mockups to illustrate a finished project, this will help ljtech find the right look for your project.",
-	},
-	{
-		id: 3,
-		name: "Writing Code",
-		image: "red",
-		description:
-			"Writing the code that powers your application, depending on the scope of work, this may take a while.",
-	},
-	{
-		id: 4,
-		name: "Test Launch",
-		image: "green",
-		description:
-			"Launching a working version of your project as soon as possible and working out the flaws in its design.",
-	},
-	{
-		id: 5,
-		name: "Analytics",
-		image: "purple",
-		description:
-			"Monitoring your projects live performance and monthly usage, making sure its working as intended.",
-	},
-	{
-		id: 6,
-		name: "Optimization",
-		image: "red",
-		description:
-			"With information collected through analytics and personal use, ljtech can finely tune your application.",
-	},
-];
+
 
 export default function Home() {
 	return (
@@ -142,7 +99,7 @@ export default function Home() {
 			<Section dark={true}>
 				<div className="flex justify-center">
 					<Container size="small">
-						<Slideshow slides={slides} />
+						<Slideshow />
 					</Container>
 				</div>
 			</Section>

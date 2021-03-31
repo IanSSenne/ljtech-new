@@ -12,7 +12,7 @@ export default function Socials() {
 			<div className="flex content-center items-center justify-center">
 				{socials.map((social, i) => (
 					<Link
-						key={`${social.name} - ${social.id}`}
+						key={social.name}
 						target="_blank"
 						classNames="hover:opacity-60"
 						href={social.href}
