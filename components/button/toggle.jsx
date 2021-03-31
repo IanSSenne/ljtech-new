@@ -19,7 +19,7 @@ const Toggle = ({ off, on, handleChange, isActive }) => (
 		>
 			{!isActive && (
 				<div
-					className={`${off} text-xs flex content-center items-center justify-center overflow-hidden border-white border w-3 h-3 rounded-full select-none absolute -top-0.5`}
+					className={`${off} text-xs flex content-center items-center justify-center overflow-hidden border w-3 h-3 rounded-full select-none absolute -top-0.5`}
 					style={{
 						opacity: Number(!isActive),
 						left: "-2px",

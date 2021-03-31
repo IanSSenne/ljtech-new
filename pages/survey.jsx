@@ -135,8 +135,8 @@ export default function Survey() {
 									<div className="flex content-center items-center justify-center">
 										<div>Old Project</div>
 										<Toggle
-											on={"bg-green-500 border-green-800"}
-											off={"bg-gray-200"}
+											off="bg-gray-500 border-light dark:border-dark"
+											on="bg-blue-500 border-light dark:border-dark"
 											handleChange={handleProject}
 											isActive={active}
 										/>

@@ -1,12 +1,6 @@
 Tuesday, March 30:
 
   ☐ Landing page image on mobile is tiny
-  ☐ Slideshow images
-  ✔ Slideshow memory leak @started(21-03-30 21:05) @done(21-03-30 21:47) @creativenull saved me @lasted(42m17s) until he merfifully ended my memory leak
-  ✔ About page content, images @done(21-03-30 20:41)
-  ✔ About page flex for mobile @done(21-03-30 20:41)
-  ✔ About page languages / products design @done(21-03-30 20:41)
-  ✔ Portfolio footer useRouter is catching everything @done(21-03-30 18:44)
   ☐ FAQ content and design
-  ✔ footer socials link to cellphone/email @done(21-03-30 18:15)
-  ✔ Header why ljtech ballooning @done(21-03-30 18:23)
+  ✔ image tags draggable false @done(21-03-30 22:45)
+  ☐ footer doesnt go super tiny

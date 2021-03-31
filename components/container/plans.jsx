@@ -20,8 +20,8 @@ export default function Plans({ plans }) {
 							<div>Monthly</div>
 							<div>
 								<Toggle
-									off="bg-gray-500"
-									on="bg-blue-500"
+									off="bg-gray-500 border-light dark:border-dark"
+									on="bg-blue-500 border-light dark:border-dark"
 									handleChange={handleChange}
 									isActive={active}
 								/>
@@ -52,11 +52,21 @@ export default function Plans({ plans }) {
 											className={`w-1 h-6 md:w-6 md:h-1 rounded-full ${plan.color}`}
 										></div>
 									</div>
-									<ul className="md:px-2 pt-2 pb-4 font-semibold">
+									<ul className="md:hidden pt-2 pb-4 font-semibold">
+										{plan.adds.map((add, i) => (
+											<li
+												key={i}
+												className="p-1 text-right text-xs md:text-base md:border-none md:shadow-none md:text-left md:w-40 mx-auto"
+											>
+												{add}
+											</li>
+										))}
+									</ul>
+									<ul className="hidden md:block md:px-2 pt-2 pb-4 font-semibold">
 										{plan.offers.map((offer, i) => (
 											<li
 												key={i}
-												className="border rounded-sm p-0.5 shadow-sm my-0.5 text-right text-xs md:text-base md:border-none md:shadow-none md:text-left md:w-40 mx-auto"
+												className="p-1 text-right text-xs md:text-base md:border-none md:shadow-none md:text-left md:w-40 mx-auto"
 											>
 												{offer}
 											</li>

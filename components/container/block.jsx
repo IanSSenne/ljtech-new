@@ -11,6 +11,7 @@ export default function Block({ reverse, children, src, set, alt }) {
 						alt={alt}
 						width="100"
 						height="100"
+						draggable={false}
 					/>
 				</picture>
 			</div>
@@ -27,6 +28,7 @@ export default function Block({ reverse, children, src, set, alt }) {
 						alt={alt}
 						width="100"
 						height="100"
+						draggable={false}
 					/>
 				</picture>
 			</div>

@@ -19,6 +19,7 @@ const plans = [
 		priceMo: 50,
 		priceYr: 600 * 0.8,
 		offers: ["+ Dark Mode", "+ SSL Certificate", "+ Web Hosting"],
+		adds: ["+ Dark Mode", "+ SSL Certificate", "+ Web Hosting"],
 	},
 	{
 		id: 2,
@@ -36,6 +37,7 @@ const plans = [
 			"Increased SEO",
 			"+ CMS Capability",
 		],
+		adds: ["", "", "+ CMS Capability"],
 	},
 	{
 		id: 3,
@@ -52,11 +54,11 @@ const plans = [
 			"+ Analytic Reports",
 			"+ Increased SEO",
 		],
+		adds: ["", "+ Analytic Reports", "+ Increased SEO"],
 	},
 ];
 
 //todo: get this in content?
-
 
 export default function Home() {
 	return (

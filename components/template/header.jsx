@@ -22,7 +22,7 @@ export default function Header() {
 					</Link>
 					<Link
 						href="/about"
-						classNames="hidden sm:block border border-dark text-dark blur px-2 rounded-full hover:text-green-700"
+						classNames="hidden sm:block border border-dark text-dark blur px-2 rounded-full hover:text-light hover:border-light"
 					>
 						Why ljtech?
 					</Link>
@@ -31,7 +31,7 @@ export default function Header() {
 					<Theme />
 					<Link
 						href="/contact"
-						classNames="text-dark blur fade-in px-2 py-1 rounded-sm hover:text-purple-700"
+						classNames="text-dark blur fade-in px-2 py-1 rounded-sm hover:text-light hover:border-light"
 					>
 						Contact
 					</Link>

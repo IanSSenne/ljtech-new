@@ -9,42 +9,42 @@ export default function Slideshow() {
 		{
 			id: 1,
 			name: "Consultation",
-			image: "green",
+			image: "../A.svg",
 			description:
 				"Consult with the web developer directly and define your project goals and how ljtech can meet them.",
 		},
 		{
 			id: 2,
 			name: "Rough Draft",
-			image: "purple",
+			image: "../B.svg",
 			description:
 				"Creating mockups to illustrate a finished project, this will help ljtech find the right look for your project.",
 		},
 		{
 			id: 3,
 			name: "Writing Code",
-			image: "red",
+			image: "../C.svg",
 			description:
 				"Writing the code that powers your application, depending on the scope of work, this may take a while.",
 		},
 		{
 			id: 4,
 			name: "Test Launch",
-			image: "green",
+			image: "../D.svg",
 			description:
 				"Launching a working version of your project as soon as possible and working out the flaws in its design.",
 		},
 		{
 			id: 5,
 			name: "Analytics",
-			image: "purple",
+			image: "../E.svg",
 			description:
 				"Monitoring your projects live performance and monthly usage, making sure its working as intended.",
 		},
 		{
 			id: 6,
 			name: "Optimization",
-			image: "red",
+			image: "../F.svg",
 			description:
 				"With information collected through analytics and personal use, ljtech can finely tune your application.",
 		},
@@ -81,7 +81,7 @@ export default function Slideshow() {
 		<div className="p-2">
 			<Title>The web dev process</Title>
 			<div className="md:flex md:content-center md:items-center md:justify-around">
-				<div className="flex content-center items-center justify-center md:block pr-2">
+				<div className="flex content-center items-center justify-center md:block md:pr-2">
 					{slides.slice(0, 3).map((slideTag, i) => (
 						<div key={slideTag.id}>
 							{i === active ? (
@@ -103,26 +103,22 @@ export default function Slideshow() {
 					))}
 				</div>
 				<div className="relative px-2 flex justify-center">
-					<Logo
-						classNames="p-4 mx-auto inset-x-0 absolute z-30"
-						type="outline"
-						width="clamp(11rem, 33vw, 22rem)"
-						height="clamp(11rem, 33vw, 22rem)"
-					/>
 					{slides.map((slideActive, i) => (
 						<div key={slideActive.id}>
 							{i === active && (
-								<Logo
-									classNames="p-4 mx-auto relative z-40 fade-in"
-									color={slideActive.image}
-									width="clamp(11rem, 33vw, 22rem)"
-									height="clamp(11rem, 33vw, 22rem)"
+								<img
+									className="p-2 fade-in h-40"
+									src={slideActive.image}
+									alt={slideActive.id}
+									width="160"
+									height="160"
+									draggable={false}
 								/>
 							)}
 						</div>
 					))}
 				</div>
-				<div className="flex content-center items-center justify-center md:block pl-2 md:text-right">
+				<div className="flex content-center items-center justify-center md:block pb-4 md:pb-0 md:pl-2 md:text-right">
 					{slides.slice(3, 6).map((slideTag, i) => (
 						<div key={slideTag.id}>
 							{i + 3 === active ? (

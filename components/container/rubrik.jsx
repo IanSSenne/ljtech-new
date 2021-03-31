@@ -15,8 +15,8 @@ export default function Rubrik() {
 			id: "toggle",
 			name: (
 				<Toggle
-					off="bg-gray-500"
-					on="bg-green-500"
+					off="bg-gray-500 border-dark dark:border-light"
+					on="bg-blue-500 border-dark dark:border-light"
 					handleChange={handleChange}
 					isActive={active}
 				/>

@@ -44,6 +44,7 @@ export default function Post({ postData }) {
 									alt="something"
 									width="100%"
 									height="100"
+									draggable={false}
 								/>
 							</div>
 							<div className="flex px-2 opacity-60">
